@@ -1,15 +1,17 @@
 //breakpoints
-$smWidth: 767px;
-$mdWidth: 991px;
-$lgWidth: 1199px;
+$smWidth: 575px;
+$mdWidth: 767px;
+$lgWidth: 991px;
+$xlWidth: 1199px;
 
 //containers
-$xsContainerWidth: auto;
-$smContainerWidth: 750px;
-$mdContainerWidth: 970px;
-$lgContainerWidth: 1180px;
+$smContainerWidth: auto;
+$mdContainerWidth: 750px;
+$lgContainerWidth: 970px;
+$xlContainerWidth: 1180px;
 
 // mixins
+
 @mixin xs {
   @media screen and (max-width: $smWidth) {
     @content;
@@ -24,6 +26,12 @@ $lgContainerWidth: 1180px;
 
 @mixin md {
   @media screen and (max-width: $lgWidth) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: $xlWidth) {
     @content;
   }
 }

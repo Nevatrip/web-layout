@@ -2,14 +2,15 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config = {
   entry: {
-    index: './src/index.js',
-    tour: './src/tour.js',
+    main: './src/scss/main.scss',
+    index: './src/pages/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,12 +21,38 @@ const config = {
       directory: path.join(__dirname, 'dist'),
     },
     hot: true,
+    watchFiles: ['**/*.html', '**/*.hbs'],
   },
   module: {
     rules: [
       {
         test: /\.html$/i,
         use: 'html-loader',
+      },
+      {
+        test: /\.hbs$/,
+        use: {
+          loader: 'handlebars-loader',
+          options: {
+            inlineRequires: '/icons/',
+          },
+        },
+      },
+      {
+        test: /main\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['autoprefixer'],
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.s[ac]ss$/,
@@ -42,6 +69,7 @@ const config = {
           },
           'sass-loader',
         ],
+        exclude: [/main\.scss$/],
       },
       {
         test: /\.js$/,
@@ -58,10 +86,12 @@ const config = {
       {
         test: /\.svg$/,
         type: 'asset',
-        generator: {
-          filename: 'assets/icons/[hash][ext]',
+
+        parser: {
+          dataUrlCondition: (source, { filename, module }) => {
+            return filename.includes('system');
+          },
         },
-        use: 'svgo-loader',
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
@@ -75,17 +105,13 @@ const config = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/pages/index.hbs',
       filename: 'index.html',
-      chunks: ['index'],
+      chunks: ['main', 'index'],
     }),
-    new HtmlWebpackPlugin({
-      template: './src/tour.html',
-      filename: 'tour.html',
-      chunks: ['tour'],
-    }),
+    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
     }),
   ],
 };
