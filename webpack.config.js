@@ -7,7 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    tour: './src/tour.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -73,9 +76,16 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: 'index.html',
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/tour.html',
+      filename: 'tour.html',
+      chunks: ['tour'],
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: '[name].css',
     }),
   ],
 };

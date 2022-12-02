@@ -1,37 +1,29 @@
 //breakpoints
-$smWidth: 575px;
-$mdWidth: 767px;
-$lgWidth: 991px;
-$xlWidth: 1199px;
+$smWidth: 767px;
+$mdWidth: 991px;
+$lgWidth: 1199px;
 
 //containers
-$xsContainerWidth: 100%;
-$smContainerWidth: 100%;
-$mdContainerWidth: 750px;
-$lgContainerWidth: 970px;
-$xlContainerWidth: 1180px;
+$xsContainerWidth: auto;
+$smContainerWidth: 750px;
+$mdContainerWidth: 970px;
+$lgContainerWidth: 1180px;
 
 // mixins
-@mixin sm {
+@mixin xs {
   @media screen and (max-width: $smWidth) {
     @content;
   }
 }
 
-@mixin md {
+@mixin sm {
   @media screen and (max-width: $mdWidth) {
     @content;
   }
 }
 
-@mixin lg {
+@mixin md {
   @media screen and (max-width: $lgWidth) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media screen and (max-width: $xlWidth) {
     @content;
   }
 }
