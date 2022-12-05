@@ -1,2 +1,9 @@
+@use '../media';
+
 .dke_logo {
+  max-width: 200px;
+
+  @include media.sm {
+    width: 160px;
+  }
 }

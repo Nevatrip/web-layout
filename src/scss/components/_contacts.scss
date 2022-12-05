@@ -1,0 +1,33 @@
+@use '../colors';
+
+.dke_contacts {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: colors.$main;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    filter: invert(46%) sepia(25%) saturate(0%) hue-rotate(198deg)
+      brightness(95%) contrast(90%);
+  }
+}
