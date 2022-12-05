@@ -1,3 +1,4 @@
+@use '../media';
 .dke_footer{
   &__container{
     padding-top: 30px;
@@ -6,6 +7,10 @@
     .dke_container{
       display: flex;
       justify-content: space-between;
+      @include media.sm {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
   &__links{
@@ -13,10 +18,34 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     max-width: 480px;
     padding: 10px 0;
+    position: relative;
+    @include media.md {
+      max-width: 345px;
+    }
+    @include media.sm {
+      order: 2;
+      margin-top: 10px;
+    }
+    &::before{
+      @include media.sm {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 1px;
+        width: 290px;
+        background: #fff;
+      }
+    }
     &:last-child{
       justify-content: flex-end;
+      @include media.sm {
+        justify-content: center;
+      }
     }
   }
   &__link{
@@ -36,6 +65,11 @@
     justify-content: flex-end;
     align-content: center;
     width: 25%;
+    @include media.sm {
+      width: 100%;
+      max-width: 290px;
+      justify-content: center;
+    }
   }
   &__social{
     margin-top: 4px;
@@ -43,10 +77,17 @@
     display: flex;
     align-items: center;
     color: #fff;
+    @include media.sm {
+      margin-left: 6px;
+      margin-right: 6px;
+    }
     span, noindex{
       margin-left: 10px;
       border-bottom: 1px solid transparent;
       transition: ease 0.3s;
+      @include media.md {
+        margin-left: 5px;
+      }
     }
     &:hover{
       span, noindex{
@@ -55,6 +96,10 @@
     }
     &:not(:first-child){
       margin-left: 12px;
+      @include media.sm {
+        margin-left: 6px;
+        margin-right: 6px;
+      }
     }
     img, svg{
       max-width: 28px;
@@ -67,6 +112,15 @@
   &__contacts{
     padding: 10px 0;
     width: 25%;
+    @include media.sm {
+      padding-top: 0;
+      max-width: 290px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
   }
   &__contact{
     color: #fff;
@@ -121,10 +175,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include media.sm {
+        flex-direction: column;
+      }
     }
   }
   &__copyright{
     font-size: 11px;
     color: #EAEAEA;
+  }
+  &__pay{
+    @include media.sm {
+      margin-top: 15px;
+    }
   }
 }
