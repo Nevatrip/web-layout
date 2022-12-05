@@ -151,7 +151,7 @@ const config = {
 
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].css',
     }),
   ],
 };

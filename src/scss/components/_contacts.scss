@@ -1,0 +1,39 @@
+@use '../colors';
+@use '../variables';
+
+.dke_contacts {
+  display: flex;
+  flex-direction: column;
+
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: colors.$main;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    border-bottom: 1px solid transparent;
+    transition: all variables.$transition;
+
+    &:hover {
+      border-bottom: 1px solid colors.$main;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+
+  &__icon {
+    filter: invert(46%) sepia(25%) saturate(0%) hue-rotate(198deg)
+      brightness(95%) contrast(90%);
+  }
+}

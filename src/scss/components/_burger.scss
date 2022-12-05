@@ -1,9 +1,18 @@
 @use '../colors';
 
 .dke_burger {
+  background: none;
+  border: none;
   display: block;
   width: 50px;
   height: 50px;
+  padding: 0;
+
+  &_white {
+    .dke_burger__icon .line {
+      stroke: #ffffff;
+    }
+  }
 
   &__icon {
     width: 50px;

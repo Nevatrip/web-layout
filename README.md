@@ -52,13 +52,7 @@
 
 - `chunks` — вёрстка шаблонов компонентов в формате Handlebars Partials `.hbs`
 
-  - [Документация Handlebars](https://sass-lang.com/documentation/)
-
-Допустим, надо сверстать хедер. Создаём в папке `chunks` файл `header.hbs` и верстаем как обычный HTML.
-
-После чего для основной страницы тоже создаем файл Handlebars, например `index.hbs`.
-
-С помощью синтаксиса `{{> './chunks/header.hbs'}}` инжектим разметку нашего компонента в разметку страницы.
+  - [Документация Handlebars](https://handlebarsjs.com/guide/partials.html#basic-partials)
 
 - `icons` — иконки в формате .svg
 
@@ -82,22 +76,6 @@
 
   - `_media.scss` — Sass-переменные для брейкпойнотов, размеров контейнера и миксины для медиа-запросов
 
-Как использовать миксины для медиа запросов
-
-```
-@include media.lg {
-  width: 1180px;
-}
-```
-
-Эквивалентно
-
-```
-@media screen and (max-width: $xlWidth) {
-  width: 1180px;
-}
-```
-
 `dist` — собранный проект (папка появляется после запуска сборки)
 
 `node_modules` — установленные npm-пакеты
@@ -108,7 +86,7 @@
 
 `.babelrc` — настройки компилятора Babel
 
-`.gitignore` — папка исключний Git
+`.gitignore` — исключения Git
 
 `webpack.config.js` — настройки сборщика webpack
 
@@ -142,3 +120,86 @@
 
 - `npm run watch` — запуск webpack dev-сервера
 - `npm run build` — сборка проекта в prod-режиме
+
+## Инструкции
+
+### Как добавить новую страницу (точку входа) в конфигурацию webpack
+
+Для новой страницы нужно создать три файла:
+
+- `src/pages/page-name.hbs` — шаблон страницы
+- `src/pages/page-name.js` — точка входа для новой страницы
+- `src/scss/pages/page-name.scss` — файл стилей конкретной страницы
+
+После чего нужно импортировать файл стилей в точку входа:
+
+```
+import '../scss/pages/page-name.scss';
+```
+
+Далее нужно добавить точку входа в поле `entry` файла `webpack.config.js` и добавить инстанс плагина `HtmlWebpackPlugin` для новой страницей:
+
+```
+...
+
+const config = {
+  entry: {
+    main: './src/scss/main.scss',
+    index: './src/pages/index.js',
+    page-name: './src/pages/page-name.js',
+  },
+
+...
+
+plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/pages/index.hbs',
+      filename: 'index.html',
+      chunks: ['main', 'index'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-name.hbs',
+      filename: 'page-name.html',
+      chunks: ['main', 'page-name'],
+    }),
+    new RemoveEmptyScriptsPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+  ],
+};
+```
+
+### Как пользоваться Handlebars
+
+Допустим, надо сверстать хедер. Создаём в папке `chunks` файл `header.hbs` и верстаем как обычный HTML. После чего для основной страницы тоже создаем файл Handlebars, например `index.hbs`. С помощью синтаксиса `{{> './chunks/header.hbs'}}` инжектим разметку нашего компонента в разметку страницы.
+
+### Как правильно использовать Sass-переменные, функции и вообще импортировать Sass-файлы
+
+Sass начинает отказываться от директивы `@import`. В дальнейшем она совсем исчезнет из языка препроцессора. Поэтому сейчас нужно использовать директиву `@use`. Она создаёт блочную видимость и пространство имён для файлов Sass. Таким образом переменные, функции и миксины больше не будут глобально доступны.
+
+```
+@use '../colors'
+
+h1 {
+  color: colors.$main;
+}
+```
+
+В этом примере мы импортируем файл `_colors.scss`. Модули Sass нужно именовать с префиксом `_*`. При импорте имя вводится без префикса и расширения. После чего, чтобы использовать переменные, нужно обратиться к ним через пространство имён `colors`. Допустим, в файле `_colors.scss` задана переменная `$main: #dd2211;`. Чтобы обратиться к ней, нужно использовать следующую запись: `colors.$main`.
+
+### Как использовать миксины для медиа запросов
+
+```
+@include media.lg {
+  width: 1180px;
+}
+```
+
+Эквивалентно
+
+```
+@media screen and (max-width: $xlWidth) {
+  width: 1180px;
+}
+```
