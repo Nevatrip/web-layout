@@ -1,10 +1,14 @@
 @use '../colors';
+@use '../media';
 .dke_banner {
   position: relative;
   min-height: 370px;
   z-index: 1;
   display: flex;
   padding: 30px 0 55px 0;
+  @include media.sm {
+    min-height: 255px;
+  }
   &__background {
     position: absolute;
     left: 0;
@@ -28,13 +32,16 @@
     }
   }
   &__box {
-    max-width: 885px;
+    max-width: 77%;
     width: 100%;
     padding: 44px 30px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     margin-left: auto;
     color: colors.$body;
+    @include media.sm {
+      max-width: 100%;
+    }
     & > a {
       display: inline-block;
       margin-bottom: 1.5625em;
@@ -62,6 +69,12 @@
       background: rgba(40, 40, 40, 0.63);
       color: #ffffff;
       padding: 44px 67px;
+      @include media.xs {
+        padding: 44px 55px;
+      }
+      @media screen and (max-width: 440px){
+        padding: 21px;
+      }
       .dke_banner__title,
       .dke_price {
         color: #ffffff;
@@ -82,7 +95,11 @@
     margin-bottom: 0.7142857142857143em;
     font-size: 35px;
     font-weight: 400;
+    line-height: 1.1;
     color: colors.$body;
+    @include media.xs {
+      font-size: 26px;
+    }
   }
   .dke_list {
     margin-bottom: 13px;
