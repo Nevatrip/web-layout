@@ -1,19 +1,25 @@
 @use '../colors';
+@use '../variables';
 
 .dke_contacts {
   display: flex;
   flex-direction: column;
 
-  &__link {
+  &__contact {
     display: flex;
     align-items: center;
+  }
+
+  &__link {
     color: colors.$main;
     text-decoration: none;
     font-size: 14px;
     font-style: normal;
+    border-bottom: 1px solid transparent;
+    transition: all variables.$transition;
 
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid colors.$main;
     }
   }
 
