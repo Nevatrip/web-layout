@@ -1,0 +1,154 @@
+@use '../colors';
+.dke_tour {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  &__preview {
+    position: relative;
+    width: 460px;
+    height: 307px;
+    background-color: #e3e3e3;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-right: 30px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px 42px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 153, 204);
+    border-radius: 16px 0 16px 0;
+    z-index: 2;
+    &_yellow {
+      color: rgb(54, 50, 50);
+      background-color: rgb(245, 212, 0);
+    }
+    &_red {
+      background-color: rgb(229, 116, 14);
+    }
+    &_blue {
+      background-color: rgb(117, 83, 255);
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 1em;
+    display: inline-block;
+    color: colors.$body;
+    & > * {
+      display: inline;
+      font-weight: inherit;
+      margin: 0;
+      border-bottom: 2px solid transparent;
+      transition: ease 0.3s;
+    }
+  }
+  &__time {
+    position: relative;
+    padding-left: 21px;
+    color: #9e9e9e;
+    margin-bottom: 1.4em;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg class='tags-block__time-svg' width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0C3.589 0 0 3.589 0 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14.298A6.305 6.305 0 0 1 1.702 8 6.305 6.305 0 0 1 8 1.702 6.305 6.305 0 0 1 14.298 8 6.305 6.305 0 0 1 8 14.298z' fill='%23C7C7C7'%3E%3C/path%3E%3Cpath d='M12.17 7.753H8.573V3.43a.659.659 0 0 0-1.317 0v4.982c0 .363.295.658.658.658h4.254a.659.659 0 0 0 0-1.317z' fill='%23C7C7C7'%3E%3C/path%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__list {
+    list-style: none;
+    font-size: 18px;
+    margin: 0 0 1.1em 0;
+    padding-left: 0;
+    li {
+      position: relative;
+      padding-left: 23px;
+      margin-bottom: 0.5em;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8684 2.60049C15.8684 2.9554 15.7445 3.25674 15.4967 3.5045L8.95764 10.0436C8.70318 10.298 8.39849 10.4253 8.04358 10.4253C7.68197 10.4253 7.38063 10.298 7.13956 10.0436L0.6005 3.5045C0.346036 3.26343 0.218803 2.96209 0.218803 2.60049C0.218803 2.24557 0.346036 1.94089 0.6005 1.68642L1.3438 0.933075C1.60496 0.685308 1.90965 0.561423 2.25787 0.561423C2.61278 0.561423 2.91412 0.685308 3.16188 0.933075L8.04358 5.81477L12.9253 0.933075C13.173 0.685308 13.4744 0.561423 13.8293 0.561423C14.1775 0.561423 14.4822 0.685308 14.7434 0.933075L15.4967 1.68642C15.7445 1.94758 15.8684 2.25227 15.8684 2.60049Z' fill='%23FED74B'/%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+  &__tickets {
+    display: inline;
+  }
+  &__ticket {
+    display: inline-block;
+    width: 63px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 3px;
+    color: rgb(51, 51, 51);
+    background: #d9e8ff;
+    border-radius: 11px;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 4px;
+    transition: ease 0.3s;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: #6ba6ff;
+    }
+  }
+  &-nav {
+    display: flex;
+    padding: 20px 0;
+    &__link {
+      color: #49aada;
+      font-weight: 600;
+      & > * {
+        border-bottom: 1px solid transparent;
+        transition: ease 0.3s;
+      }
+      &:hover {
+        & > * {
+          border-bottom: 1px solid #49aada;
+        }
+      }
+      &_prev {
+        margin-right: auto;
+      }
+      &_next {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+  }
+  a.dke_tour__title:hover > * {
+    border-bottom: 2px solid colors.$body;
+  }
+}
+.dke_tours .dke_container{
+  display: block;
+}

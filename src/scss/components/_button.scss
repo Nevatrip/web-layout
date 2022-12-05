@@ -1,0 +1,15 @@
+@use '../colors';
+.dke_button {
+  font-size: 17px;
+  line-height: 1.3333333;
+  color: colors.$body;
+  border: none;
+  background-color: colors.$buttonMain;
+  padding: 13px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  &:hover {
+    background-color: colors.$buttonMainHover;
+  }
+}
