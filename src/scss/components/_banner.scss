@@ -144,10 +144,16 @@
   font-size: 36px;
   color: colors.$body;
   margin-right: 12px;
+  @include media.md {
+    font-size: 30px;
+  } 
   & > svg, & > img {
     max-width: 19px;
     height: auto;
     display: inline;
+    @include media.md {
+      max-width: 16px;
+    }
   }
   small {
     font-size: 11px;
