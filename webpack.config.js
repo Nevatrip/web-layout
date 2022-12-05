@@ -7,10 +7,47 @@ import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const PAGES = [
+  {
+    dir: "home",
+    filename: "index"
+  },
+  {
+    dir: "busguide",
+    filename: "busguide"
+  },
+  {
+    dir: "en-nevatrip",
+    filename: "en-nevatrip"
+  },
+  {
+    dir: "nevatrip-ru",
+    filename: "nevatrip-ru"
+  },
+  {
+    dir: "prahatrip-cz",
+    filename: "prahatrip-cz"
+  },
+  {
+    dir: "ru-prahatrip-cz",
+    filename: "ru-prahatrip-cz"
+  },
+  {
+    dir: "ru-thaibuytrip",
+    filename: "ru-thaibuytrip"
+  },
+];
+
 const config = {
   entry: {
     main: './src/scss/main.scss',
-    index: './src/pages/index.js',
+    index: './src/pages/home/index.js',
+    busguide: './src/pages/busguide/index.js',
+    "en-nevatrip": './src/pages/en-nevatrip/index.js',
+    "nevatrip-ru": './src/pages/nevatrip-ru/index.js',
+    "ru-prahatrip-cz": './src/pages/ru-prahatrip-cz/index.js',
+    "prahatrip-cz": './src/pages/prahatrip-cz/index.js',
+    "ru-thaibuytrip": './src/pages/ru-thaibuytrip/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -104,11 +141,14 @@ const config = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/pages/index.hbs',
-      filename: 'index.html',
-      chunks: ['main', 'index'],
-    }),
+    ...PAGES.map(({ dir, filename }) => new HtmlWebpackPlugin({
+      template: `./src/pages/${dir}/${filename}.hbs`,
+      filename: `./${filename}.html`,
+      chunks: ['main', dir],
+      inject: true,
+    })),
+
+
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

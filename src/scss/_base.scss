@@ -22,6 +22,33 @@ body {
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1, h2, h3 ,h4 ,h5, h6, p, ul{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+button{
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+}
+input, textarea{
+  outline: none;
+  border: none;
+}
+img{
+  display: inline-block;
+}
 
 .dke_wrapper {
   width: 100%;
@@ -47,6 +74,10 @@ body {
     width: media.$smContainerWidth;
     min-width: 360px;
   }
+}
+
+.preload * {
+  transition: none !important;
 }
 
 a {
