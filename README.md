@@ -141,11 +141,12 @@
 import '../scss/pages/page-name.scss';
 ```
 
-Далее нужно добавить информацию о страницу в массив `PAGES` в `webpack.config.js`:
+Далее нужно добавить информацию о странице в массив `PAGES` в `webpack.config.js`:
 
 ```
 const PAGES = [
 ...
+
   {
     dir: 'page-name',
     filename: 'page-name',
