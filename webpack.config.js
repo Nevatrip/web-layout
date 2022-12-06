@@ -140,7 +140,7 @@ const config = {
   },
 
   plugins: [
-    ...PAGES.map(({ dir, filename }) => new HtmlWebpackPlugin({
+    ...PAGES?.map(({ dir, filename }) => new HtmlWebpackPlugin({
       template: `./src/pages/${dir}/${filename}.hbs`,
       filename: `./${filename}.html`,
       chunks: ['main', dir],
