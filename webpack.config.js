@@ -119,8 +119,10 @@ const config = {
       },
       {
         test: /\.svg$/,
-        type: 'asset',
-
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/icons/[hash][ext]',
+        },
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
             return filename.includes('system');
@@ -146,6 +148,7 @@ const config = {
           chunks: ['main', dir],
         })
     ),
+
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
