@@ -41,13 +41,10 @@ const PAGES = [
 const config = {
   entry: {
     main: './src/scss/main.scss',
-    index: './src/pages/home/index.js',
-    busguide: './src/pages/busguide/index.js',
-    'en-nevatrip': './src/pages/en-nevatrip/index.js',
-    'nevatrip-ru': './src/pages/nevatrip-ru/index.js',
-    'ru-prahatrip-cz': './src/pages/ru-prahatrip-cz/index.js',
-    'prahatrip-cz': './src/pages/prahatrip-cz/index.js',
-    'ru-thaibuytrip': './src/pages/ru-thaibuytrip/index.js',
+    ...PAGES?.reduce((acc, { dir }) => {
+      acc = { ...acc, [dir]: `./src/pages/${dir}/index.js` };
+      return acc;
+    }, {}),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -146,7 +143,7 @@ const config = {
         new HtmlWebpackPlugin({
           template: `./src/pages/${dir}/${filename}.hbs`,
           filename: `./${filename}.html`,
-          chunks: ['main', filename],
+          chunks: ['main', home],
         })
     ),
     new RemoveEmptyScriptsPlugin(),
