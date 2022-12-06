@@ -1,15 +1,4 @@
-@use '../components/header';
 @use '../components/burger';
-
-@use '../components/navbar-head';
-@use '../components/languages';
-@use '../components/social';
-@use '../components/social-item';
-@use '../components/contacts';
-@use '../components/logo';
-@use '../components/menu';
-@use '../components/topbar';
-@use '../components/navbar';
 
 @use '../components/banner';
 @use '../components/advantages';
@@ -17,6 +6,8 @@
 @use '../components/tour-cards';
 @use '../components/breadcrumbs';
 @use '../components/rent-form';
+
 @use '../components/button';
 @use '../components/list';
+
 @use '../components/footer';
