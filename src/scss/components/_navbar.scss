@@ -1,59 +1,9 @@
 @use '../colors';
 @use '../media';
 
+@use './navbar-head';
+@use './navbar-drop-down';
+
 .dke_navbar {
-  background: colors.$twilightGrey;
 
-  &__container {
-    display: flex;
-    align-items: center;
-
-    @include media.sm {
-      justify-content: space-between;
-    }
-  }
-
-  &__nav {
-    width: 100%;
-
-    @include media.sm {
-      display: none;
-    }
-  }
-
-  &__burger {
-    display: none;
-
-    @include media.sm {
-      display: block;
-      margin-left: -15px;
-    }
-  }
-
-  &__contacts {
-    margin: 0;
-    display: none;
-
-    @include media.sm {
-      display: flex;
-    }
-  }
-
-  &__contact {
-    padding: 0;
-    background: none;
-    border: none;
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__contact-icon {
-    width: 32px;
-    height: 32px;
-  }
 }

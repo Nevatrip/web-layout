@@ -1,6 +1,14 @@
 @use '../colors';
+@use '../media';
 
 .dke_head-navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    color: white;
+
 
     &::after {
         content: "";
@@ -24,17 +32,14 @@
         }
     }
 
-    &__btn {
-        color: white;
+    &__wrapper{
+        background: colors.$twilightGrey;
+        position: relative;
+        z-index: 4;
     }
+
 }
 .dke_navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    color: white;
     
     &._cool-dark {
         background-color: colors.$dark2;
@@ -43,9 +48,68 @@
         background-color: colors.$dark5;
     }
 
+    &__container{
+        display: flex;
+        align-items: center;  
+        
+        position: relative;
+        z-index: 3;
+
+        @include media.sm {
+            justify-content: space-between;
+          }      
+    }
+
     &__head {
         position: relative;
         z-index: 3;    
     }
     &__drop-down-menu {}
+
+
+    
+    &__nav {
+    width: 100%;
+
+    @include media.sm {
+        display: none;
+    }
+    }
+
+    &__burger {
+    display: none;
+
+    @include media.sm {
+        display: block;
+        margin-left: -15px;
+    }
+    }
+
+    &__contacts {
+    margin: 0;
+    display: none;
+
+    @include media.sm {
+        display: flex;
+    }
+    }
+
+    &__contact {
+    padding: 0;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    }
+
+    &__contact-icon {
+    width: 32px;
+    height: 32px;
+    }
+    
 }

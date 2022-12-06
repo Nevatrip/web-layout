@@ -146,6 +146,8 @@ const config = {
           chunks: ['main', dir],
         })
     ),
+
+
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',

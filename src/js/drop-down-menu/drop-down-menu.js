@@ -5,10 +5,10 @@ export function dropDownMenu() {
     const MD_WIDTH = 767;
     const TIME = 3000;
 
-    const btnTopHeader = document.querySelector("#btn-header-burger");
+    const btnTopHeader = document.querySelector("#btn-drop-down-menu");
     const navbar = document.querySelector(".dke_navbar");
     const headerNavbar = document.querySelector(".dke_head-navbar");
-    const btnNavbar = document.querySelector(".dke_head-navbar__btn");
+    const btnNavbar = document.querySelector("#btn-header-burger");
     const mobileMenu = document.querySelector(".dke_menu-mobile");
     const dropDownMenu = document.querySelector(".dke_drop-down-navbar");
     const btnsDropDownMenu = document.querySelectorAll(".dke_item-drop-down__btn");
@@ -46,7 +46,6 @@ export function dropDownMenu() {
 
     // открытие/закрытие бургер-меню
     if (navbar && btnNavbar && mobileMenu) {
-        console.log(1);
         btnNavbar.addEventListener("click", function() {
             this.disabled = true;
 
