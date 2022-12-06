@@ -143,7 +143,7 @@ const config = {
         new HtmlWebpackPlugin({
           template: `./src/pages/${dir}/${filename}.hbs`,
           filename: `./${filename}.html`,
-          chunks: ['main', home],
+          chunks: ['main', dir],
         })
     ),
     new RemoveEmptyScriptsPlugin(),
