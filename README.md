@@ -125,10 +125,14 @@
 
 ### Как добавить новую страницу (точку входа) в конфигурацию webpack
 
-Для новой страницы нужно создать три файла:
+Создаём папку под новую страницу:
 
-- `src/pages/page-name.hbs` — шаблон страницы
-- `src/pages/page-name.js` — точка входа для новой страницы
+`src/pages/page-name`
+
+Далее нужно создать три файла:
+
+- `src/pages/page-name/page-name.hbs` — шаблон страницы
+- `src/pages/page-name/index.js` — точка входа для новой страницы
 - `src/scss/pages/page-name.scss` — файл стилей конкретной страницы
 
 После чего нужно импортировать файл стилей в точку входа:
@@ -137,38 +141,19 @@
 import '../scss/pages/page-name.scss';
 ```
 
-Далее нужно добавить точку входа в поле `entry` файла `webpack.config.js` и добавить инстанс плагина `HtmlWebpackPlugin` для новой страницей:
+Далее нужно добавить информацию о страницу в массив `PAGES` в `webpack.config.js`:
 
 ```
+const PAGES = [
 ...
-
-const config = {
-  entry: {
-    main: './src/scss/main.scss',
-    index: './src/pages/index.js',
-    page-name: './src/pages/page-name.js',
+  {
+    dir: 'page-name',
+    filename: 'page-name',
   },
-
-...
-
-plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/pages/index.hbs',
-      filename: 'index.html',
-      chunks: ['main', 'index'],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/page-name.hbs',
-      filename: 'page-name.html',
-      chunks: ['main', 'page-name'],
-    }),
-    new RemoveEmptyScriptsPlugin(),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
-};
+];
 ```
+
+Где `dir` — название папки для страницы, `filename` — название `.hbs` шаблона страницы.
 
 ### Как пользоваться Handlebars
 
