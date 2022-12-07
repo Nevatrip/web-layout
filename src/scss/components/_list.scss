@@ -11,7 +11,7 @@
       font-size: 16px;
     }
     &:not(:last-child) {
-      margin-bottom: 0.6190476190476191em;
+      margin-bottom: 0.619em;
     }
     &::before {
       content: "";
@@ -20,7 +20,7 @@
       height: 30px;
       border-radius: 50%;
       background: colors.$buttonMain;
-      background-image: url("data:image/svg+xml,%3Csvg width='45' height='29' viewBox='0 0 45 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44.7937 5.86804C44.7937 6.87362 44.4427 7.72741 43.7407 8.42942L25.2133 26.9568C24.4923 27.6777 23.6291 28.0382 22.6235 28.0382C21.5989 28.0382 20.7451 27.6777 20.0621 26.9568L1.53476 8.42942C0.813776 7.74639 0.453285 6.89259 0.453285 5.86804C0.453285 4.86246 0.813776 3.99918 1.53476 3.27819L3.64079 1.14371C4.38074 0.441699 5.24402 0.0906944 6.23063 0.0906944C7.23621 0.0906944 8.09 0.441699 8.79201 1.14371L22.6235 14.9752L36.455 1.14371C37.157 0.441699 38.0108 0.0906944 39.0163 0.0906944C40.003 0.0906944 40.8662 0.441699 41.6062 1.14371L43.7407 3.27819C44.4427 4.01815 44.7937 4.88143 44.7937 5.86804Z' fill='black'/%3E%3C/svg%3E%0A");
+      background-image: url("../../icons/list-black-arrow.system.svg");
       background-size: 12px auto;
       background-position: center;
       background-repeat: no-repeat;
