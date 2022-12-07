@@ -6,6 +6,7 @@
   display: flex;
   width: 100%;
   padding: 20px 0;
+
   @include media.md {
     width: calc(50% - 15px);
     flex-direction: column;
@@ -13,19 +14,24 @@
     border: 1px solid #E3E3E3;
     padding: 0;
     align-self: baseline;
+
     &:nth-of-type(n + 3){
       margin-top: 50px;
     }
+
     & + hr{
       display: none;
     }
   }
+
   @include media.sm {
     width: 100%;
+
     &:nth-of-type(n + 2){
       margin-top: 40px;
     }
   }
+
   &__description{
     @include media.md {
       padding: 0 15px 15px 15px;
@@ -34,6 +40,7 @@
       flex-grow: 1;
     }
   }
+
   &__preview {
     position: relative;
     width: 460px;
@@ -43,10 +50,12 @@
     overflow: hidden;
     margin-right: 30px;
     flex-shrink: 0;
+
     @include media.lg {
       width: 374px;
       height: 260px;
     }
+
     @include media.md {
       width: 100%;
       margin-right: 0;
@@ -54,10 +63,12 @@
       margin-bottom: 20px;
       border-radius: 16px 16px 0 0;
     }
+
     @include media.sm {
       padding-bottom: 66.35%;
       height: auto;
     }
+
     img {
       width: 100%;
       position: absolute;
@@ -68,6 +79,7 @@
       object-fit: cover;
     }
   }
+
   &__tag {
     position: absolute;
     left: 0;
@@ -79,32 +91,40 @@
     background-color: rgb(51, 153, 204);
     border-radius: 16px 0 16px 0;
     z-index: 2;
+
     &_yellow {
       color: rgb(54, 50, 50);
       background-color: rgb(245, 212, 0);
     }
+
     &_red {
       background-color: rgb(229, 116, 14);
     }
+
     &_blue {
       background-color: rgb(117, 83, 255);
     }
   }
+
   &__title {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 1em;
     display: inline-block;
     color: colors.$body;
+
     @include media.md {
       font-size: 16px;
     }
+
     @include media.sm {
       font-size: 25px;
     }
+
     @include media.xs {
       font-size: 16px;
     }
+
     & > * {
       display: inline;
       font-size: inherit;
@@ -114,14 +134,17 @@
       transition: border-color variables.$transition;
     }
   }
+
   &__time {
     position: relative;
     padding-left: 21px;
     color: #9e9e9e;
     margin-bottom: 1.4em;
+
     @include media.md {
       font-size: 14px;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -132,29 +155,36 @@
       background-image: url("../../icons/time.system.svg");
       background-position: center;
       background-repeat: no-repeat;
+
       @include media.md {
         top: 2px;
       }
     }
   }
+
   &__list {
     list-style: none;
     font-size: 18px;
     margin: 0 0 1.1em 0;
     padding-left: 0;
+
     @include media.md {
       font-size: 15px;
     }
+
     @include media.sm {
       font-size: 18px;
     }
+
     @include media.xs {
       font-size: 15px;
     }
+
     li {
       position: relative;
       padding-left: 23px;
       margin-bottom: 0.5em;
+
       &::before {
         content: "";
         position: absolute;
@@ -169,9 +199,11 @@
       }
     }
   }
+
   &__tickets {
     display: inline;
   }
+
   &__ticket {
     display: inline-block;
     width: 63px;
@@ -186,40 +218,49 @@
     margin-top: 3px;
     margin-right: 4px;
     transition: all variables.$transition;
+
     &:hover {
       color: #fff;
       text-decoration: none;
       background-color: #6ba6ff;
     }
   }
+
   &-nav {
     display: flex;
     padding: 20px 0;
     width: 100%;
+
     &__link {
       color: #49aada;
       font-weight: 600;
+
       & > * {
         border-bottom: 1px solid transparent;
         transition: border-color variables.$transition;
       }
+
       &:hover {
         & > * {
           border-bottom: 1px solid #49aada;
         }
       }
+
       &_prev {
         margin-right: auto;
       }
+
       &_next {
         margin-left: auto;
         text-align: right;
       }
     }
   }
+
   a.dke_tour__title:hover > * {
     border-bottom: 2px solid colors.$body;
   }
+
   @include media.md {
     .dke_price-box{
       margin-top: auto;
@@ -228,8 +269,10 @@
     }
   }
 }
+
 .dke_tours .dke_container{
   display: block;
+  
   @include media.md {
     display: flex;
     flex-wrap: wrap;

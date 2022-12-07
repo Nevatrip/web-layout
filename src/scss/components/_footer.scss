@@ -2,19 +2,23 @@
 @use '../variables';
 
 .dke_footer{
+
   &__container{
     padding-top: 30px;
     padding-bottom: 20px;
     background-color: #192023;
+
     .dke_container{
       display: flex;
       justify-content: space-between;
+
       @include media.sm {
         flex-direction: column;
         align-items: center;
       }
     }
   }
+
   &__links{
     display: flex;
     flex-wrap: wrap;
@@ -24,13 +28,16 @@
     max-width: 480px;
     padding: 10px 0;
     position: relative;
+
     @include media.md {
       max-width: 345px;
     }
+
     @include media.sm {
       order: 2;
       margin-top: 10px;
     }
+    
     &::before{
       @include media.sm {
         content: '';
@@ -43,13 +50,16 @@
         background: #fff;
       }
     }
+
     &:last-child{
       justify-content: flex-end;
+
       @include media.sm {
         justify-content: center;
       }
     }
   }
+
   &__link{
     font-size: 14px;
     color: #fff;
@@ -57,68 +67,83 @@
     display: inline-block;
     border-bottom: 1px solid transparent;
     transition: border-color variables.$transition;
+
     &:hover{
       border-bottom: 1px solid #fff;
     }
   }
+
   &__socials-block{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     width: 25%;
+
     @include media.sm {
       width: 100%;
       max-width: 290px;
       justify-content: center;
       align-items: center;
+
       .dke_social-item:first-child{
         margin-left: 0;
       }
     }
   }
+
   &__social-link{
     margin-top: 4px;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
     color: #fff;
+
     @include media.sm {
       margin-left: 6px;
       margin-right: 6px;
     }
+
     span, noindex{
       margin-left: 10px;
       border-bottom: 1px solid transparent;
       transition: border-color variables.$transition;
+
       @include media.md {
         margin-left: 5px;
       }
     }
+
     &:hover{
       span, noindex{
         border-bottom: 1px solid #fff;
       }
     }
+
     &:not(:first-child){
       margin-left: 12px;
+
       @include media.sm {
         margin-left: 6px;
         margin-right: 6px;
       }
     }
+
     img, svg{
       max-width: 28px;
       max-height: 28px;
     }
+
     img{
       object-fit: contain;
     }
   }
+
   &__contacts{
     padding: 10px 0;
     width: 25%;
     font-style: normal;
+    
     @include media.sm {
       padding-top: 0;
       max-width: 290px;
@@ -129,22 +154,27 @@
 
     }
   }
+
   &__contact{
     color: #fff;
     font-size: 16px;
     font-weight: 100;
     display: block;
+
     &:not(:last-child){
       margin-bottom: 10px;
     }
+
     a{
       color: #fff;
       border-bottom: 1px solid transparent;
       transition: border-color variables.$transition;
+
       &:hover{
         border-bottom: 1px solid #fff;
       }
     }
+
     span{
       display: block;
       color: #A9A9A9;
@@ -154,9 +184,11 @@
       letter-spacing: 0.5px;
       margin-top: 2px;
     }
+
     &_mail, &_tel{
       padding-left: 40px;
       position: relative;
+
       &::before{
         content: '';
         position: absolute;
@@ -168,20 +200,25 @@
         background-repeat: no-repeat;
       }
     }
+
     &_mail::before{
       background-image: url("../icons/mail.system.svg");
     }
+
     &_tel::before{
       background-image: url("../icons/tel.system.svg");
     }
   }
+
   &__disclaimer{
     background-color: #081318;
     padding: 20px 0;
+
     .dke_container{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      
       @include media.sm {
         flex-direction: column;
       }

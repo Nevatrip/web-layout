@@ -9,14 +9,17 @@
   color: #6b6b6b;
   display: flex;
   flex-wrap: wrap;
+
   li:not(:first-child)::before {
     content: "/";
     margin-left: 3px;
   }
+
   a {
     color: colors.$body;
     border-bottom: 1px solid transparent;
     transition: border-color variables.$transition;
+    
     &:hover {
       border-bottom: 1px solid colors.$body;
     }

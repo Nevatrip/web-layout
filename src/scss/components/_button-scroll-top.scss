@@ -16,6 +16,7 @@
   pointer-events: none;
   z-index: 2;
   transition: opacity variables.$transition;
+  
   @include media.sm {
     right: 15px;
     bottom: 15px;
