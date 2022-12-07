@@ -86,7 +86,7 @@ img {
 
   @include media.sm {
     width: media.$smContainerWidth;
-    min-width: 360px;
+    min-width: 320px;
   }
 }
 

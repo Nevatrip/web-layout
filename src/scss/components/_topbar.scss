@@ -5,8 +5,13 @@
   width: 100%;
 
   &__container {
+    min-height: 70px;
     padding: 10px 15px;
     align-items: center;
+
+    @include media.sm {
+      min-height: 65px;
+    }
   }
 
   &__burger {
@@ -21,6 +26,10 @@
   &__logo {
     margin-top: 5px;
     margin-right: 28px;
+
+    &_centered {
+      margin-top: 0;
+    }
   }
 
   &__title {
@@ -44,6 +53,7 @@
   }
 
   &__social {
+    flex-shrink: 0;
     margin-right: 15px;
 
     @include media.sm {

@@ -50,12 +50,17 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     clean: false,
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src'),
     },
+  },
+  devServer: {
     hot: true,
     watchFiles: ['**/*.html', '**/*.hbs'],
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
   module: {
     rules: [
@@ -69,6 +74,7 @@ const config = {
           loader: 'handlebars-loader',
           options: {
             inlineRequires: '/icons|images/',
+            partialDirs: [path.join(__dirname, 'src', 'chunks')],
           },
         },
       },
