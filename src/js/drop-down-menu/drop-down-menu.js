@@ -52,6 +52,7 @@ export function dropDownMenu() {
             const bottomHeight = navbar.getBoundingClientRect()?.bottom;
             mobileMenu.style.top = bottomHeight + "px";
 
+            //блокируется сролл у body, чтобы пользователь не мог скроллить страницу при открытом бургер-меню
             if (document.body.style.overflowY) document.body.style.overflowY = null;
             else document.body.style.overflowY = "hidden";
 
