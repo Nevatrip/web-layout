@@ -64,16 +64,13 @@
         position: relative;
         z-index: 3;    
     }
-    &__drop-down-menu {}
-
-
     
     &__nav {
     width: 100%;
 
-    @include media.sm {
-        display: none;
-    }
+        @include media.sm {
+            display: none;
+        }
     }
 
     &__burger {

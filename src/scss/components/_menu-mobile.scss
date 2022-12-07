@@ -40,10 +40,6 @@
                 background-color: colors.$dark7;
             }
         }
-        
-
-        &__nav {
-        }
         &__top-list {
             display: flex;
             flex-wrap: wrap;
@@ -53,19 +49,12 @@
 
             
         }
-        &__bottom {}
-    
-
         svg {
             fill: #F4F4F4;
         }
     }
 }
 .dke_drop-down-menu {
-    &__list-item {
-    }
-    &__top-list {
-    }
     &__top-icon {
         position: absolute;
         top: 10px;
@@ -114,8 +103,6 @@
         flex: 0 1 30px;
 
     }
-    &__head-title {
-    }
     &__body {
         transition: all .3s ease-out;
         background-color: colors.$dark4;
@@ -131,8 +118,6 @@
     &__list {
         font-size: 17px;
         color: colors.$gray1;
-
-
     }
     &__list-item {
 
@@ -168,6 +153,5 @@
             }
         }
     }
-    &__list-item {}
 }
 
