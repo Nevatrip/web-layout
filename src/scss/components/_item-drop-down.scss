@@ -1,15 +1,6 @@
 @use '../colors';
 
 .dke_item-drop-down {
-<<<<<<< HEAD
-  transition: max-height .3s ease-out;
-  
-  &__link {
-    display: flex;
-    transition: all .3s ease-out;
-
-    &:hover{
-=======
   transition: max-height 0.3s ease-out;
 
   &__link {
@@ -17,7 +8,6 @@
     transition: all 0.3s ease-out;
 
     &:hover {
->>>>>>> egorpariah
       text-decoration: underline;
     }
   }
