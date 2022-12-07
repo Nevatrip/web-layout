@@ -22,19 +22,30 @@ body {
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1, h2, h3 ,h4 ,h5, h6, p, ul{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
-ul{
+
+ul {
   list-style-type: none;
 }
-a{
+
+a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
 }
-button{
+
+button {
   display: inline-block;
   cursor: pointer;
   outline: none;
@@ -42,11 +53,14 @@ button{
   background: none;
   padding: 0;
 }
-input, textarea{
+
+input,
+textarea {
   outline: none;
   border: none;
 }
-img{
+
+img {
   display: inline-block;
 }
 

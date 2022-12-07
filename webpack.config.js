@@ -48,7 +48,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    clean: false,
   },
   devServer: {
     static: {
@@ -114,14 +114,14 @@ const config = {
         test: /\.(jpe?g|png|gif|ico)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext]',
+          filename: 'assets/images/[name][ext]',
         },
       },
       {
         test: /\.svg$/,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/icons/[hash][ext]',
+          filename: 'assets/icons/[name][ext]',
         },
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
@@ -133,7 +133,7 @@ const config = {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[hash][ext]',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
     ],
@@ -164,6 +164,7 @@ export default (env, argv) => {
 
   if (argv.mode === 'production') {
     config.output.filename = '[name].[contenthash].js';
+    config.output.clean = true;
   }
 
   return config;
