@@ -1,5 +1,7 @@
 @use '../colors';
 @use '../media';
+@use '../variables';
+
 .dke_button {
   font-size: 17px;
   line-height: 1.33;
@@ -9,7 +11,7 @@
   padding: 13px 24px;
   border-radius: 30px;
   cursor: pointer;
-  transition: ease 0.3s;
+  transition: background-color variables.$transition;
   @include media.sm {
     font-size: 15px;
   }

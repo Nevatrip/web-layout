@@ -1,4 +1,6 @@
 @use '../media';
+@use '../variables';
+
 .dke_footer{
   &__container{
     padding-top: 30px;
@@ -54,7 +56,7 @@
     margin: 5px 15px;
     display: inline-block;
     border-bottom: 1px solid transparent;
-    transition: ease 0.3s;
+    transition: border-color variables.$transition;
     &:hover{
       border-bottom: 1px solid #fff;
     }
@@ -88,7 +90,7 @@
     span, noindex{
       margin-left: 10px;
       border-bottom: 1px solid transparent;
-      transition: ease 0.3s;
+      transition: border-color variables.$transition;
       @include media.md {
         margin-left: 5px;
       }
@@ -138,7 +140,7 @@
     a{
       color: #fff;
       border-bottom: 1px solid transparent;
-      transition: ease 0.3s;
+      transition: border-color variables.$transition;
       &:hover{
         border-bottom: 1px solid #fff;
       }
