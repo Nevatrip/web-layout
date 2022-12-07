@@ -116,6 +116,7 @@
   &__contacts{
     padding: 10px 0;
     width: 25%;
+    font-style: normal;
     @include media.sm {
       padding-top: 0;
       max-width: 290px;
