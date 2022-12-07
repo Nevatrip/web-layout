@@ -1,6 +1,6 @@
 import { toggleAttr } from "../utils.js"
 
-const TIME = 3000;
+const DELAY_ANIMATION = 3000;
 
 let isOpenMenu = false;
 
@@ -59,8 +59,9 @@ function showMenu() {
   if (dropDownMenu)
     if (dropDownMenu.style.overflowY) dropDownMenu.style.overflowY = null;
     else setTimeout(e => {
+      // примеение скролла для выпаадающего списка после его полного открытия
       dropDownMenu.style.overflowY = "auto";
-    }, TIME);
+    }, DELAY_ANIMATION);
 
   if (navbar && mobileMenu) {
     const bottomHeight = navbar.getBoundingClientRect()?.bottom;
@@ -82,10 +83,11 @@ function showSublist(element) {
   if (element) toggleAttr(element, "aria-expanded");
     
   if (dropDownSublist)
-    if (dropDownSublist.style.overflowY) dropDownSublist.style.overflowY = null;
-    else setTimeout(e => {
+  if (dropDownSublist.style.overflowY) dropDownSublist.style.overflowY = null;
+  else setTimeout(e => {
+      // примеение скролла для выпаадающего списка после его полного открытия
       dropDownSublist.style.overflowY = "auto";
-    }, TIME);
+    }, DELAY_ANIMATION);
 
   this.disabled = false;
 }
