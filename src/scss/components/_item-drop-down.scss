@@ -1,6 +1,7 @@
 @use '../colors';
 
 .dke_item-drop-down {
+<<<<<<< HEAD
   transition: max-height .3s ease-out;
   
   &__link {
@@ -8,6 +9,15 @@
     transition: all .3s ease-out;
 
     &:hover{
+=======
+  transition: max-height 0.3s ease-out;
+
+  &__link {
+    display: flex;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+>>>>>>> egorpariah
       text-decoration: underline;
     }
   }
@@ -18,13 +28,15 @@
     justify-content: center;
     align-items: center;
   }
-  &__text{
+  
+  &__text {
     padding: 0.65em 0.3em 0.65em 0.94em;
+  }
 
-  }
   &__text-wrapper {
-    display: inline; 
+    display: inline;
   }
+
   &__btn {
     display: flex;
     cursor: pointer;
@@ -34,57 +46,58 @@
         padding: 0;
         white-space: normal;
 
-        &-wrapper{
+        &-wrapper {
           position: relative;
           text-align: left;
           padding: 0.65em 0.3em 0.65em 0.94em;
           white-space: nowrap;
-  
-          &::after{
+
+          &::after {
             content: '';
-            background-image: url("/src/icons/arrow-drop-down.system.svg");
+            background-image: url('/src/icons/arrow-drop-down.system.svg');
             width: 11px;
             height: 6px;
             transition: transform 0.3s ease-out;
             display: inline-block;
             position: relative;
-            right: -.5em;
+            right: -0.5em;
           }
         }
       }
     }
-    
-  }
-  &__sublist {
-    transition: all .3s ease-out;
-    padding-left: 45px;
-    font-size: 14px;
-    overflow-y: hidden;
-    max-height: 0;
-    margin-bottom: 0;
-    
-  }
-  &__sublist-item {
-    padding-top: .6em;
-  }
-  &__sublist-link {
-    transition: all .3s ease-out;
 
-    &:hover{
-      color: colors.$blue1;
-      text-decoration: underline;
-    }
-  }
-
-  &._active{
-    .dke_item-drop-down__text-wrapper {
-      &::after{
-        transform: rotate(180deg);
+    &._active {
+      .dke_item-drop-down__text-wrapper {
+        &::after {
+          transform: rotate(180deg);
+        }
       }
     }
-    .dke_item-drop-down__sublist{
+  }
+
+  &__sublist {
+    transition: all 0.3s ease-out;
+    padding-left: 45px;
+    font-size: 14px;
+    overflow: hidden;
+    max-height: 0;
+    margin-bottom: 0;
+
+    &._active {
       margin-bottom: 10px;
-      max-height: 500px;
+    }
+  }
+
+  &__sublist-item {
+    padding-top: 0.6em;
+  }
+  
+  &__sublist-link {
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: colors.$blue1;
+      text-decoration: underline;
     }
   }
 }

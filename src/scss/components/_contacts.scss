@@ -20,6 +20,15 @@
     &:hover {
       border-bottom: 1px solid colors.$main;
     }
+
+    &_red {
+      color: colors.$red;
+
+      &:hover {
+        color: colors.$darkRed;
+        border-bottom: 1px solid colors.$darkRed;
+      }
+    }
   }
 
   &__icon-wrapper {
