@@ -59,19 +59,23 @@
       border-bottom: 1px solid #fff;
     }
   }
-  &__socials{
+  &__socials-block{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     width: 25%;
     @include media.sm {
       width: 100%;
       max-width: 290px;
       justify-content: center;
+      align-items: center;
+      .dke_social-item:first-child{
+        margin-left: 0;
+      }
     }
   }
-  &__social{
+  &__social-link{
     margin-top: 4px;
     margin-bottom: 4px;
     display: flex;
