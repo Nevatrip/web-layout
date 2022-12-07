@@ -1,87 +1,90 @@
 @use '../colors';
 
 .dke_item-drop-down {
-    transition: max-height .3s ease-out;
+  transition: max-height .3s ease-out;
+  
+  &__link {
+    display: flex;
+    transition: all .3s ease-out;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    height: 42px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text{
+    padding: 0.65em 0.3em 0.65em 0.94em;
+
+  }
+  &__text-wrapper {
+    display: inline; 
+  }
+  &__btn {
+    display: flex;
+    cursor: pointer;
+
+    .dke_item-drop-down {
+      &__text {
+        padding: 0;
+        white-space: normal;
+
+        &-wrapper{
+          position: relative;
+          text-align: left;
+          padding: 0.65em 0.3em 0.65em 0.94em;
+          white-space: nowrap;
+  
+          &::after{
+            content: '';
+            background-image: url("/src/icons/arrow-drop-down.system.svg");
+            width: 11px;
+            height: 6px;
+            transition: transform 0.3s ease-out;
+            display: inline-block;
+            position: relative;
+            right: -.5em;
+          }
+        }
+      }
+    }
     
-    &__link {
-        display: flex;
-        transition: all .3s ease-out;
-
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    &__icon {
-        height: 42px;
-        width: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__text{
-        padding: 0.65em 0.3em 0.65em 0.94em;
-    }
-    &__text-wrapper {
-        display: inline; 
-    }
-    &__btn {
-        display: flex;
-        cursor: pointer;
-
-        .dke_item-drop-down {
-            &__text {
-                padding: 0;
-                white-space: normal;
-
-                &-wrapper{
-                    position: relative;
-                    text-align: left;
-                    padding: 0.65em 0.3em 0.65em 0.94em;
-                    white-space: nowrap;
+  }
+  &__sublist {
+    transition: all .3s ease-out;
+    padding-left: 45px;
+    font-size: 14px;
+    overflow-y: hidden;
+    max-height: 0;
+    margin-bottom: 0;
     
-                    &::after{
-                        content: '';
-                        background-image: url("/src/icons/arrow-drop-down.system.svg");
-                        width: 11px;
-                        height: 6px;
-                        transition: transform 0.3s ease-out;
-                        display: inline-block;
-                        position: relative;
-                        right: -.5em;
-                    }
-                }
-            }
-        }
-        &._active {
-            .dke_item-drop-down__text-wrapper {
-                &::after{
-                    transform: rotate(180deg);
-                }
-            }
-        }
-        
-    }
-    &__sublist {
-        transition: all .3s ease-out;
-        padding-left: 45px;
-        font-size: 14px;
-        overflow: hidden;
-        max-height: 0;
-        margin-bottom: 0;
-        
-        &._active{
-            margin-bottom: 10px;
-        }
-    }
-    &__sublist-item {
-        padding-top: .6em;
-    }
-    &__sublist-link {
-        transition: all .3s ease-out;
+  }
+  &__sublist-item {
+    padding-top: .6em;
+  }
+  &__sublist-link {
+    transition: all .3s ease-out;
 
-        &:hover{
-            color: colors.$blue1;
-            text-decoration: underline;
-        }
+    &:hover{
+      color: colors.$blue1;
+      text-decoration: underline;
     }
+  }
+
+  &._active{
+    .dke_item-drop-down__text-wrapper {
+      &::after{
+        transform: rotate(180deg);
+      }
+    }
+    .dke_item-drop-down__sublist{
+      margin-bottom: 10px;
+      max-height: 500px;
+    }
+  }
 }
