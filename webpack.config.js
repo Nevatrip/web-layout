@@ -68,7 +68,7 @@ const config = {
         use: {
           loader: 'handlebars-loader',
           options: {
-            inlineRequires: '/icons/',
+            inlineRequires: '/icons|images/',
           },
         },
       },
