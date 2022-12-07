@@ -2,15 +2,18 @@
 
 .dke_rent-form {
   padding: 50px 0 30px 0;
+
   .dke_container{
     display: block;
   }
+
   &__title {
     font-size: 22px;
     margin: 0 0 0.772em;
     color: #2b2b2b;
     font-weight: 600;
   }
+
   &__form {
     box-shadow: 0 1px 27px 0 rgb(0, 0, 0, 0.13);
     border-radius: 20px;
@@ -20,13 +23,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     box-shadow: 0 1px 27px 0 rgb(0, 0, 0, 0.13);
+
     @include media.md {
       padding: 30px;
     }
+
     @include media.xs {
       flex-direction: column;
     }
   }
+
   &__name {
     font-size: 12px;
     margin: 0 0 23px;
@@ -34,6 +40,7 @@
     font-weight: 400;
     width: 100%;
   }
+
   &__label {
     font-size: 18px;
     margin: 0 0 0.8em;
@@ -41,16 +48,20 @@
     font-weight: 600;
     width: 100%;
   }
+
   &__input,
   .dke_button {
     width: calc(50% - 15px);
+
     @include media.xs {
       width: 100%;
+
       &:not(:last-child){
         margin-bottom: 15px;
       }
     }
   }
+  
   &__input input {
     width: 100%;
     border: 1px solid #dedede;
