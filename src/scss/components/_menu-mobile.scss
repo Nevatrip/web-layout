@@ -122,6 +122,7 @@
     padding-top: 10.5px;
     padding-bottom: 10.5px;
     cursor: pointer;
+    align-items: stretch;
   }
 
   &__head-icon {
@@ -163,8 +164,8 @@
     width: 100%;
   }
 }
-.dke_bottom-menu-mobile {
 
+.dke_bottom-menu-mobile {
   &__list {
     font-size: 20px;
 

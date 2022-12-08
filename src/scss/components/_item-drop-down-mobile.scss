@@ -48,7 +48,6 @@
   }
   &__body {
     transition: all .3s ease-out;
-    padding: 0 15px;
     overflow-y: hidden;
     max-height: 0;
     border-top: 0 solid transparent;
@@ -88,17 +87,8 @@
       max-height: 1000px;
 
       animation-name: hidden-scroll;
-      animation-duration: .4s;
+      animation-duration: .6s;
       animation-fill-mode: forwards;  
-
-      @keyframes hidden-scroll {
-        from {
-          overflow-y: hidden;
-        }
-        to {
-          overflow-y: auto;
-        }
-      }    
     }
   }
 }
