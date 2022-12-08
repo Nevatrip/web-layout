@@ -19,9 +19,6 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 300ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 
     &_active {

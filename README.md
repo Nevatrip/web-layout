@@ -1,5 +1,32 @@
 # Нормы frontend-разработки Nevatrip
 
+## Стиль кода
+
+- Отступы — 2 пробела
+- HTML-атрибуты пишем в одну строку
+- В CSS-стилях отделяем все вложенности, модификаторы, элементы, псевдоэлементы, псведоклассы, миксины пустой строкой:
+
+```
+.dke_languages {
+  font-size: 14px;
+  position: relative;
+
+  &__current {
+    padding: 10px 10px;
+    position: relative;
+    display: flex;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #ffffff;
+    }
+  }
+}
+```
+
 ## Вёрстка
 
 - Использовать БЭМ при вёрстке и стилизации макетов
