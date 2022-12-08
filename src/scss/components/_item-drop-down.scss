@@ -3,6 +3,32 @@
 .dke_item-drop-down {
   transition: max-height 0.3s ease-out;
 
+  &._active{
+      .dke_item-drop-down__text-wrapper {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+      .dke_item-drop-down__sublist{
+        margin-bottom: 10px;
+        max-height: 500px;
+  
+        animation-name: hidden-scroll;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+  
+        @keyframes hidden-scroll {
+          from {
+            overflow-y: hidden;
+          }
+          to {
+            overflow-y: auto;
+          }
+        }    
+    }
+
+  }
+
   &__link {
     display: flex;
     transition: all 0.3s ease-out;
@@ -56,13 +82,6 @@
       }
     }
 
-    &._active {
-      .dke_item-drop-down__text-wrapper {
-        &::after {
-          transform: rotate(180deg);
-        }
-      }
-    }
   }
 
   &__sublist {
@@ -72,10 +91,6 @@
     overflow: hidden;
     max-height: 0;
     margin-bottom: 0;
-
-    &._active {
-      margin-bottom: 10px;
-    }
   }
 
   &__sublist-item {

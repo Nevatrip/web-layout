@@ -41,7 +41,18 @@
     padding: 40px 0 50px;
     border: 1px solid #C0C0C0;
     max-height: 80vh;
-    
+    animation-name: hidden-scroll;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+
+    @keyframes hidden-scroll {
+      from {
+        overflow-y: hidden;
+      }
+      to {
+        overflow-y: auto;
+      }
+    }  
     
     @include media.sm{
       padding: 0;
@@ -51,11 +62,13 @@
   }
   
   .dke_head-navbar{
+
     &::after {
       visibility: visible;
       opacity: 1;    
     }
   }
+
 }
 
 

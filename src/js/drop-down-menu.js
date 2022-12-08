@@ -1,7 +1,5 @@
 import { toggleAttr } from "./utils.js"
 
-const DELAY_ANIMATION = 3000;
-
 let isOpenMenu = false;
 
 export function dropDownMenu() {
@@ -46,7 +44,6 @@ window.addEventListener('resize', () => {
 
 // открытие/закртие меню
 function showMenu() {
-  const dropDownMenu = document.querySelector(".dke_drop-down-navbar");
   const navbar = document.querySelector(".dke_navbar");
   const mobileMenu = document.querySelector(".dke_menu-mobile");
 
@@ -55,13 +52,6 @@ function showMenu() {
   isOpenMenu = !isOpenMenu;
 
   toggleAttr(this, "aria-expanded");
-
-  if (dropDownMenu)
-    if (dropDownMenu.style.overflowY) dropDownMenu.style.overflowY = null;
-    else setTimeout(e => {
-      // примеение скролла для выпаадающего списка после его полного открытия
-      dropDownMenu.style.overflowY = "auto";
-    }, DELAY_ANIMATION);
 
   if (navbar && mobileMenu) {
     const bottomHeight = navbar.getBoundingClientRect()?.bottom;
@@ -76,18 +66,11 @@ function showMenu() {
 // открытие/закртие выпадающих списков
 function showSublist(element) {
   this.disabled = true;
-  element.classList.toggle("_active");
-
-  const dropDownSublist = this?.nextElementSibling;
-
-  if (element) toggleAttr(element, "aria-expanded");
+  
+  if (element) {
+    element.classList.toggle("_active");
+    toggleAttr(element, "aria-expanded");
+  }
     
-  if (dropDownSublist)
-  if (dropDownSublist.style.overflowY) dropDownSublist.style.overflowY = null;
-  else setTimeout(e => {
-      // примеение скролла для выпаадающего списка после его полного открытия
-      dropDownSublist.style.overflowY = "auto";
-    }, DELAY_ANIMATION);
-
   this.disabled = false;
 }
