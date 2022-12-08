@@ -1,5 +1,6 @@
 import '../../scss/pages/nevatrip-ru.scss';
-import { dropDownMenu } from './../../js/drop-down-menu/drop-down-menu.js';
+
+import { dropDownMenu } from './../../js/drop-down-menu.js';
 import Topbar from '../../js/topbar.js';
 import Navbar from '../../js/navbar.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';

@@ -2,13 +2,7 @@
 @use '../media';
 
 .dke_head-navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
     color: white;
-
 
     &::after {
         content: "";
@@ -24,13 +18,6 @@
         opacity: 0;
     }
 
-    &._active {
-
-        &::after {
-            visibility: visible;
-            opacity: 1;    
-        }
-    }
 
     &__wrapper{
         background: colors.$twilightGrey;

@@ -1,8 +1,8 @@
-import { toggleAttr } from "../utils.js"
+import { toggleAttr } from "./utils.js"
 
-const TIME = 3000;
+const DELAY_ANIMATION = 3000;
 
-let isOpen = false;
+let isOpenMenu = false;
 
 export function dropDownMenu() {
   const btnTopHeader = document.querySelector("#btn-drop-down-menu");
@@ -13,7 +13,7 @@ export function dropDownMenu() {
   // нажатие на кнопку блока topbar для открытия/закртия меню
   btnTopHeader?.addEventListener("click", showMenu);
 
-  // нажатие на кнопку блока тфмифк для открытия/закртия меню
+  // нажатие на кнопку блока navbar для открытия/закртия меню
   btnNavbar?.addEventListener("click", showMenu);
 
   // открытие/закрытие внутренних списков меню на desktop
@@ -32,7 +32,7 @@ export function dropDownMenu() {
 }
 
 window.addEventListener('resize', () => {    
-  if (isOpen) {
+  if (isOpenMenu) {
     const navbar = document.querySelector(".dke_navbar");
     const mobileMenu = document.querySelector(".dke_menu-mobile");
     
@@ -52,16 +52,16 @@ function showMenu() {
 
   this.disabled = true;
 
-  isOpen = !isOpen;
+  isOpenMenu = !isOpenMenu;
 
   toggleAttr(this, "aria-expanded");
 
-  if (dropDownMenu) {
+  if (dropDownMenu)
     if (dropDownMenu.style.overflowY) dropDownMenu.style.overflowY = null;
     else setTimeout(e => {
+      // примеение скролла для выпаадающего списка после его полного открытия
       dropDownMenu.style.overflowY = "auto";
-    }, TIME);
-  }  
+    }, DELAY_ANIMATION);
 
   if (navbar && mobileMenu) {
     const bottomHeight = navbar.getBoundingClientRect()?.bottom;
@@ -82,12 +82,12 @@ function showSublist(element) {
 
   if (element) toggleAttr(element, "aria-expanded");
     
-  if (dropDownSublist) {
-    if (dropDownSublist.style.overflowY) dropDownSublist.style.overflowY = null;
-    else setTimeout(e => {
+  if (dropDownSublist)
+  if (dropDownSublist.style.overflowY) dropDownSublist.style.overflowY = null;
+  else setTimeout(e => {
+      // примеение скролла для выпаадающего списка после его полного открытия
       dropDownSublist.style.overflowY = "auto";
-    }, TIME);
-  }
+    }, DELAY_ANIMATION);
 
   this.disabled = false;
 }
