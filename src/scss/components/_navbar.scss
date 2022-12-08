@@ -3,3 +3,11 @@
 
 @use './navbar-head';
 @use './navbar-drop-down';
+
+.dke_navbar{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+}

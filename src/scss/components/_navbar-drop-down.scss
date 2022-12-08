@@ -36,17 +36,30 @@
 
 // стили для открытых меню; класс для body
 ._active-menu{
-  .dke_drop-down-navbar{
-  padding: 40px 0 50px;
-  border: 1px solid #C0C0C0;
-  max-height: 80vh;
 
-  @include media.sm{
-    padding: 0;
-    border: 0 solid transparent;  
-    max-height: 0;
+  .dke_drop-down-navbar{
+    padding: 40px 0 50px;
+    border: 1px solid #C0C0C0;
+    max-height: 80vh;
+    animation-name: hidden-scroll;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+    @include media.sm{
+      padding: 0;
+      border: 0 solid transparent;  
+      max-height: 0;
+    }
   }
+  
+  .dke_head-navbar{
+
+    &::after {
+      visibility: visible;
+      opacity: 1;    
+    }
   }
+
 }
 
 

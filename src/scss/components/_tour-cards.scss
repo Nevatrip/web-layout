@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../media';
+@use '../variables';
 
 .dke_tour {
   display: flex;
@@ -14,11 +15,11 @@
     padding: 0;
     align-self: baseline;
 
-    &:nth-of-type(n + 3) {
+    &:nth-of-type(n + 3){
       margin-top: 50px;
     }
 
-    & + hr {
+    & + hr{
       display: none;
     }
   }
@@ -26,7 +27,7 @@
   @include media.sm {
     width: 100%;
 
-    &:nth-of-type(n + 2) {
+    &:nth-of-type(n + 2){
       margin-top: 40px;
     }
   }
@@ -130,7 +131,7 @@
       font-weight: inherit;
       margin: 0;
       border-bottom: 2px solid transparent;
-      transition: ease 0.3s;
+      transition: border-color variables.$transition;
     }
   }
 
@@ -154,6 +155,7 @@
       background-image: url("../../icons/time.system.svg");
       background-position: center;
       background-repeat: no-repeat;
+
       @include media.md {
         top: 2px;
       }
@@ -215,7 +217,7 @@
     text-align: center;
     margin-top: 3px;
     margin-right: 4px;
-    transition: ease 0.3s;
+    transition: all variables.$transition;
 
     &:hover {
       color: #fff;
@@ -235,7 +237,7 @@
 
       & > * {
         border-bottom: 1px solid transparent;
-        transition: ease 0.3s;
+        transition: border-color variables.$transition;
       }
 
       &:hover {
@@ -268,9 +270,10 @@
   }
 }
 
-.dke_tours .dke_container {
-  display: block;
 
+.dke_tours .dke_container{
+  display: block;
+  
   @include media.md {
     display: flex;
     flex-wrap: wrap;

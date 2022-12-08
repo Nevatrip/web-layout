@@ -1,14 +1,17 @@
 @use '../colors';
 @use '../media';
+
 .dke_banner {
   position: relative;
   min-height: 370px;
   z-index: 1;
   display: flex;
   padding: 30px 0 55px 0;
+  
   @include media.sm {
     min-height: 255px;
   }
+
   &__background {
     position: absolute;
     left: 0;
@@ -16,6 +19,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+
     &_darken::before {
       content: "";
       position: absolute;
@@ -25,12 +29,14 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.2);
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   &__box {
     max-width: 77%;
     width: 100%;
@@ -39,12 +45,15 @@
     border-radius: 15px;
     margin-left: auto;
     color: colors.$body;
+
     @include media.sm {
       max-width: 100%;
     }
+
     & > a {
       display: inline-block;
       margin-bottom: 1.5625em;
+
       h2,
       span,
       p {
@@ -53,6 +62,7 @@
         border-bottom: 2px solid transparent;
         transition: ease 0.3s;
       }
+
       &:hover {
         h2,
         span,
@@ -61,24 +71,30 @@
         }
       }
     }
+
     p {
       margin-top: 0;
       margin-bottom: 0.6em;
     }
+
     &_dark {
       background: rgba(40, 40, 40, 0.63);
       color: #ffffff;
       padding: 44px 67px;
+
       @include media.xs {
         padding: 44px 55px;
       }
+
       @media screen and (max-width: 440px){
         padding: 21px;
       }
+
       .dke_banner__title,
       .dke_price {
         color: #ffffff;
       }
+
       & > a {
         &:hover {
           h2,
@@ -90,6 +106,7 @@
       }
     }
   }
+
   &__title {
     margin-top: 0;
     margin-bottom: 0.714em;
@@ -97,19 +114,24 @@
     font-weight: 400;
     line-height: 1.1;
     color: colors.$body;
+
     @include media.xs {
       font-size: 26px;
     }
   }
+
   .dke_list {
     margin-bottom: 13px;
   }
+
   .dke_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     & > a {
       display: inline-block;
+
       .dke_banner__title {
         color: #ffffff;
         margin: 0;
@@ -118,49 +140,59 @@
         border-bottom: 2px solid transparent;
         transition: ease 0.3s;
       }
+
       &:hover {
         .dke_banner__title {
           border-bottom: 2px solid #ffffff;
         }
       }
     }
+
     & > .dke_banner__title {
       color: #ffffff;
       margin: 0;
       font-weight: 600;
     }
   }
+
   &_small {
     min-height: 255px;
     padding: 0;
     margin-bottom: 30px;
   }
 }
+
 .dke_price-box {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .dke_price {
   font-size: 36px;
   color: colors.$body;
   margin-right: 12px;
+
   @include media.md {
     font-size: 30px;
   } 
+
   & > svg, & > img {
     max-width: 19px;
     height: auto;
     display: inline;
+    
     @include media.md {
       max-width: 16px;
     }
   }
+
   small {
     font-size: 11px;
     font-weight: 400;
     line-height: 1;
     display: block;
+
     & > svg, & > img {
       max-width: 5.5px;
       height: auto;
