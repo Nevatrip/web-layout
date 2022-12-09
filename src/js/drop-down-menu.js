@@ -30,34 +30,17 @@ export function dropDownMenu() {
 }
 
 window.addEventListener('resize', () => {    
-  if (isOpenMenu) {
-    const navbar = document.querySelector(".dke_navbar");
-    const mobileMenu = document.querySelector(".dke_menu-mobile");
-    
-    if (navbar && mobileMenu) {
-      // меняем положение мобильного меню взависимсоти от высоты navbar
-      const bottomHeight = navbar.getBoundingClientRect()?.bottom;
-      mobileMenu.style.top = bottomHeight + "px";
-    }
-  }
+  if (isOpenMenu) setTopMobileMenu();
 });
 
 // открытие/закртие меню
 function showMenu() {
-  const navbar = document.querySelector(".dke_navbar");
-  const mobileMenu = document.querySelector(".dke_menu-mobile");
-
   this.disabled = true;
 
   isOpenMenu = !isOpenMenu;
 
   toggleAttr(this, "aria-expanded");
-
-  if (navbar && mobileMenu) {
-    const bottomHeight = navbar.getBoundingClientRect()?.bottom;
-    mobileMenu.style.top = bottomHeight + "px";
-  }
-
+  setTopMobileMenu();
   document.body.classList.toggle("_active-menu");
   
   this.disabled = false;
@@ -73,4 +56,15 @@ function showSublist(element) {
   }
     
   this.disabled = false;
+}
+
+// меняем положение мобильного меню (по вертикали) в зависимости от высоты navbar
+function setTopMobileMenu() {
+  const navbar = document.querySelector(".dke_navbar");
+  const mobileMenu = document.querySelector(".dke_menu-mobile");
+
+  if (navbar && mobileMenu) {
+    const bottomHeight = navbar.getBoundingClientRect()?.bottom;
+    mobileMenu.style.top = bottomHeight + "px";
+  }
 }
