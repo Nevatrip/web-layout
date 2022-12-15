@@ -43,13 +43,13 @@
     &__nav{
       .dke_container{
         @media screen and (max-width: 400px) {
-          padding-left: 5px;
-          padding-right: 5px;
+          padding-left: 6px;
+          padding-right: 6px;
         }    
 
         @media screen and (max-width: 360px) {
-          padding-left: 2px;
-          padding-right: 2px;
+          padding-left: 6px;
+          padding-right: 6px;
         }    
         
       }
@@ -63,6 +63,52 @@
       padding: 25px 0;
       list-style-type: none;
       margin: 0;
+      width: 100%;
+
+      &-item{
+        flex: 0 1 calc(50% - 4px);
+        width: calc(50% - 4px);
+    
+        @media screen and (max-width: 400px) {
+          flex: 0 1 calc(50% - 2px);
+          width: calc(50% - 2px);
+        }
+      }
+
+      &-link{
+        position: relative;
+        padding: 56px 15px 11px;
+        border: 1px solid #BFBFBF;
+        border-radius: 9px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &-icon{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+          display: block;
+        }    
+      }
+      &-text{
+        @media screen and (max-width: 400px) {
+          word-break: break-all;
+        }      
+      }
     }
 
     svg {
@@ -70,49 +116,49 @@
     }
   }
 }
-.dke_drop-down-menu {
-  &__top-icon {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .dke_drop-down-menu {
+//   &__top-icon {
+//     position: absolute;
+//     top: 10px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 40px;
+//     height: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    svg{
-      display: block;
-    }
-  }
+//     svg{
+//       display: block;
+//     }
+//   }
 
-  &__top-list-item {
-    flex: 0 1 calc(50% - 4px);
-    width: calc(50% - 4px);
+//   &__top-list-item {
+//     flex: 0 1 calc(50% - 4px);
+//     width: calc(50% - 4px);
 
-    @media screen and (max-width: 400px) {
-      flex: 0 1 calc(50% - 2px);
-      width: calc(50% - 2px);
-    }
-  }
+//     @media screen and (max-width: 400px) {
+//       flex: 0 1 calc(50% - 2px);
+//       width: calc(50% - 2px);
+//     }
+//   }
 
-  &__top-list-link {
-    position: relative;
-    padding: 56px 15px 11px;
+//   &__top-list-link {
+//     position: relative;
+//     padding: 56px 15px 11px;
 
-    border: 1px solid #BFBFBF;
-    border-radius: 9px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: all .3s ease-out;
+//     border: 1px solid #BFBFBF;
+//     border-radius: 9px;
+//     width: 100%;
+//     height: 100%;
+//     text-align: center;
+//     transition: all .3s ease-out;
 
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-  }
-}
+//     display: inline-block;
+//     text-decoration: none;
+//     color: inherit;
+//   }
+// }
 
 .dke_subitem-drop-down {
   &__head {
@@ -127,15 +173,20 @@
     background: none;
     padding-top: 10.5px;
     padding-bottom: 10.5px;
-  }
 
-  &__head-icon {
-    margin-right: 17px;
-    width: 30px;
-    flex: 0 1 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &-icon {
+      margin-right: 17px;
+      width: 30px;
+      flex: 0 1 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-title{
+      flex: 0 1 calc(100% - 30px);
+      text-align: left;
+    }
   }
 
   &__body {
