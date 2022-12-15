@@ -2,6 +2,24 @@
 @use '../media';
 
 .dke_item-drop-down-mobile {
+  &._hr{
+    padding-top: 20px;
+    margin-top: 20px;
+    position: relative;
+
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: calc(100% - 60px);
+      background-color: colors.$gray2;
+    }
+  }
+
   &__head {
     display: flex;
     align-items: center;
@@ -10,20 +28,25 @@
     cursor: pointer;
     color: #fff;
     text-align: left;
-
+    outline: none;
+    border: none;
+    background: none;
     
     @include media.sm {
       max-width: 100%;
       width: 100%;
     }
-
   }
+
   &__head-link {
     padding-top: 11px;
     padding-bottom: 11px;
     display: flex;
     align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
   }
+
   &__head-icon {
     margin-right: 17px;
     width: 33px;
@@ -41,23 +64,32 @@
       transition: transform .3s ease-out;
     }
   }
+
   &__head-text {
     @media screen and (max-width: 400px) {
       word-break: break-all;
     }  
   }
+
   &__body {
     transition: all .3s ease-out;
     overflow-y: hidden;
     max-height: 0;
     border-top: 0 solid transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
+
   &__link {
     display: flex;
     align-items: flex-start;
     padding: 0 15px;
     min-width: auto;
+    text-decoration: none;
+    color: inherit;
   }
+
   &__icon {
     height: 48px;
     margin-right: 17px;
@@ -67,6 +99,7 @@
     justify-content: center;
     align-items: center;
   }
+
   &__text {
     padding: 11px 0;
 

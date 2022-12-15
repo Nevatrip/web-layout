@@ -1,6 +1,5 @@
 @use '../colors';
 @use '../media';
-@use './item-drop-down';
 
 .dke_drop-down-navbar {
   width: 100%;
@@ -15,7 +14,6 @@
   padding: 0;
   transition: all .3s ease-out;
   border: 0 solid transparent;
-
   position: absolute;
   z-index: 4;
 
@@ -28,15 +26,17 @@
     display: flex;
     gap: 1%;
   }
+
   &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     flex: 0 1 32%
   }
-  
 }
 
 // стили для открытых меню; класс для body
 ._active-menu{
-
   .dke_drop-down-navbar{
     padding: 40px 0 50px;
     border: 1px solid #C0C0C0;
@@ -53,13 +53,9 @@
   }
   
   .dke_head-navbar{
-
     &::after {
       visibility: visible;
       opacity: 1;    
     }
   }
-
 }
-
-
