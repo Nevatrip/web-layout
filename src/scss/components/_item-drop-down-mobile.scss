@@ -65,12 +65,6 @@
     }
   }
 
-  &__head-text {
-    @media screen and (max-width: 400px) {
-      word-break: break-all;
-    }  
-  }
-
   &__body {
     transition: all .3s ease-out;
     overflow-y: hidden;
@@ -102,10 +96,6 @@
 
   &__text {
     padding: 11px 0;
-
-    @media screen and (max-width: 380px) {
-      word-break: break-all;
-    }  
   }
 
   &._active {
