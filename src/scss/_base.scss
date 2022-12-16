@@ -89,14 +89,6 @@ img {
   }
 }
 
-@keyframes hidden-scroll {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: auto;
-  }
-}
 
 .preload * {
   transition: none !important;
@@ -133,5 +125,14 @@ hr {
   border-top: 1px solid #edeceb;
   &.short {
     width: 50%;
+  }
+}
+
+@keyframes hidden-scroll {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: auto;
   }
 }

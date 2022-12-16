@@ -15,7 +15,7 @@
     &._cool-dark {
       background-color: colors.$dark2;
 
-      .dke_drop-down-menu__top-list-link{
+      .dke_menu-mobile__top-list-link{
         &:hover, &:focus {
           background-color: colors.$dark4;
         }    
@@ -29,7 +29,7 @@
     &._warm-dark {
       background-color: colors.$dark5;
 
-      .dke_drop-down-menu__top-list-link{
+      .dke_menu-mobile__top-list-link{
         &:hover, &:focus {
           background-color: colors.$dark6;
         }    
@@ -103,11 +103,6 @@
         svg{
           display: block;
         }    
-      }
-      &-text{
-        @media screen and (max-width: 400px) {
-          word-break: break-all;
-        }      
       }
     }
 
