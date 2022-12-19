@@ -11,6 +11,7 @@
   padding: 13px 24px;
   border-radius: 30px;
   cursor: pointer;
+  text-align: center;
   transition: background-color variables.$transition;
 
   @include media.sm {
@@ -20,7 +21,7 @@
   @include media.xs {
     padding: 13px 22px;
   }
-  
+
   &:hover {
     background-color: colors.$buttonMainHover;
   }
