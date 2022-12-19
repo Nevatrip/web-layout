@@ -30,47 +30,41 @@ export function dropDownMenu() {
 }
 
 window.addEventListener('resize', () => {    
-  if (isOpenMenu) {
-    const navbar = document.querySelector(".dke_navbar");
-    const mobileMenu = document.querySelector(".dke_menu-mobile");
-    
-    if (navbar && mobileMenu) {
-      // меняем положение мобильного меню взависимсоти от высоты navbar
-      const bottomHeight = navbar.getBoundingClientRect()?.bottom;
-      mobileMenu.style.top = bottomHeight + "px";
-    }
-  }
+  if (isOpenMenu) setTopMobileMenu();
 });
 
 // открытие/закртие меню
 function showMenu() {
-  const navbar = document.querySelector(".dke_navbar");
-  const mobileMenu = document.querySelector(".dke_menu-mobile");
-
-  this.disabled = true;
+  this.classList.add("_disabled");
 
   isOpenMenu = !isOpenMenu;
 
   toggleAttr(this, "aria-expanded");
-
-  if (navbar && mobileMenu) {
-    const bottomHeight = navbar.getBoundingClientRect()?.bottom;
-    mobileMenu.style.top = bottomHeight + "px";
-  }
-
+  setTopMobileMenu();
   document.body.classList.toggle("_active-menu");
   
-  this.disabled = false;
+  this.classList.remove("_disabled");
 }
 
 // открытие/закртие выпадающих списков
 function showSublist(element) {
-  this.disabled = true;
+  this.classList.add("_disabled");
   
   if (element) {
     element.classList.toggle("_active");
     toggleAttr(element, "aria-expanded");
   }
     
-  this.disabled = false;
+  this.classList.remove("_disabled");
+}
+
+// меняем положение мобильного меню (по вертикали) в зависимости от высоты navbar
+function setTopMobileMenu() {
+  const navbar = document.querySelector(".dke_navbar");
+  const mobileMenu = document.querySelector(".dke_menu-mobile");
+
+  if (navbar && mobileMenu) {
+    const bottomHeight = navbar.getBoundingClientRect()?.bottom;
+    mobileMenu.style.top = bottomHeight + "px";
+  }
 }

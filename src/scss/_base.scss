@@ -89,14 +89,6 @@ img {
   }
 }
 
-@keyframes hidden-scroll {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: auto;
-  }
-}
 
 .preload * {
   transition: none !important;
