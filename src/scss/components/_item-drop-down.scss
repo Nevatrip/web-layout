@@ -38,6 +38,10 @@
     background: none;
     padding: 0;
 
+    &._disabled{
+      pointer-events: none;
+    }
+
     .dke_item-drop-down {
       &__text {
         padding: 0;
@@ -62,17 +66,21 @@
         }
       }
     }
-
   }
 
   &__sublist {
-    transition: all 0.3s ease-out;
-    padding: 0 0 0 45px;
     font-size: 14px;
-    overflow: hidden;
-    max-height: 0;
     list-style-type: none;
     margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    
+    &-wrapper{
+      transition: all 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 0 0 45px;
+    }
   }
 
   &__sublist-item {
@@ -98,13 +106,9 @@
       }
     }
     
-    .dke_item-drop-down__sublist{
+    .dke_item-drop-down__sublist-wrapper{
       margin-bottom: 10px;
-      max-height: 500px;
-
-      animation-name: hidden-scroll;
-      animation-duration: .6s;
-      animation-fill-mode: forwards;
+      max-height: 400px;
     }
   }
 }

@@ -179,6 +179,7 @@
     color: inherit;
   }
 }
+
 .dke_bottom-menu-mobile {
   &__list {
     list-style-type: none;
@@ -187,8 +188,8 @@
     font-size: 20px;
   }
 }
-._active-menu{
 
+._active-menu{
   @include media.sm{
     overflow-y: hidden;
   }

@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
 
 // открытие/закртие меню
 function showMenu() {
-  this.disabled = true;
+  this.classList.add("_disabled");
 
   isOpenMenu = !isOpenMenu;
 
@@ -43,19 +43,19 @@ function showMenu() {
   setTopMobileMenu();
   document.body.classList.toggle("_active-menu");
   
-  this.disabled = false;
+  this.classList.remove("_disabled");
 }
 
 // открытие/закртие выпадающих списков
 function showSublist(element) {
-  this.disabled = true;
+  this.classList.add("_disabled");
   
   if (element) {
     element.classList.toggle("_active");
     toggleAttr(element, "aria-expanded");
   }
     
-  this.disabled = false;
+  this.classList.remove("_disabled");
 }
 
 // меняем положение мобильного меню (по вертикали) в зависимости от высоты navbar

@@ -18,6 +18,10 @@
     display: block;
     margin-right: 10px;
 
+    &._disabled{
+      pointer-events: none;
+    }
+
     @include media.sm {
       display: none;
     }

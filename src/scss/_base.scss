@@ -127,12 +127,3 @@ hr {
     width: 50%;
   }
 }
-
-@keyframes hidden-scroll {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: auto;
-  }
-}
