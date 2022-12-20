@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
+import svgToTinyDataUri from 'mini-svg-data-uri';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -59,9 +60,7 @@ const config = {
     hot: true,
     watchFiles: ['**/*.html', '**/*.hbs'],
   },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  optimization: {},
   module: {
     rules: [
       {
@@ -125,13 +124,17 @@ const config = {
       },
       {
         test: /\.svg$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/icons/[name][ext]',
-        },
+        type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
             return filename.includes('system');
+          },
+        },
+        generator: {
+          filename: 'assets/icons/[name][ext]',
+          dataUrl: content => {
+            content = content.toString();
+            return svgToTinyDataUri(content);
           },
         },
       },
@@ -166,6 +169,7 @@ export default (env, argv) => {
   if (argv.mode === 'development') {
     config.output.filename = '[name].js';
     config.devtool = 'source-map';
+    config.optimization.runtimeChunk = 'single';
   }
 
   if (argv.mode === 'production') {

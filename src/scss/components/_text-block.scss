@@ -2,79 +2,77 @@
 
 .dke_html {
   padding: 30px 0 40px 0;
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0.625em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin-top: 0;
-    margin-bottom: 0.556em;
-    font-weight: 600;
-  }
-
-  h1 {
-    font-size: 45px;
-  }
-
-  h2 {
-    font-size: 40px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  h4 {
-    font-size: 23px;
-  }
-
-  h5 {
-    font-size: 18px;
-  }
-
-  strong,
-  b {
-    font-weight: 600;
-  }
-
-  ul {
-    font-size: 14px;
-
-    li {
-      margin-bottom: 0.714em;
-    }
-  }
-
-  a {
-    color: #49aada;
-    border-bottom: 1px solid transparent;
-    transition: border-color variables.$transition;
-
-    &:hover {
-      border-bottom: 1px solid #49aada;
-    }
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  table th {
-    font-weight: 600;
-  }
-
-  table td,
-  table th {
-    border: 1px solid #000;
-  }
-  
   .dke_container {
     display: block;
   }
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0.625em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 0.556em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 23px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+ul:not([class]) {
+  font-size: 14px;
+
+  li:not([class]) {
+    margin-bottom: 0.714em;
+  }
+}
+
+p:not([class]) a, ul:not([class]) li:not([class]) a, ol:not([class]) li:not([class]) a {
+  color: #49aada;
+  border-bottom: 1px solid transparent;
+  transition: border-color variables.$transition;
+
+  &:hover {
+    border-bottom: 1px solid #49aada;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  border: 1px solid #000;
 }

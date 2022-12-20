@@ -8,10 +8,10 @@ export default class Topbar {
     this.languagesList = element.querySelector('[data-role="languagesList"]');
     this.burgerIcon = element.querySelector('[data-role="burgerIcon"]');
 
-    this.languagesCurrent.addEventListener('click', () => {
+    this.languagesCurrent?.addEventListener('click', () => {
       this.toggleLanguagesList();
     });
-    this.burgerIcon.addEventListener('click', () => {
+    this.burgerIcon?.addEventListener('click', () => {
       this.toggleBurgerIcon();
     });
   }

@@ -5,7 +5,7 @@ import Topbar from '../../js/topbar.js';
 import Navbar from '../../js/navbar.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 
-// new Topbar(document.querySelector('.dke_topbar'));
+new Topbar(document.querySelector('.dke_topbar'));
 // new Navbar(document.querySelector('.dke_navbar'));
 
 function ready() {

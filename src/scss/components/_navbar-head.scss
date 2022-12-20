@@ -55,17 +55,21 @@
 		width: 100%;
 
 		@include media.sm {
-				display: none;
+			display: none;
 		}
 	}
 
 	&__burger {
-	display: none;
+		display: none;
 
-	@include media.sm {
-			display: block;
-			margin-left: -15px;
-	}
+		&._disabled{
+      pointer-events: none;
+    }
+
+		@include media.sm {
+				display: block;
+				margin-left: -15px;
+		}
 	}
 
 	&__contacts {
