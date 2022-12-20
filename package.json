@@ -33,6 +33,7 @@
     "webpack-remove-empty-scripts": "^1.0.1"
   },
   "dependencies": {
+    "blueimp-gallery": "^3.4.0",
     "normalize.css": "^8.0.1"
   }
 }
