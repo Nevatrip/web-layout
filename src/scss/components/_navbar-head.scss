@@ -67,25 +67,26 @@
   }
 
   &__contacts {
-  margin: 0;
-  display: none;
+    margin: 0;
+    padding: 0;
+    display: none;
 
-  @include media.sm {
+    @include media.sm {
       display: flex;
-  }
+    }
   }
 
   &__contact {
-  padding: 0;
-  background: none;
-  border: none;
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
+    padding: 0;
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
 
-  &:last-child {
+    &:last-child {
       margin-right: 0;
-  }
+    }
   }
 
   &__contact-icon {
