@@ -41,7 +41,13 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: colors.$main;
+  border-bottom: 1px solid transparent;
+  transition: border-color variables.$transition;
+
+  &:hover {
+    border-bottom: 1px solid colors.$main;
+  }
 }
 
 button {
