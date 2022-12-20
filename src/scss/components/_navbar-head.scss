@@ -23,7 +23,6 @@
 		position: relative;
 		z-index: 4;
 	}
-
 }
 .dke_navbar {
 	
@@ -55,7 +54,7 @@
 		width: 100%;
 
 		@include media.sm {
-			display: none;
+      display: none;
 		}
 	}
 
@@ -67,8 +66,8 @@
     }
 
 		@include media.sm {
-				display: block;
-				margin-left: -15px;
+      display: block;
+      margin-left: -15px;
 		}
 	}
 
@@ -95,8 +94,7 @@
 	}
 
 	&__contact-icon {
-	width: 32px;
-	height: 32px;
+    width: 32px;
+    height: 32px;
 	}
-	
 }
