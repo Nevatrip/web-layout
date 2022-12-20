@@ -87,6 +87,10 @@ img {
     width: media.$smContainerWidth;
     min-width: 320px;
   }
+
+  &_content {
+    max-width: media.$lgContainerWidth;
+  }
 }
 
 .dke_row {
