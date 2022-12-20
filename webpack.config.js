@@ -26,6 +26,10 @@ const PAGES = [
     filename: 'nevatrip-ru',
   },
   {
+    dir: 'excursion',
+    filename: 'excursion',
+  },
+  {
     dir: 'prahatrip-cz',
     filename: 'prahatrip-cz',
   },
