@@ -1,10 +1,11 @@
 import { toggleAttr } from "./utils.js"
 
+const btnTopHeader = document.querySelector("#btn-drop-down-menu");
+const btnNavbar = document.querySelector("#btn-header-burger");
+
 let isOpenMenu = false;
 
 export function dropDownMenu() {
-  const btnTopHeader = document.querySelector("#btn-drop-down-menu");
-  const btnNavbar = document.querySelector("#btn-header-burger");
   const itemsDropDownMenu = document.querySelectorAll(".dke_item-drop-down");
   const itemsDropDownMenuMobile = document.querySelectorAll(".dke_item-drop-down-mobile");
   
@@ -30,20 +31,32 @@ export function dropDownMenu() {
 }
 
 window.addEventListener('resize', () => {    
-  if (isOpenMenu) setTopMobileMenu();
+  if (isOpenMenu) { 
+    setTopMobileMenu();
+
+    // если бургер-кнопок нет или они скрыты, закрывать меню
+    if (!btnTopHeader && (!btnNavbar || getComputedStyle(btnNavbar, null).display === "none")) 
+      showMenu();
+  }
 });
 
 // открытие/закртие меню
 function showMenu() {
-  this.classList.add("_disabled");
+  if (this) this.disabled = true;
 
   isOpenMenu = !isOpenMenu;
 
-  toggleAttr(this, "aria-expanded");
   setTopMobileMenu();
   document.body.classList.toggle("_active-menu");
   
-  this.classList.remove("_disabled");
+  [btnTopHeader, btnNavbar].forEach(function(element) {
+    if (element) {
+      toggleAttr(element, "aria-expanded");
+      element.classList.toggle('dke_burger__icon_active');
+    }
+  });
+
+  if (this) this.disabled = false;
 }
 
 // открытие/закртие выпадающих списков
