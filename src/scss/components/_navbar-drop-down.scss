@@ -25,6 +25,12 @@
     padding: 40px 0 50px;
     max-height: 80vh;
     overflow-y: auto;
+
+    @include media.md{
+      .dke_container {
+        width: 731px;
+      }
+    }
   }
 
   &__nav {

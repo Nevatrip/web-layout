@@ -35,6 +35,12 @@
     &._disabled{
       pointer-events: none;
     }
+
+    &-text{
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+    }
     
     @include media.sm {
       max-width: 100%;
@@ -57,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding-top: 3px;
 
     &_arrow{
       width: 18px;
