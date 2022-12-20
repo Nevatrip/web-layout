@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 
 // открытие/закртие меню
 function showMenu() {
-  this?.classList.add("_disabled");
+  if (this) this.disabled = true;
 
   isOpenMenu = !isOpenMenu;
 
@@ -56,7 +56,7 @@ function showMenu() {
     }
   });
 
-  this?.classList.remove("_disabled");
+  if (this) this.disabled = false;
 }
 
 // открытие/закртие выпадающих списков

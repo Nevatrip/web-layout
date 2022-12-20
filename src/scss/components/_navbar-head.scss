@@ -25,7 +25,6 @@
   }
 }
 .dke_navbar {
-  
   &._cool-dark {
     background-color: colors.$dark2;
   }
@@ -60,10 +59,6 @@
 
   &__burger {
     display: none;
-
-    &._disabled{
-      pointer-events: none;
-    }
 
     @include media.sm {
       display: block;
