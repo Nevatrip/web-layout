@@ -158,7 +158,7 @@
 
 или в стилях:
 
-`background-image: url('/src/icons/arrow-drop-down.system.svg');`
+`background-image: url('src/icons/arrow-drop-down.system.svg');`
 
 К чанкам нужно обращаться просто прописывая путь от его папки или по названию (если он не вложен в папку):
 

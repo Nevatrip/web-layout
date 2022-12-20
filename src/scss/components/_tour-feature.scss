@@ -1,0 +1,13 @@
+.dke_tour-feature {
+  display: flex;
+  align-items: center;
+
+  &__icon-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    margin-right: 14px;
+  }
+}

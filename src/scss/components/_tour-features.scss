@@ -1,0 +1,9 @@
+.dke_tour-features {
+  &__item {
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
