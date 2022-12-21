@@ -1,0 +1,62 @@
+@use '../colors';
+@use '../media';
+
+.dke_price-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &_justified {
+    justify-content: space-between;
+  }
+
+  &_small {
+    .dke_price-box__price {
+      font-size: 29px;
+      flex-shrink: 0;
+
+      & > img {
+        max-width: 15px;
+      }
+    }
+
+    & > .dke_button {
+      width: 100%;
+    }
+  }
+
+  &__price {
+    font-size: 36px;
+    color: colors.$body;
+    margin-right: 12px;
+
+    @include media.md {
+      font-size: 30px;
+    }
+
+    & > svg,
+    & > img {
+      max-width: 19px;
+      height: auto;
+      display: inline;
+
+      @include media.md {
+        max-width: 16px;
+      }
+    }
+  }
+
+  &__sub-price {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+
+    & > svg,
+    & > img {
+      max-width: 5.5px;
+      height: auto;
+      display: inline;
+    }
+  }
+}

@@ -42,12 +42,6 @@ a {
   display: inline-block;
   text-decoration: none;
   color: colors.$main;
-  border-bottom: 1px solid transparent;
-  transition: border-color variables.$transition;
-
-  &:hover {
-    border-bottom: 1px solid colors.$main;
-  }
 }
 
 button {
@@ -95,6 +89,7 @@ img {
   }
 
   &_content {
+    flex-direction: column;
     max-width: media.$lgContainerWidth;
   }
 }
@@ -160,8 +155,7 @@ td {
 }
 
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin: 21px 0;
   border: 0;
   border-top: 1px solid #edeceb;
   &.short {

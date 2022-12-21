@@ -1,3 +1,6 @@
+@use '../colors';
+@use '../variables';
+
 .dke_tour-feature {
   display: flex;
 
@@ -22,5 +25,27 @@
     &_order {
       font-size: 15px;
     }
+
+    a {
+      border-bottom: 1px solid transparent;
+      transition: border-color variables.$transition;
+
+      &:hover {
+        border-bottom: 1px solid colors.$main;
+      }
+    }
+  }
+
+  &__onboard-icon {
+    font-family: 'icomoon';
+    font-size: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background: colors.$buttonMain;
+    padding: 5px;
   }
 }

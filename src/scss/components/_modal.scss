@@ -1,0 +1,28 @@
+.dke_modal {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+  &__window {
+    background: #ffffff;
+    position: absolute;
+    top: 40px;
+    width: 316px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+  }
+
+  &__form {
+    padding: 30px 26px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
