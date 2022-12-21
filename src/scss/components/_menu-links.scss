@@ -1,0 +1,63 @@
+@use "../media";
+@use "../variables";
+@use "../colors";
+
+.dke_menu-links {
+  margin-bottom: 50px;
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 17px;
+
+    @include media.lg{
+      font-size: 15px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 1 auto;
+    column-gap: 20px;
+
+    box-shadow: 2px 2px 5px colors.$shadowDark;
+    border-radius: 12px;
+    line-height: 1.1;
+    color: colors.$dark5;
+    font-size: 16px;
+    padding: 12px 25px;
+
+    @include media.lg{
+      font-size: 14px;
+    }
+
+    @include media.md{
+      padding: 15px 25px;
+    }
+    
+    &-icon {
+      min-width: 30px;
+      max-width: 40px;
+    }
+    
+    span{
+      display: inline-block;
+      max-width: min-content;
+    }
+
+    &:hover, &:focus {
+      span {
+        color: colors.$blue1;
+        text-decoration: underline;
+      }
+    }
+  }
+}

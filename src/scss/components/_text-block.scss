@@ -1,4 +1,6 @@
 @use '../variables';
+@use '../media';
+@use '../colors';
 
 p {
   margin-top: 0;
@@ -9,7 +11,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.556em;
   font-weight: 600;
@@ -35,6 +38,10 @@ h5 {
   font-size: 18px;
 }
 
+h6 {
+  font-size: 15px;
+}
+
 strong,
 b {
   font-weight: 600;
@@ -50,12 +57,12 @@ ul:not([class]) {
 }
 
 p:not([class]) a, ul:not([class]) li:not([class]) a, ol:not([class]) li:not([class]) a {
-  color: #49aada;
+  color: colors.$blue1;
   border-bottom: 1px solid transparent;
   transition: border-color variables.$transition;
 
   &:hover {
-    border-bottom: 1px solid #49aada;
+    border-bottom: 1px solid colors.$blue1;
   }
 }
 
@@ -72,47 +79,73 @@ table th {
   border: 1px solid #000;
 }
 
-.dke {
-  &_html {
-    padding: 30px 0 40px 0;
+.dke_html {
+  padding: 30px 0 40px 0;
+
+  .dke_container {
+    display: block;
+  }
+
+  &-excursion{    
+    &, ul{
+      font-size: 17px;
+
+      @include media.lg{
+        font-size: 15px;
+      }  
+    }
+    
+    &__btn{
+      text-align: left;
+      margin-top: 15px;
+      margin-bottom: 10.5px;
+
+      div{
+        color: colors.$blue1;
+        text-align: right;
+        font-weight: 600;
   
-    .dke_container {
-      display: block;
+        &::after{
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 6px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("/src/icons/arrow-blue.system.svg");
+          transition: all variables.$transition;
+        }
+      }
+
+      &._active{
+        div::after{
+          transform: rotate(180deg);
+        }
+      }
     }
 
-    &-excursion{
-      font-size: 17px;
-    
-      ul {
-        font-size: 17px;
-      } 
-      
-      &__subtitle{
-        margin-top: 25px;
-      }
-      &__list{
-        list-style: none;
-        columns: 2;
-        line-height: 1.4;
-        padding: 0;
+    &__list{
+      list-style: none;
+      columns: 2;
+      line-height: 1.4;
+      padding: 0;
 
-        li{
-          padding-left: 23px;
-          margin-bottom: 0.5em;
-          position: relative;
+      li{
+        padding-left: 1.4em;
+        margin-bottom: 0.5em;
+        position: relative;
 
-          &::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            background-image: url("/src/icons/list-arrow.system.svg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-          }
+        &::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 15px;
+          height: 15px;
+          background-image: url("/src/icons/list-arrow.system.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
         }
       }
     }
