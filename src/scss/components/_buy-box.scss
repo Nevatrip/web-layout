@@ -1,0 +1,32 @@
+@use '../media';
+
+.dke_buy-box{
+  margin-bottom: 20px;
+
+  @include media.xs {
+    display: none;
+  }
+
+  .dke_price-box{
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  @include media.md {
+
+    .dke_price{
+      font-size: 26px;
+      margin-right: 5px;
+    }
+
+    .dke_price > svg, .dke_price > img{
+      max-height: 20px;
+    }
+
+    .dke_button{
+      padding: 13px 10px;
+      flex-shrink: 0;
+    }
+  }
+}
