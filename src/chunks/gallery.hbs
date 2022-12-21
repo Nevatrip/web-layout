@@ -1,75 +1,78 @@
-<h4>Галерея</h4>
-<div class="dke_gallery" id="links">
-  <div class="dke_gallery__item">
-    <a href="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg">
-      <img src="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg" alt="">
+<div class="dke_gallery-container">
+  <h4>Галерея</h4>
+  {{!-- Галерея на десктопе --}}
+  <div class="dke_gallery" id="links">
+    <div class="dke_gallery__item">
+      <a href="src/images/gallery1.jpg">
+        <img src="src/images/gallery-small1.jpg" alt="">
+      </a>
+    </div>
+    <div class="dke_gallery__item">
+      <a href="src/images/gallery2.jpg">
+        <img src="src/images/gallery-small2.jpg" alt="">
+      </a>
+    </div>
+    <div class="dke_gallery__item">
+      <a href="src/images/gallery3.jpg">
+        <img src="src/images/gallery-small3.jpg" alt="">
+      </a>
+    </div>
+    <div class="dke_gallery__item">
+      <a href="src/images/gallery4.jpg">
+        <img src="src/images/gallery-small4.jpg" alt="">
+      </a>
+    </div>
+  </div>
+
+  {{!-- Карусель в мобильной версии --}}
+  <div class="dke_gallery-carousel">
+    <div
+      id="blueimp-gallery-carousel"
+      class="blueimp-gallery blueimp-gallery-carousel dke_gallery-carousel"
+      aria-label="image carousel"
+    >
+      <div class="slides" aria-live="off"></div>
+      <h3 class="title"></h3>
+      <a
+        class="prev"
+        aria-controls="blueimp-gallery-carousel"
+        aria-label="previous slide"
+      >‹</a>
+      <a
+        class="next"
+        aria-controls="blueimp-gallery-carousel"
+        aria-label="next slide"
+      >›</a>
+      <ol class="indicator"></ol>
+    </div>
+  </div>
+
+  {{!-- Попап галереи --}}
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev"></a>
+    <a class="next"></a>
+    <a class="close"></a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+  </div>
+
+  {{!-- Картинки для слайдера --}}
+  <div id="blueimp-gallery-carousel_images">
+    <a href="src/images/gallery1.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
+      <img src="src/images/gallery1.jpg" alt="Метеор в Петергоф - 0" />
+    </a>
+    <a href="src/images/gallery2.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
+      <img src="src/images/gallery2.jpg" alt="Метеор в Петергоф - 1" />
+    </a>
+    <a href="src/images/gallery3.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
+      <img src="src/images/gallery3.jpg" alt="Метеор в Петергоф - 2" />
+    </a>
+    <a href="src/images/gallery4.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
+      <img src="src/images/gallery4.jpg" alt="Метеор в Петергоф - 2" />
     </a>
   </div>
-  <div class="dke_gallery__item">
-    <a href="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg">
-      <img src="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg" alt="">
-    </a>
-  </div>
-  <div class="dke_gallery__item">
-    <a href="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg">
-      <img src="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg" alt="">
-    </a>
-  </div>
-  <div class="dke_gallery__item">
-    <a href="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg">
-      <img src="https://devdev.nevatrip.ru/assets/components/gallery/connector.php?action=web/phpthumb&ctx=web&w=150&h=150&zc=1&far=C&q=90&src=%2Fassets%2Fgallery%2F113%2F1726.jpg" alt="">
-    </a>
-  </div>
-</div>
-<div
-  id="blueimp-gallery-carousel"
-  class="blueimp-gallery blueimp-gallery-carousel"
-  aria-label="image carousel"
->
-  <div class="slides" aria-live="off"></div>
-  <h3 class="title"></h3>
-  <a
-    class="prev"
-    aria-controls="blueimp-gallery-carousel"
-    aria-label="previous slide"
-  >‹</a>
-  <a
-    class="next"
-    aria-controls="blueimp-gallery-carousel"
-    aria-label="next slide"
-  >›</a>
-  <a
-    class="play-pause"
-    aria-controls="blueimp-gallery-carousel"
-    aria-label="play slideshow"
-    aria-pressed="true"
-    role="button"
-  ></a>
-  <ol class="indicator"></ol>
-</div>
-
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-  <!-- The container for the modal slides -->
-  <div class="slides"></div>
-  <!-- Controls for the borderless lightbox -->
-  <h3 class="title"></h3>
-  <a class="prev"></a>
-  <a class="next"></a>
-  <a class="close"></a>
-  <a class="play-pause"></a>
-  <ol class="indicator"></ol>
-</div>
-
-
-
-<div id="blueimp-gallery-carousel_images">
-  <a href="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2573.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
-    <img src="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2573.jpg" src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2573.jpg" alt="Метеор в Петергоф - 0" />
-  </a>
-  <a href="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2568.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
-    <img src="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2568.jpg" src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2568.jpg" alt="Метеор в Петергоф - 1" />
-  </a>
-  <a href="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2577.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
-    <img src="https://devdev.nevatrip.ru//assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=940&amp;h=940&amp;zc=0&amp;far=&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2577.jpg" src="/assets/components/gallery/connector.php?action=web/phpthumb&amp;ctx=web&amp;w=150&amp;h=150&amp;zc=1&amp;far=C&amp;q=90&amp;src=%2Fassets%2Fgallery%2F159%2F2577.jpg" alt="Метеор в Петергоф - 2" />
-  </a>
 </div>
