@@ -1,7 +1,8 @@
 <div class="dke_gallery-container">
   <h4>Галерея</h4>
-  {{!-- Галерея на десктопе --}}
-  <div class="dke_gallery" id="links">
+  
+  <!-- Галерея на десктопе -->
+  <div class="dke_gallery" id="dke_gallery">
     <div class="dke_gallery__item">
       <a href="src/images/gallery1.jpg">
         <img src="src/images/gallery-small1.jpg" alt="">
@@ -24,34 +25,9 @@
     </div>
   </div>
 
-  {{!-- Карусель в мобильной версии --}}
-  <div class="dke_gallery-carousel">
-    <div
-      id="blueimp-gallery-carousel"
-      class="blueimp-gallery blueimp-gallery-carousel dke_gallery-carousel"
-      aria-label="image carousel"
-    >
-      <div class="slides" aria-live="off"></div>
-      <h3 class="title"></h3>
-      <a
-        class="prev"
-        aria-controls="blueimp-gallery-carousel"
-        aria-label="previous slide"
-      >‹</a>
-      <a
-        class="next"
-        aria-controls="blueimp-gallery-carousel"
-        aria-label="next slide"
-      >›</a>
-      <ol class="indicator"></ol>
-    </div>
-  </div>
-
-  {{!-- Попап галереи --}}
+  <!-- Попап галереи -->
   <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-    <!-- The container for the modal slides -->
     <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
     <h3 class="title"></h3>
     <a class="prev"></a>
     <a class="next"></a>
@@ -60,8 +36,19 @@
     <ol class="indicator"></ol>
   </div>
 
-  {{!-- Картинки для слайдера --}}
-  <div id="blueimp-gallery-carousel_images">
+  <!-- Слайдер в мобильной версии -->
+  <div class="dke_gallery-carousel">
+    <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel dke_gallery-carousel" aria-label="image carousel">
+      <div class="slides" aria-live="off"></div>
+      <h3 class="title"></h3>
+      <a class="prev" aria-controls="blueimp-gallery-carousel" aria-label="previous slide"></a>
+      <a class="next" aria-controls="blueimp-gallery-carousel" aria-label="next slide"></a>
+      <ol class="indicator"></ol>
+    </div>
+  </div>
+
+  <!-- Картинки для слайдера -->
+  <div id="dke_slider-items" class="dke_slider-items">
     <a href="src/images/gallery1.jpg" title=""  data-gallery class="excursion_gallery_click_photo">
       <img src="src/images/gallery1.jpg" alt="Метеор в Петергоф - 0" />
     </a>
