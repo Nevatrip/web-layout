@@ -64,14 +64,17 @@
   display: none;
   border-radius: 10px;
   overflow: hidden;
+
   @include media.xs {
     display: block;
+  
     .blueimp-gallery-svgasimg > .next, .blueimp-gallery-svgasimg > .prev {
-      background: url('src/icons/galery-arrow.system.svg');
+      background: url('/src/icons/galery-arrow.system.svg');
       background-repeat: no-repeat;
       background-size: 10px 14px;
       background-position: center;
     }
+  
     .next, .prev{
       border: 0;
       border-radius: 0;
@@ -83,13 +86,16 @@
       top: 50%;
       transform: translateY(-50%);
     }
+  
     .next, .prev, .indicator {
       display: block;
     }
+  
     .next {
       left: auto;
       right: 0;
     }
+  
     .prev {
       left: 0;
       right: auto;
