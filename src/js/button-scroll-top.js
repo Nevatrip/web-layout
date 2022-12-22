@@ -1,6 +1,7 @@
 export default class ButtonScrollTop {
   constructor(selector) {
     this.element = document.querySelector(selector);
+    if(!this.element) return;
     
     window.addEventListener('scroll', () => {
       this.buttonChangeVisible()
