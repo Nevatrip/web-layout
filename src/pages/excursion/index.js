@@ -5,16 +5,23 @@ import Topbar from '../../js/topbar.js';
 import Navbar from '../../js/navbar.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 import gallery from '../../js/gallery.js';
+import liveNotify from '../../js/live-notify.js';
 
 new Topbar(document.querySelector('.dke_topbar'));
+
 
 function ready() {
   // выпадающее меню (desktop), бургер-меню (mobile)
   dropDownMenu();
 
+  //Инициализация слайдера и попапа галереи
   gallery();
+
+  //Инициализация попапа уведомления
+  new liveNotify('#dke_live-notify');
+  
   // кнопка прокрутки страницы вверх
-  // new ButtonScrollTop('.dke_button-scroll-top');
+  new ButtonScrollTop('.dke_button-scroll-top');
 }
 
 function load() {
