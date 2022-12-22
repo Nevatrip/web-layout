@@ -7,7 +7,32 @@
   flex-wrap: wrap;
 
   &_justified {
+    flex-wrap: nowrap;
     justify-content: space-between;
+
+    @include media.sm {
+      justify-content: flex-start;
+    }
+
+    @include media.xs {
+      justify-content: space-between;
+    }
+  }
+
+  @include media.xs {
+    &_sticky {
+      justify-content: space-around;
+      z-index: 30;
+      background: #ffffff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 15px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+    }
   }
 
   &_small {
@@ -18,10 +43,6 @@
       & > img {
         max-width: 15px;
       }
-    }
-
-    & > .dke_button {
-      width: 100%;
     }
   }
 

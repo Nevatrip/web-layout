@@ -1,4 +1,11 @@
+@use '../colors';
+@use '../variables';
+
 .dke_modal {
+  padding-right: 0px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
   z-index: 100;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -6,20 +13,63 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
   justify-content: center;
+  transition: visibility 0s 300ms, opacity variables.$transition;
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity variables.$transition;
+
+    .dke_modal__window {
+      top: 40px;
+    }
+  }
+
+  &_active-padding {
+    padding-right: 17px;
+  }
 
   &__window {
     background: #ffffff;
-    position: absolute;
-    top: 40px;
+    position: fixed;
+    top: -400px;
     width: 316px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     border-radius: 10px;
+    transition: top variables.$transition;
+  }
+
+  &__close {
+    opacity: 0.3;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('src/icons/cross-in-circle.system.svg') center center
+      no-repeat;
+    transition: opacity variables.$transition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__header {
+    padding: 12px 20px;
+    margin: 0 12px;
+    font-size: 14px;
+    color: colors.$grey;
+    border-bottom: 1px solid colors.$lightGrey;
   }
 
   &__form {
     padding: 30px 26px;
+  }
+
+  &__input {
+    margin-bottom: 15px;
   }
 
   &__button {

@@ -8,10 +8,6 @@
   display: flex;
   padding: 30px 0;
 
-  @include media.sm {
-    min-height: 255px;
-  }
-
   &__background {
     position: absolute;
     left: 0;
@@ -158,6 +154,41 @@
   &_bottom-title {
     .dke_container {
       justify-content: flex-end;
+    }
+
+    .dke_container_content .dke_banner__title {
+      margin: 25px 0;
+    }
+
+    @include media.sm {
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 30px;
+        background-color: #fff;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        z-index: 20;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 11px;
+        height: 5px;
+        width: 60px;
+        border-radius: 4px;
+        margin: 0 auto;
+        background-color: colors.$lightGrey;
+        z-index: 21;
+      }
     }
   }
 

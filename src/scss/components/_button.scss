@@ -25,4 +25,13 @@
   &:hover {
     background-color: colors.$buttonMainHover;
   }
+
+  &_not-shrink {
+    flex-shrink: 0;
+
+    @include media.md {
+      font-size: 15px;
+      padding: 13px 16px;
+    }
+  }
 }

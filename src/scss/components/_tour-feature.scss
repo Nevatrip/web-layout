@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../variables';
+@use '../media';
 
 .dke_tour-feature {
   display: flex;
@@ -22,8 +23,14 @@
   &__text {
     font-size: 17px;
 
-    &_order {
+    @include media.sm {
       font-size: 15px;
+    }
+
+    &_order {
+      @include media.lg {
+        font-size: 15px;
+      }
     }
 
     a {
