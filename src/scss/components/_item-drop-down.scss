@@ -75,7 +75,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    max-height: 400px;
     overflow-y: auto;
     
     &-wrapper{
@@ -111,7 +110,6 @@
     
     .dke_item-drop-down__sublist-wrapper{
       margin-bottom: 10px;
-      max-height: 400px;
     }
   }
 }

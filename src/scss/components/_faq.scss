@@ -1,0 +1,225 @@
+@use "../colors";
+@use "../media";
+@use "../variables";
+
+.dke {
+  &_faq {
+    margin-bottom: 30px;
+  }
+}
+
+.dke_faq {
+  &__tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    list-style: none;
+
+    @include media.sm {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 550px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    margin: 1.3em 0 1.5em;
+    font-size: 24px;
+    text-align: center;
+
+    @media screen and (max-width: 550px) {
+      font-size: 19px;
+      text-align: left;
+      padding-left: 2.6em;
+      letter-spacing: 0.7px;
+      position: relative;
+    }
+
+    &::before{
+      content: '';
+      transform: translateY(20%);
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/src/icons/ask-gray.system.svg");
+      background-size: contain;
+      width: 35px;
+      height: 35px;
+      margin-right: 14px;
+
+      @media screen and (max-width: 550px) {
+        height: 26px;
+        width: 26px;
+        position: absolute;
+        left: 6px;
+        top: 0;
+      }
+    }
+  }
+}
+
+.dke_item-tabs-faq {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  line-height: 22px;
+  border-radius: 22px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 7%);
+  transition: all variables.$transition;
+  text-align: center;
+  border: 1px solid #E5E5E5;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:hover{
+    box-shadow: 2px 9px 26px rgb(0 0 0 / 9%);
+  }
+
+  &:hover:active{
+    box-shadow: inset 2px 9px 26px rgb(0 0 0 / 9%);
+  }
+
+  &._active{
+    border: 1px solid colors.$blue1;
+
+    svg path{
+      fill: colors.$blue1;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    color: #355363;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &-icon{
+      width: 23px;
+      height: 23px;
+      flex: 0 1 23px;
+    }
+
+    span{
+      font-weight: 600;
+      text-align: left;
+      padding: 0.7em 0.8em;
+      flex: 0 1 calc(100% - 23px);
+
+      @media screen and (max-width: 550px) {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0.7em 0.9em;
+      }
+    }
+  }
+}
+
+.dke_content-tab-faq {
+  display: none;
+
+  &._active{
+    display: block;
+  }
+}
+
+.dke_list-tab-faq {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: num;
+
+  &__item {
+    & + & {
+      border-top: 1px solid #B8B8B8;
+    }
+  }
+}
+
+.dke_item-tab-faq {
+  transition: all variables.$transition;
+
+  &__head {
+    position: relative;
+    padding: 23px 70px 22px 0;
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("/src/icons/collapsed-gray.system.svg");
+      top: 22px;
+      right: 13px;
+      height: 23px;
+      width: 23px;
+
+      @media screen and (max-width: 550px) {
+        height: 19px;
+        width: 19px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 0;
+    font-weight: 600;
+    letter-spacing: .55px;
+    color: #2C2C2C;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 1.6em;
+
+    @media screen and (max-width: 550px) {
+      font-size: 13px;
+      line-height: 1.4;
+      padding-left: 20px;
+    }
+
+    &::before {
+      content: counter(num) '.';
+      counter-increment: num;
+      position: absolute;
+      display: block;
+      left: 6px;
+
+      @media screen and (max-width: 550px) {
+        left: 0;
+      }
+    }
+  }
+
+  &__body {
+    transition: all variables.$transition;
+    max-height: 0;
+    overflow-y: hidden;
+    
+    &-content {
+      padding: 0 70px 24px 33px;
+      font-size: 17px;
+      overflow-y: auto;
+
+      @include media.lg{
+        font-size: 15px;
+      }
+
+      @media screen and (max-width: 550px) {
+        padding: 0 25px 31px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &._active{
+    .dke_item-tab-faq__head::after {
+      background-image: url("/src/icons/deployed-blue.system.svg");
+    }
+  }
+}

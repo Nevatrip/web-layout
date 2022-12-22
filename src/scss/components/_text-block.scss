@@ -49,7 +49,8 @@ b {
 
 ul:not([class]) {
   font-size: 14px;
-  margin: 0;
+  padding: revert;
+  list-style-type: revert;
 
   li:not([class]) {
     margin-bottom: 0.714em;
@@ -79,75 +80,22 @@ table th {
   border: 1px solid #000;
 }
 
-.dke_html {
-  padding: 30px 0 40px 0;
+.dke {
+  &_html {
+    padding: 30px 0 40px 0;
 
-  .dke_container {
-    display: block;
+    .dke_container {
+      display: block;
+    }
   }
 
-  &-excursion{    
+  &_lead{    
     &, ul{
       font-size: 17px;
 
       @include media.lg{
         font-size: 15px;
       }  
-    }
-    
-    &__btn{
-      text-align: left;
-      margin-top: 15px;
-      margin-bottom: 10.5px;
-
-      div{
-        color: colors.$blue1;
-        text-align: right;
-        font-weight: 600;
-  
-        &::after{
-          content: '';
-          display: inline-block;
-          width: 12px;
-          height: 6px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-image: url("/src/icons/arrow-blue.system.svg");
-          transition: all variables.$transition;
-        }
-      }
-
-      &._active{
-        div::after{
-          transform: rotate(180deg);
-        }
-      }
-    }
-
-    &__list{
-      list-style: none;
-      columns: 2;
-      line-height: 1.4;
-      padding: 0;
-
-      li{
-        padding-left: 1.4em;
-        margin-bottom: 0.5em;
-        position: relative;
-
-        &::before{
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 5px;
-          width: 15px;
-          height: 15px;
-          background-image: url("/src/icons/list-arrow.system.svg");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 100% auto;
-        }
-      }
     }
   }
 }
