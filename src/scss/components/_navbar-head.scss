@@ -14,7 +14,7 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: all variables.$transition;
+    transition: visibility variables.$transition, opacity variables.$transition;
     visibility: hidden;
     opacity: 0;
   }

@@ -14,26 +14,12 @@
   bottom: 0;
   left: 0;
   justify-content: center;
-  transition: visibility 0s 300ms, opacity variables.$transition;
-
-  &_active {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity variables.$transition;
-
-    .dke_modal__window {
-      top: 40px;
-    }
-  }
-
-  &_active-padding {
-    padding-right: 17px;
-  }
+  transition: visibility variables.$transition, opacity variables.$transition;
 
   &__window {
     background: #ffffff;
     position: fixed;
-    top: -400px;
+    top: -100vh;
     width: 316px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     border-radius: 10px;
@@ -75,4 +61,16 @@
   &__button {
     width: 100%;
   }
+}
+
+.js_dke_modal-active {
+  visibility: visible;
+  opacity: 1;
+
+  .dke_modal__window {
+    top: 40px;
+  }
+}
+.js_dke_active-padding {
+  padding-right: 17px;
 }

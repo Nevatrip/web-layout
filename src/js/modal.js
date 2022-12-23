@@ -16,19 +16,19 @@ export default class Modal {
   openModal() {
     const isVerticalScrollbar = document.body.offsetWidth < window.innerWidth;
 
-    this.element.classList.add('dke_modal_active');
-    document.body.classList.add('active-modal');
+    this.element.classList.add('js_dke_modal-active');
+    document.body.classList.add('js_dke_active-modal');
 
     if (isVerticalScrollbar) {
-      this.element.classList.add('dke_modal_active-padding');
-      document.body.classList.add('scroll-padding');
+      this.element.classList.add('js_dke_active-padding');
+      document.body.classList.add('js_dke_scroll-padding');
     }
   }
 
   closeModal() {
-    this.element.classList.remove('dke_modal_active');
-    this.element.classList.remove('dke_modal_active-padding');
-    document.body.classList.remove('active-modal');
-    document.body.classList.remove('scroll-padding');
+    this.element.classList.remove('js_dke_modal-active');
+    this.element.classList.remove('js_dke_active-padding');
+    document.body.classList.remove('js_dke_active-modal');
+    document.body.classList.remove('js_dke_scroll-padding');
   }
 }
