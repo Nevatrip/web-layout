@@ -20,14 +20,4 @@
 @use './components/breadcrumbs';
 @use './components/footer';
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic-ext,latin-ext';
-
-@font-face {
-  font-family: 'icomoon';
-  src: url('src/fonts/icomoon.eot?wsxrm2');
-  src: url('src/fonts/icomoon.eot?#iefixwsxrm2') format('embedded-opentype'),
-    url('src/fonts/icomoon.ttf?wsxrm2') format('truetype'),
-    url('src/fonts/icomoon.woff?wsxrm2') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import 'https://fonts.googleapis.com/css2?family=PT+Sans&family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic-ext,latin-ext';
