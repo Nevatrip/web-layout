@@ -62,10 +62,6 @@
   &__burger {
     display: none;
 
-    &._disabled {
-      pointer-events: none;
-    }
-
     @include media.sm {
       display: block;
       margin-left: -15px;
