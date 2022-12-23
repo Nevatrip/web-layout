@@ -36,7 +36,9 @@ window.addEventListener('resize', () => {
     setTopMobileMenu();
 
     // если бургер-кнопок нет или они скрыты, закрывать меню
-    if (!btnTopHeader && (!btnNavbar || getComputedStyle(btnNavbar, null).display === 'none')) 
+    if (
+      !btnTopHeader && 
+      (!btnNavbar || getComputedStyle(btnNavbar, null).display === 'none')) 
       showMenu();
   }
 });

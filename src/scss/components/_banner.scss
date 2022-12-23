@@ -6,11 +6,7 @@
   min-height: 370px;
   z-index: 1;
   display: flex;
-  padding: 30px 0 55px 0;
-  
-  @include media.sm {
-    min-height: 255px;
-  }
+  padding: 30px 0;
 
   &__background {
     position: absolute;
@@ -86,7 +82,7 @@
         padding: 44px 55px;
       }
 
-      @media screen and (max-width: 440px){
+      @media screen and (max-width: 440px) {
         padding: 21px;
       }
 
@@ -155,48 +151,72 @@
     }
   }
 
+  &_bottom-title {
+    .dke_banner__background::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.15) 15%,
+        rgba(0, 0, 0, 0.4) 45%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+
+      @include media.sm {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.15) 52%,
+          rgba(0, 0, 0, 0.4) 60%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+      }
+    }
+
+    .dke_container {
+      justify-content: flex-end;
+    }
+
+    .dke_container_content .dke_banner__title {
+      @include media.sm {
+        margin: 25px 0;
+      }
+    }
+
+    @include media.sm {
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30px;
+        background-color: #fff;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        z-index: 20;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 11px;
+        height: 5px;
+        width: 60px;
+        border-radius: 4px;
+        margin: 0 auto;
+        background-color: colors.$lightGrey;
+        z-index: 21;
+      }
+    }
+  }
+
   &_small {
     min-height: 255px;
     padding: 0;
     margin-bottom: 30px;
-  }
-}
-
-.dke_price-box {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.dke_price {
-  font-size: 36px;
-  color: colors.$body;
-  margin-right: 12px;
-
-  @include media.md {
-    font-size: 30px;
-  } 
-
-  & > svg, & > img {
-    max-width: 19px;
-    height: auto;
-    display: inline;
-    
-    @include media.md {
-      max-width: 16px;
-    }
-  }
-
-  small {
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 1;
-    display: block;
-
-    & > svg, & > img {
-      max-width: 5.5px;
-      height: auto;
-      display: inline;
-    }
   }
 }
