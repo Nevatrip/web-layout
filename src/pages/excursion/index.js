@@ -24,7 +24,7 @@ function ready() {
 
   // блок FAQ
   faq();
-
+  
   // кнопка прокрутки страницы вверх
   // new ButtonScrollTop('.dke_button-scroll-top');
 }
