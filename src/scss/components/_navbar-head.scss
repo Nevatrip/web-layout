@@ -14,7 +14,7 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: all transition: all $transition;;
+    transition: visibility variables.$transition, opacity variables.$transition;
     visibility: hidden;
     opacity: 0;
   }
@@ -65,7 +65,7 @@
     @include media.sm {
       display: block;
       margin-left: -15px;
-    } 
+    }
   }
 
   &__contacts {
@@ -73,7 +73,7 @@
     display: none;
 
     @include media.sm {
-        display: flex;
+      display: flex;
     }
   }
 
@@ -86,7 +86,7 @@
     margin-right: 8px;
 
     &:last-child {
-        margin-right: 0;
+      margin-right: 0;
     }
   }
 

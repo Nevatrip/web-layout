@@ -5,7 +5,6 @@ import Topbar from '../../js/topbar.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 
 new Topbar(document.querySelector('.dke_topbar'));
-// new Navbar(document.querySelector('.dke_navbar'));
 
 function ready() {
   // выпадающее меню (desktop), бургер-меню (mobile)

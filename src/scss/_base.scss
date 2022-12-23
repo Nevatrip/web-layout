@@ -14,12 +14,20 @@ html {
 body {
   margin: 0;
   position: relative;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'PT Sans', Arial, Helvetica, sans-serif;
   line-height: 1.428;
   color: colors.$body;
   background: #fff;
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.js_dke_active-modal {
+  overflow: hidden;
+}
+
+.js_dke_scroll-padding {
+  padding-right: 17px;
 }
 
 h1,
@@ -41,7 +49,7 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: colors.$main;
 }
 
 button {
@@ -89,6 +97,7 @@ img {
   }
 
   &_content {
+    flex-direction: column;
     max-width: media.$lgContainerWidth;
   }
 }
@@ -97,7 +106,6 @@ img {
   margin-left: -15px;
   margin-right: -15px;
   display: flex;
-  width: 100%;
   flex-grow: 1;
 
   @include media.sm {
@@ -154,8 +162,7 @@ td {
 }
 
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin: 21px 0;
   border: 0;
   border-top: 1px solid #edeceb;
   &.short {
