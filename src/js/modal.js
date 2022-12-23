@@ -27,6 +27,7 @@ export default class Modal {
 
   closeModal() {
     this.element.classList.remove('dke_modal_active');
+    this.element.classList.remove('dke_modal_active-padding');
     document.body.classList.remove('active-modal');
     document.body.classList.remove('scroll-padding');
   }
