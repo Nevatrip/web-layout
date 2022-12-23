@@ -1,6 +1,6 @@
-@use "../media";
-@use "../variables";
-@use "../colors";
+@use '../media';
+@use '../variables';
+@use '../colors';
 
 .dke_menu-links {
   margin-bottom: 50px;
@@ -32,7 +32,7 @@
     align-items: center;
     flex: 0 1 auto;
     column-gap: 20px;
-    box-shadow: 2px 2px 5px colors.$shadowDark;
+    box-shadow: 2px 2px 5px rgba(colors.$gray4, 25%);
     border-radius: 12px;
     line-height: 1.1;
     color: colors.$dark5;

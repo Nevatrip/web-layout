@@ -101,7 +101,7 @@
     }
   }
   
-  &._active{
+  &.js_dke_active{
     .dke_item-drop-down__text-wrapper {
       &::after {
         transform: rotate(180deg);

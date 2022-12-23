@@ -1,6 +1,6 @@
-@use "../media";
-@use "../colors";
-@use "../variables";
+@use '../media';
+@use '../colors';
+@use '../variables';
 
 .dke_sight {
   &, ul{
@@ -19,7 +19,7 @@
     min-width: 90%;
     transition: all variables.$transition;
 
-    &._active{
+    &.js_dke_active{
       .dke_sight__btn-text::after{
         transform: rotate(180deg);
       }
@@ -39,7 +39,7 @@
         height: 6px;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("/src/icons/arrow-blue.system.svg");
+        background-image: url('/src/icons/arrow-blue.system.svg');
         transition: all variables.$transition;
       }
 
@@ -84,13 +84,13 @@
       flex: 0 1 50%;
 
       &::before{
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         top: 5px;
         width: 15px;
         height: 15px;
-        background-image: url("/src/icons/list-arrow.system.svg");
+        background-image: url('/src/icons/list-arrow.system.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;
@@ -98,7 +98,7 @@
     }
   }
 
-  &._active{
+  &.js_dke_active{
     .dke_sight__btn-text::after{
       transform: rotate(180deg);
     }

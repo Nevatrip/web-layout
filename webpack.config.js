@@ -41,6 +41,14 @@ const PAGES = [
     dir: 'ru-thaibuytrip',
     filename: 'ru-thaibuytrip',
   },
+  {
+    dir: 'excursion',
+    filename: 'excursion',
+  },
+  {
+    dir: 'faq',
+    filename: 'faq',
+  },
 ];
 
 const config = {

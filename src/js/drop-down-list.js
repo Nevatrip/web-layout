@@ -1,14 +1,14 @@
-import { toggleAttr } from "./utils.js";
+import { toggleAttr } from './utils.js';
 
 // открытие/закртие выпадающих списков
 export function showDropDownList() {
   if (this) this.disabled = true;
 
   const parentElement = this.parentElement;
-  const dropDownContent = parentElement.querySelector("[data-role=drop-down]");
+  const dropDownContent = parentElement.querySelector('[data-role=drop-down]');
   const childBlock = dropDownContent.firstElementChild;
 
-  parentElement.classList.toggle("_active");
+  parentElement.classList.toggle('js_dke_active');
   [dropDownContent, childBlock].forEach(setMaxHeight);
   updateAriaExpanded(parentElement);
     
@@ -25,11 +25,11 @@ function setMaxHeight(element) {
 
 // поиск элемента с атрибутом aria-expanded и изменение его значения
 function updateAriaExpanded(parentElement) {
-  if (parentElement.hasAttribute("aria-expanded"))
-    toggleAttr(parentElement, "aria-expanded");
+  if (parentElement.hasAttribute('aria-expanded'))
+    toggleAttr(parentElement, 'aria-expanded');
   else {
-    const elementAriaAttr = parentElement.querySelector("[aria-expanded]");
+    const elementAriaAttr = parentElement.querySelector('[aria-expanded]');
     if (elementAriaAttr)
-      toggleAttr(elementAriaAttr, "aria-expanded");  
+      toggleAttr(elementAriaAttr, 'aria-expanded');  
   }
 }
