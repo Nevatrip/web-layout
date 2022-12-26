@@ -24,7 +24,7 @@
       margin-bottom: 1.9em;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       margin-top: .8em;
       margin-bottom: 1.2em;
       font-size: 22px;
@@ -42,7 +42,7 @@
       height: 48px;
       margin-right: 26px;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         display: block;
         margin: 0 auto 22px;
       }
@@ -65,7 +65,7 @@
       gap: 16px;
     }  
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       column-gap: 2%;
       row-gap: 10px;
     }  
@@ -109,7 +109,7 @@
     width: 40%;
   }
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: media.$breakpointWidth1) {
     width: 48%;
   }
 
@@ -153,7 +153,7 @@
       justify-content: center;
       align-items: center;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         font-size: 14px;
         line-height: 1.4;
         padding: 0;
@@ -164,7 +164,7 @@
   &.js_dke_active{
     border: 2px solid colors.$blue1;
 
-    svg path{
+    path{
       fill: colors.$blue1;
     }
   }
@@ -182,7 +182,7 @@
     @media screen and (max-width: 830px) {
       margin: 1.5em auto .8em;
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       font-size: 24px;
       margin: 1.5em auto 0;
     }
@@ -195,7 +195,7 @@
     font-size: 15px;
     font-weight: 600;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       line-height: 1.35;
       margin: 1em auto .15em;
     }
@@ -241,7 +241,7 @@
       height: 23px;
       width: 23px;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         height: 19px;
         width: 19px;
       }
@@ -252,7 +252,7 @@
     position: relative;
     margin-bottom: 0;
     font-weight: 600;
-    letter-spacing: .55px;
+    letter-spacing: .055em;
     color: colors.$dark3;
     font-size: 16px;
     text-align: left;
@@ -264,7 +264,7 @@
       text-decoration: underline;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       font-size: 13px;
       line-height: 1.4;
       padding-left: 20px;
@@ -277,7 +277,7 @@
       display: block;
       left: 6px;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         left: 0;
       }
     }
@@ -317,7 +317,7 @@
         font-size: 15px;
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         padding: 0 25px 31px 20px;
         font-size: 14px;
       }
@@ -336,7 +336,7 @@
     margin: 1.3em 0 1.5em;
     font-size: 24px;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       font-size: 19px;
       text-align: left;
       padding-left: 2.6em;
@@ -353,7 +353,7 @@
       margin-bottom: 0;
       margin-right: 14px;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: media.$breakpointWidth1) {
         display: inline-block;
         height: 26px;
         width: 26px;
@@ -374,7 +374,7 @@
       justify-content: center;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: media.$breakpointWidth1) {
       justify-content: flex-start;
     }
   }
@@ -413,7 +413,7 @@
         margin-top: 0;
         min-height: auto;
   
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: media.$breakpointWidth1) {
           padding: 0.7em 0.9em;
         }
       }
