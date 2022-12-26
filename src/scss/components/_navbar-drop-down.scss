@@ -25,6 +25,12 @@
     padding: 40px 0 50px;
     max-height: 80vh;
     overflow-y: auto;
+
+    @include media.md{
+      .dke_container {
+        width: 731px;
+      }
+    }
   }
 
   &__nav {
@@ -42,7 +48,7 @@
 }
 
 // стили для открытых меню; класс для body
-._active-menu{
+.js_dke_active-menu{
   .dke_drop-down-navbar{
     border: 1px solid #C0C0C0;
     max-height: 80vh;

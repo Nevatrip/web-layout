@@ -18,10 +18,6 @@
     display: block;
     margin-right: 10px;
 
-    &._disabled{
-      pointer-events: none;
-    }
-
     @include media.sm {
       display: none;
     }
@@ -58,7 +54,8 @@
 
   &__social {
     flex-shrink: 0;
-    margin-right: 15px;
+    margin: 0 15px 0 0;
+    padding: 0;
 
     @include media.sm {
       margin-right: 0;

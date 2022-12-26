@@ -24,6 +24,7 @@
 
   &__text {
     padding: 0.65em 0.3em 0.65em 0.94em;
+    flex: 0 1 calc(100% - 30px);
   }
 
   &__text-wrapper {
@@ -52,6 +53,7 @@
           text-align: left;
           padding: 0.75em 0.3em 0.75em 0.94em;
           white-space: nowrap;
+          flex: 0 1 calc(100% - 30px);
 
           &::after {
             content: '';
@@ -72,7 +74,7 @@
     font-size: 14px;
     list-style-type: none;
     margin: 0;
-    max-height: 400px;
+    padding: 0;
     overflow-y: auto;
     
     &-wrapper{
@@ -99,7 +101,7 @@
     }
   }
   
-  &._active{
+  &.js_dke_active{
     .dke_item-drop-down__text-wrapper {
       &::after {
         transform: rotate(180deg);
@@ -108,7 +110,6 @@
     
     .dke_item-drop-down__sublist-wrapper{
       margin-bottom: 10px;
-      max-height: 400px;
     }
   }
 }

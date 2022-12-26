@@ -133,12 +133,16 @@
       flex: 0 1 30px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      padding-top: 2px;
     }
 
     &-title{
       flex: 0 1 calc(100% - 30px);
       text-align: left;
+      display: flex;
+      align-items: center;
+      line-height: 1.2;
     }
   }
 
@@ -148,7 +152,7 @@
     overflow: hidden;
     max-height: 0;
 
-    &._active {
+    &.js_dke_active {
       padding-top: 8px;
       padding-bottom: 15px;  
       max-height: 1000px;
@@ -189,7 +193,7 @@
   }
 }
 
-._active-menu{
+.js_dke_active-menu{
   @include media.sm{
     overflow-y: hidden;
   }

@@ -1,11 +1,12 @@
-@use '../components/banner';
 @use '../components/text-block';
+@use '../components/remark';
+@use '../components/menu-links';
+@use '../components/sight';
+@use '../components/video';
+@use '../components/map';
+@use '../components/faq';
 @use '../components/tour-cards';
 @use '../components/advantages';
 @use '../components/rent-form';
 @use '../components/button-scroll-top';
 @use '../components/list';
-
-@use '../components/gallery';
-@use '../components/buy-box';
-@use '../components/live-notify';

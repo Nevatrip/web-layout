@@ -14,12 +14,20 @@ html {
 body {
   margin: 0;
   position: relative;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'PT Sans', Arial, Helvetica, sans-serif;
   line-height: 1.428;
   color: colors.$body;
   background: #fff;
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.js_dke_active-modal {
+  overflow: hidden;
+}
+
+.js_dke_scroll-padding {
+  padding-right: 17px;
 }
 
 h1,
@@ -29,7 +37,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul
+{
   margin: 0;
   padding: 0;
 }
@@ -41,7 +50,7 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: colors.$main;
 }
 
 button {
@@ -60,7 +69,9 @@ textarea {
 }
 
 img {
-  display: inline-block;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .dke_wrapper {
@@ -87,13 +98,17 @@ img {
     width: media.$smContainerWidth;
     min-width: 320px;
   }
+
+  &_content {
+    flex-direction: column;
+    max-width: media.$lgContainerWidth;
+  }
 }
 
 .dke_row {
   margin-left: -15px;
   margin-right: -15px;
   display: flex;
-  width: 100%;
   flex-grow: 1;
 
   @include media.sm {
@@ -125,21 +140,6 @@ img {
   transition: none !important;
 }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -150,11 +150,17 @@ td {
 }
 
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin: 21px 0;
   border: 0;
   border-top: 1px solid #edeceb;
+
   &.short {
     width: 50%;
+  }
+}
+
+.dke_col-4_top{
+  @include media.sm {
+    order: -1;
   }
 }

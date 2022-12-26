@@ -1,0 +1,76 @@
+@use '../colors';
+@use '../variables';
+
+.dke_modal {
+  padding-right: 0px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  transition: visibility variables.$transition, opacity variables.$transition;
+
+  &__window {
+    background: #ffffff;
+    position: fixed;
+    top: -100vh;
+    width: 316px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    transition: top variables.$transition;
+  }
+
+  &__close {
+    opacity: 0.3;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('src/icons/cross-in-circle.system.svg') center center/contain
+      no-repeat;
+    transition: opacity variables.$transition;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__header {
+    padding: 12px 20px;
+    margin: 0 12px;
+    font-size: 14px;
+    color: colors.$grey;
+    border-bottom: 1px solid colors.$lightGrey;
+  }
+
+  &__form {
+    padding: 30px 26px;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+
+.js_dke_modal-active {
+  visibility: visible;
+  opacity: 1;
+
+  .dke_modal__window {
+    top: 40px;
+  }
+}
+.js_dke_active-padding {
+  padding-right: 17px;
+}

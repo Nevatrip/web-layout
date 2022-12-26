@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 
   li:not(:first-child)::before {
-    content: "/";
+    content: '/';
     margin-left: 3px;
   }
 

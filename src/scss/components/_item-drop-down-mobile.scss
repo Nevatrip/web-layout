@@ -8,7 +8,7 @@
     position: relative;
 
     &::before{
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -35,6 +35,12 @@
     &._disabled{
       pointer-events: none;
     }
+
+    &-text{
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+    }
     
     @include media.sm {
       max-width: 100%;
@@ -57,7 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding-top: 3px;
 
     &_arrow{
       width: 18px;
@@ -72,7 +78,6 @@
   &__body {
     list-style-type: none;
     margin: 0;
-    max-height: 1000px;
     overflow-y: auto;
     padding: 10px 0 20px;
     border-top: 1px solid colors.$gray2;
@@ -107,13 +112,12 @@
     padding: 11px 0;
   }
 
-  &._active {
+  &.js_dke_active {
     .dke_item-drop-down-mobile__head-icon_arrow{
       transform: rotate(180deg);
     }
 
     .dke_item-drop-down-mobile__body-wrapper{
-      max-height: 1000px;
       margin-bottom: 15px;
     }
   }
