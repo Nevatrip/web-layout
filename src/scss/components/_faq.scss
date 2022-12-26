@@ -56,6 +56,10 @@
     gap: 16px;
     margin: 0;
     list-style: none;
+    
+    svg{
+      fill: colors.$gray4;
+    }
 
     @include media.lg {
       gap: 10px;
@@ -164,9 +168,10 @@
   &.js_dke_active{
     border: 2px solid colors.$blue1;
 
-    path{
+    svg{
       fill: colors.$blue1;
     }
+
   }
 }
 
