@@ -65,8 +65,8 @@
     transition: all variables.$transition;
 
     &:hover {
-      color: colors.$main;
-      border-bottom: 1px solid colors.$main;
+      color: colors.$link;
+      border-bottom: 1px solid colors.$link;
     }
   }
 }

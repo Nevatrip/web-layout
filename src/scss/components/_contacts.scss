@@ -10,7 +10,7 @@
   }
 
   &__link {
-    color: colors.$main;
+    color: colors.$link;
     text-decoration: none;
     font-size: 14px;
     font-style: normal;
@@ -18,7 +18,7 @@
     transition: all variables.$transition;
 
     &:hover {
-      border-bottom: 1px solid colors.$main;
+      border-bottom: 1px solid colors.$link;
     }
 
     &_red {

@@ -258,8 +258,8 @@
   }
 
   a.dke_tour__title:hover > * {
-    color: colors.$main;
-    border-bottom: 2px solid colors.$main;
+    color: colors.$link;
+    border-bottom: 2px solid colors.$link;
   }
 
   @include media.md {
