@@ -22,11 +22,11 @@
     }
 
     &_red {
-      color: colors.$red;
+      color: colors.$busLink;
 
       &:hover {
-        color: colors.$darkRed;
-        border-bottom: 1px solid colors.$darkRed;
+        color: colors.$busLinkHover;
+        border-bottom: 1px solid colors.$busLinkHover;
       }
     }
   }

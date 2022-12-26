@@ -28,7 +28,7 @@
       width: 1px;
       position: absolute;
       left: 0;
-      background: #d6d2cf;
+      background: colors.$border;
       z-index: 1;
     }
   }
@@ -37,7 +37,7 @@
     text-align: center;
     font-size: 14px;
     padding: 12px 32px;
-    color: #ffffff;
+    color: colors.$text3;
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -46,7 +46,7 @@
     transition: background variables.$transition;
 
     &:hover {
-      background: colors.$darkBlue;
+      background: colors.$link2;
     }
 
     @include media.lg {

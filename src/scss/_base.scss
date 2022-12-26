@@ -16,8 +16,8 @@ body {
   position: relative;
   font-family: 'Open Sans', 'PT Sans', Arial, Helvetica, sans-serif;
   line-height: 1.428;
-  color: colors.$body;
-  background: #fff;
+  color: colors.$text;
+  background: colors.$background4;
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
