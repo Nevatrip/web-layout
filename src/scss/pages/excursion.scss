@@ -1,7 +1,10 @@
+
+@use '../components/banner';
 @use '../components/tour-features';
 @use '../components/tour-feature';
 @use '../components/remind-me';
 @use '../components/modal';
+@use '../components/tour-bottom';
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';

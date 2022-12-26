@@ -2,6 +2,8 @@ import '../../scss/pages/excursion.scss';
 
 import { dropDownMenu } from './../../js/drop-down-menu.js';
 import Topbar from '../../js/topbar.js';
+import { sightList } from './../../js/sight-list.js';
+import { faq } from './../../js/faq.js';
 import Modal from '../../js/modal.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 
@@ -17,6 +19,12 @@ function ready() {
     remindModal.openModal();
   });
 
+  // список достопримечательностей
+  sightList();
+
+  // блок FAQ
+  faq();
+  
   // кнопка прокрутки страницы вверх
   // new ButtonScrollTop('.dke_button-scroll-top');
 }
