@@ -1,0 +1,84 @@
+@use '../variables';
+@use '../colors';
+
+.dke_live-notify{
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  bottom: 5px;
+  background: #FFFFFF;
+  border: 0.4px solid #C2C2C2;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px rgb(0, 0, 0, .25);
+  border-radius: 16px;
+  padding: 15px 80px 11px 17px;
+  width: 253px;
+  min-height: 127px;
+  overflow: hidden;
+  transition: all variables.$transition;
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+  transform: translateX(-300px);
+
+  &.js_dke_live-notify_show{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__text{
+    font-size: 12px;
+    color: #fff;
+    line-height: 15px;
+    letter-spacing: -0.4px;
+    color: colors.$body;
+  }
+
+  &__link{
+    display:inline-block;
+    width: 93px;
+    height: 33px;
+    background: colors.$buttonMain;
+    border-radius: 18px;
+    font-size: 12px;
+    line-height: 33px;
+    color: #000000;
+    text-align:center;
+    vertical-align:center;
+    transition: background-color variables.$transition;
+
+    &:hover{
+      background-color: colors.$buttonMainHover;
+    }
+  }
+  
+  &__close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color:#8D8D8D;
+    text-shadow:none;
+    opacity: 1;
+    font-size: 22.5px;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
