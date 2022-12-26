@@ -1,12 +1,7 @@
 @use '../variables';
+@use '../media';
 @use '../colors';
 
-.dke_html {
-  padding: 30px 0 40px 0;
-  .dke_container {
-    display: block;
-  }
-}
 p {
   margin-top: 0;
   margin-bottom: 0.625em;
@@ -16,7 +11,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.556em;
   font-weight: 600;
@@ -42,6 +38,10 @@ h5 {
   font-size: 18px;
 }
 
+h6 {
+  font-size: 15px;
+}
+
 strong,
 b {
   font-weight: 600;
@@ -49,6 +49,8 @@ b {
 
 ul:not([class]) {
   font-size: 14px;
+  padding: revert;
+  list-style-type: revert;
 
   li:not([class]) {
     margin-bottom: 0.714em;
@@ -77,3 +79,24 @@ table td,
 table th {
   border: 1px solid #000;
 }
+
+.dke {
+  &_html {
+    padding: 30px 0 40px 0;
+
+    .dke_container {
+      display: block;
+    }
+  }
+
+  &_lead{    
+    &, ul{
+      font-size: 17px;
+
+      @include media.lg{
+        font-size: 15px;
+      }  
+    }
+  }
+}
+

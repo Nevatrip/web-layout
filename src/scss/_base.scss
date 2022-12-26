@@ -37,7 +37,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul
+{
   margin: 0;
   padding: 0;
 }
@@ -68,7 +69,9 @@ textarea {
 }
 
 img {
-  display: inline-block;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .dke_wrapper {
@@ -137,21 +140,6 @@ img {
   transition: none !important;
 }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -165,7 +153,14 @@ hr {
   margin: 21px 0;
   border: 0;
   border-top: 1px solid #edeceb;
+
   &.short {
     width: 50%;
+  }
+}
+
+.dke_col-4_top{
+  @include media.sm {
+    order: -1;
   }
 }

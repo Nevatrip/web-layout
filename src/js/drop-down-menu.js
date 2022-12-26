@@ -1,4 +1,5 @@
 import { toggleAttr } from './utils.js';
+import { showDropDownList } from './drop-down-list.js';
 
 const btnTopHeader = document.querySelector('#btn-drop-down-menu');
 const btnNavbar = document.querySelector('#btn-header-burger');
@@ -7,20 +8,20 @@ let isOpenMenu = false;
 
 export function dropDownMenu() {
   const itemsDropDownMenu = document.querySelectorAll('.dke_item-drop-down');
-  const itemsDropDownMenuMobile = document.querySelectorAll(
-    '.dke_item-drop-down-mobile'
-  );
-
-  // нажатие на кнопку блока topbar для открытия/закртия меню
+  const itemsDropDownMenuMobile = document.querySelectorAll('.dke_item-drop-down-mobile');
+  
+  // нажатие на бургер-кнопку блока topbar для открытия/закртия меню
   btnTopHeader?.addEventListener('click', showMenu);
 
-  // нажатие на кнопку блока navbar для открытия/закртия меню
+  // нажатие на бургер-кнопку блока navbar для открытия/закртия меню
   btnNavbar?.addEventListener('click', showMenu);
 
   // открытие/закрытие внутренних списков меню на desktop
   itemsDropDownMenu?.forEach(element => {
     const btn = element.querySelector('.dke_item-drop-down__btn');
 
+    btn?.addEventListener('click', showDropDownList);
+    
     btn?.addEventListener('click', function () {
       showSublist.call(this, element);
     });
@@ -29,6 +30,9 @@ export function dropDownMenu() {
   // открытие/закрытие внутренних списков бургер-меню
   itemsDropDownMenuMobile?.forEach(element => {
     const btn = element.querySelector('.dke_item-drop-down-mobile__head');
+
+
+    btn?.addEventListener('click', showDropDownList);
 
     btn?.addEventListener('click', function () {
       showSublist.call(this, element);
@@ -45,7 +49,7 @@ window.addEventListener('resize', () => {
       !btnTopHeader &&
       (!btnNavbar || getComputedStyle(btnNavbar, null).display === 'none')
     )
-      showMenu();
+    showMenu();
   }
 });
 
@@ -56,8 +60,9 @@ function showMenu() {
   isOpenMenu = !isOpenMenu;
 
   setTopMobileMenu();
-  document.body.classList.toggle('_active-menu');
-
+  
+  document.body.classList.toggle('js_dke_active-menu');
+  
   [btnTopHeader, btnNavbar].forEach(function (element) {
     if (element) {
       toggleAttr(element, 'aria-expanded');
@@ -66,18 +71,6 @@ function showMenu() {
   });
 
   if (this) this.disabled = false;
-}
-
-// открытие/закртие выпадающих списков
-function showSublist(element) {
-  this.classList.add('_disabled');
-
-  if (element) {
-    element.classList.toggle('_active');
-    toggleAttr(element, 'aria-expanded');
-  }
-
-  this.classList.remove('_disabled');
 }
 
 // меняем положение мобильного меню (по вертикали) в зависимости от высоты navbar
