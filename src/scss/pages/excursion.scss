@@ -1,11 +1,11 @@
-
 @use '../components/banner';
 @use '../components/tour-features';
 @use '../components/tour-feature';
+@use '../components/offer';
 @use '../components/remind-me';
 @use '../components/modal';
 @use '../components/tour-bottom';
-
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts/';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@use '../components/gallery';
+@use '../components/buy-box';
+@use '../components/live-notify';
+@use '../components/tour-cards';

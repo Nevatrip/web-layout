@@ -11,6 +11,9 @@ import { sightList } from './../../js/sight-list.js';
 import { faq } from './../../js/faq.js';
 import Modal from '../../js/modal.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
+import Gallery from '../../js/gallery.js';
+import LiveNotify from '../../js/live-notify.js';
+
 
 function ready() {
   // выпадающее меню (desktop), бургер-меню (mobile)
@@ -30,8 +33,14 @@ function ready() {
   // блок FAQ
   faq();
   
+  //Инициализация слайдера и попапа галереи
+  new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');
+
+  //Инициализация попапа уведомления
+  new LiveNotify('#dke_live-notify');
+
   // кнопка прокрутки страницы вверх
-  // new ButtonScrollTop('.dke_button-scroll-top');
+  new ButtonScrollTop('.dke_button-scroll-top');
 }
 
 function load() {

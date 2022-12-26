@@ -158,3 +158,9 @@ hr {
     width: 50%;
   }
 }
+
+.dke_col-4_top{
+  @include media.sm {
+    order: -1;
+  }
+}
