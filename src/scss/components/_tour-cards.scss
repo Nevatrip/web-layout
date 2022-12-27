@@ -185,6 +185,14 @@
       position: relative;
       padding-left: 23px;
       margin-bottom: 0.5em;
+      a{
+        transition: border-color variables.$transition;
+        border-bottom: 1px solid transparent;
+        display: inline;
+        &:hover{
+          border-color: #49aada;
+        }
+      }
 
       &::before {
         content: '';
