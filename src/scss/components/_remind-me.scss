@@ -2,7 +2,7 @@
 @use '../media';
 
 .dke_remind-me {
-  border: 1px solid colors.$lightGrey;
+  border: 1px solid colors.$border;
   box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.25);
   border-radius: 12px;
 
@@ -11,12 +11,12 @@
     border: none;
     box-shadow: none;
     border-radius: 0;
-    border-top: 1px solid colors.$lightGrey;
+    border-top: 1px solid colors.$border;
   }
 
   @include media.xs {
     display: block;
-    border: 1px solid colors.$lightGrey;
+    border: 1px solid colors.$border;
     border-radius: 12px;
     box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.25);
   }
@@ -24,7 +24,7 @@
   &__text {
     padding: 12px;
     font-size: 14px;
-    border-bottom: 1px solid colors.$lightGrey;
+    border-bottom: 1px solid colors.$border;
 
     @include media.md {
       font-size: 12px;
@@ -40,7 +40,7 @@
       padding: 12px;
       font-size: 14px;
       width: auto;
-      border-bottom: 1px solid colors.$lightGrey;
+      border-bottom: 1px solid colors.$border;
     }
   }
 
@@ -68,7 +68,7 @@
   }
 
   &__price {
-    color: colors.$body;
+    color: colors.$text;
     font-size: 29px;
     flex-shrink: 0;
     margin-right: 12px;
@@ -78,7 +78,7 @@
       text-align: center;
       margin-right: 0;
       padding-bottom: 10px;
-      border-bottom: 1px solid colors.$lightGrey;
+      border-bottom: 1px solid colors.$border;
     }
 
     @include media.sm {

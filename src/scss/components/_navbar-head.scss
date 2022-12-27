@@ -20,7 +20,7 @@
   }
 
   &__wrapper {
-    background: colors.$twilightGrey;
+    background: colors.$background3;
     position: relative;
     z-index: 4;
   }
@@ -28,10 +28,10 @@
 
 .dke_navbar {
   &._cool-dark {
-    background-color: colors.$dark2;
+    background-color: colors.$background;
   }
   &._warm-dark {
-    background-color: colors.$dark5;
+    background-color: colors.$mobileBackground;
   }
 
   &__container {
