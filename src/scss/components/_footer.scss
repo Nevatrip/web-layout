@@ -166,15 +166,18 @@
 
     a{
       color: #fff;
-      border-bottom: 1px solid transparent;
-      transition: border-color variables.$transition;
 
-      &:hover{
+      span{
+        border-bottom: 1px solid transparent;
+        transition: border-color variables.$transition;
+      }
+      
+      &:hover span{
         border-bottom: 1px solid #fff;
       }
     }
 
-    span{
+    & > span{
       display: block;
       color: #A9A9A9;
       font-size: 14px;
@@ -198,14 +201,18 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+
+      & ~ span{
+        padding-left: 40px;
+      }
     }
 
     &_mail::before{
-      background-image: url("../icons/mail.system.svg");
+      background-image: url("/src/icons/mail.system.svg");
     }
 
     &_tel::before{
-      background-image: url("../icons/tel.system.svg");
+      background-image: url("/src/icons/tel.system.svg");
     }
   }
 

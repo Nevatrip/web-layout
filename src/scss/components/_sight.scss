@@ -1,0 +1,106 @@
+@use '../media';
+@use '../colors';
+@use '../variables';
+
+.dke_sight {
+  &, ul{
+    font-size: 17px;
+
+    @include media.lg{
+      font-size: 15px;
+    }  
+  }
+
+  &__btn {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 10.5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    min-width: 90%;
+    transition: all variables.$transition;
+
+    &.js_dke_active{
+      .dke_sight__btn-text::after{
+        transform: rotate(180deg);
+      }
+    }
+
+    &-text{
+      color: colors.$blue1;
+      text-align: right;
+      margin-top: 0.6em;
+      font-weight: 600;
+      display: none;
+
+      &::after{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/src/icons/arrow-blue.system.svg');
+        transition: all variables.$transition;
+      }
+
+      @include media.md {
+        display: block;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  &__list-wrapper {
+    @include media.md {
+      transition: all variables.$transition;
+      max-height: 0;
+      overflow-y: hidden;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    columns: 2;
+    line-height: 1.4;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow-y: auto;
+
+    @include media.xs {
+      columns: auto;
+    }
+
+    li{
+      padding-left: 1.4em;
+      margin-bottom: 0.65em;
+      position: relative;
+      flex: 0 1 50%;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        background-image: url('/src/icons/list-arrow.system.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+
+  &.js_dke_active{
+    .dke_sight__btn-text::after{
+      transform: rotate(180deg);
+    }
+  }
+}
