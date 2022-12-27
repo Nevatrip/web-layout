@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 import svgToTinyDataUri from 'mini-svg-data-uri';
+import SVGSpriteLoaderPlugin from 'svg-sprite-loader/plugin.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,8 +43,8 @@ const PAGES = [
     filename: 'ru-thaibuytrip',
   },
   {
-    dir: 'excursion',
-    filename: 'excursion',
+    dir: 'trip-icons',
+    filename: 'trip-icons'
   },
   {
     dir: 'faq',
@@ -136,6 +137,7 @@ const config = {
       },
       {
         test: /\.svg$/,
+        exclude: /\.sprite\.svg$/,
         type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
@@ -149,6 +151,14 @@ const config = {
             return svgToTinyDataUri(content);
           },
         },
+      },
+      {
+        test: /\.sprite\.svg$/,
+        loader: 'svg-sprite-loader',
+        options: {
+          extract: true,
+          outputPath: 'assets/sprites/'
+        }
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
@@ -174,6 +184,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new SVGSpriteLoaderPlugin()
   ],
 };
 
