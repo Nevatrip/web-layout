@@ -43,8 +43,8 @@ const PAGES = [
     filename: 'ru-thaibuytrip',
   },
   {
-    dir: 'excursion',
-    filename: 'excursion',
+    dir: 'trip-icons',
+    filename: 'trip-icons'
   },
   {
     dir: 'faq',

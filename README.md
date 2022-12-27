@@ -259,3 +259,5 @@ h1 {
   <use xlink:href="/assets/sprites/sprite.svg#icon.sprite" />
 </svg>
  ```
+
+Все иконки, используемые в проекте, можно посмотреть (здесь)[https://nevatrip.github.io/web-layout/trip-icons.html]
