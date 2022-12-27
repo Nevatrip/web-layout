@@ -19,6 +19,79 @@
     }
   }
 
+  &_column {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .dke_price-box__price {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    .dke_button {
+      width: 100%;
+    }
+
+    @include media.sm {
+      flex-direction: row;
+
+      .dke_price-box__price {
+        margin-right: 12px;
+        margin-bottom: 0;
+      }
+
+      .dke_button {
+        width: auto;
+      }
+    }
+  }
+
+  &_on-pad {
+    padding: 25px 35px;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgb(150 150 150 / 25%);
+    border: 1px solid colors.$lightGrey;
+
+    .dke_price-box__price {
+      margin-bottom: 20px;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .dke_button {
+      width: 100%;
+      font-size: 20px;
+    }
+
+    @include media.md {
+      padding: 20px;
+
+      .dke_button {
+        font-size: 17px;
+      }
+    }
+
+    @include media.sm {
+      flex-direction: row;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .dke_price-box__price {
+        text-align: left;
+        margin-bottom: 0;
+        margin-right: 12px;
+      }
+
+      .dke_button {
+        width: auto;
+      }
+    }
+  }
+
   @include media.xs {
     &_sticky {
       justify-content: space-around;
@@ -32,6 +105,7 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
       border-top-left-radius: 18px;
       border-top-right-radius: 18px;
+      flex-wrap: nowrap;
     }
   }
 
@@ -50,17 +124,6 @@
     @include media.md {
       font-size: 30px;
     }
-
-    & > svg,
-    & > img {
-      max-width: 19px;
-      height: auto;
-      display: inline;
-
-      @include media.md {
-        max-width: 16px;
-      }
-    }
   }
 
   &__sub-price {
@@ -68,12 +131,5 @@
     font-weight: 400;
     line-height: 1;
     display: block;
-
-    & > svg,
-    & > img {
-      max-width: 5.5px;
-      height: auto;
-      display: inline;
-    }
   }
 }
