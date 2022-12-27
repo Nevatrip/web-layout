@@ -10,7 +10,7 @@
 
   &_white {
     .dke_burger__icon .line {
-      stroke: #ffffff;
+      stroke: colors.$border3;
     }
   }
 
@@ -37,7 +37,7 @@
     & .line {
       fill: none;
       transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
-      stroke: colors.$body;
+      stroke: colors.$icon2;
       stroke-width: 5.5;
       stroke-linecap: round;
     }

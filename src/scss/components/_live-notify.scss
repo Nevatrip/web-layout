@@ -49,14 +49,14 @@
     color: #fff;
     line-height: 15px;
     letter-spacing: -0.4px;
-    color: colors.$body;
+    color: colors.$text;
   }
 
   &__link{
     display:inline-block;
     width: 93px;
     height: 33px;
-    background: colors.$buttonMain;
+    background: colors.$button;
     border-radius: 18px;
     font-size: 12px;
     line-height: 33px;
@@ -66,7 +66,7 @@
     transition: background-color variables.$transition;
 
     &:hover{
-      background-color: colors.$buttonMainHover;
+      background-color: colors.$buttonHover;
     }
   }
   
