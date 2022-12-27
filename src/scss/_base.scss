@@ -16,8 +16,8 @@ body {
   position: relative;
   font-family: 'Open Sans', 'PT Sans', Arial, Helvetica, sans-serif;
   line-height: 1.428;
-  color: colors.$body;
-  background: #fff;
+  color: colors.$text;
+  background: colors.$background4;
   -webkit-font-smoothig: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,7 +50,7 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
-  color: colors.$main;
+  color: colors.$link;
 }
 
 button {
@@ -156,5 +156,11 @@ hr {
 
   &.short {
     width: 50%;
+  }
+}
+
+.dke_col-4_top{
+  @include media.sm {
+    order: -1;
   }
 }

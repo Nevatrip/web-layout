@@ -45,7 +45,7 @@
     position: relative;
     width: 460px;
     height: 307px;
-    background-color: #e3e3e3;
+    background-color: rgba(colors.$background3, 0.3);
     border-radius: 16px;
     overflow: hidden;
     margin-right: 30px;
@@ -91,6 +91,7 @@
     background-color: rgb(51, 153, 204);
     border-radius: 16px 0 16px 0;
     z-index: 2;
+    text-transform: uppercase;
 
     &_yellow {
       color: rgb(54, 50, 50);
@@ -111,7 +112,7 @@
     font-weight: 600;
     margin-bottom: 1em;
     display: inline-block;
-    color: colors.$body;
+    color: colors.$text;
 
     @include media.md {
       font-size: 16px;
@@ -138,7 +139,7 @@
   &__time {
     position: relative;
     padding-left: 21px;
-    color: #9e9e9e;
+    color: colors.$text2;
     margin-bottom: 1.4em;
 
     @include media.md {
@@ -152,7 +153,7 @@
       top: 3px;
       width: 16px;
       height: 16px;
-      background-image: url('../../icons/time.system.svg');
+      background-image: url('/src/icons/time.system.svg');
       background-position: center;
       background-repeat: no-repeat;
 
@@ -192,7 +193,7 @@
         top: 5px;
         width: 15px;
         height: 15px;
-        background-image: url('../../icons/list-arrow.system.svg');
+        background-image: url('/src/icons/list-arrow.system.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;
@@ -212,7 +213,7 @@
     line-height: 24px;
     margin-right: 3px;
     color: rgb(51, 51, 51);
-    background: #d9e8ff;
+    background: colors.$button2;
     border-radius: 11px;
     text-align: center;
     margin-top: 3px;
@@ -220,9 +221,9 @@
     transition: all variables.$transition;
 
     &:hover {
-      color: #fff;
+      color: colors.$text3;
       text-decoration: none;
-      background-color: #6ba6ff;
+      background-color: colors.$buttonHover2;
     }
   }
 
@@ -232,7 +233,7 @@
     width: 100%;
 
     &__link {
-      color: #49aada;
+      color: colors.$link;
       font-weight: 600;
 
       & > * {
@@ -242,7 +243,7 @@
 
       &:hover {
         & > * {
-          border-bottom: 1px solid #49aada;
+          border-bottom: 1px solid colors.$link;
         }
       }
 
@@ -258,8 +259,8 @@
   }
 
   a.dke_tour__title:hover > * {
-    color: colors.$main;
-    border-bottom: 2px solid colors.$main;
+    color: colors.$link;
+    border-bottom: 2px solid colors.$link;
   }
 
   @include media.md {
@@ -277,6 +278,72 @@
   @include media.md {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.dke_tours-small{
+
+  @include media.md {
+    display: none;
+  }
+
+  .dke_tour{
+    width: 100%;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid #e3e3e3;
+    padding: 0;
+    align-self: baseline;
+    margin-bottom: 20px;
+    &__description {
+      padding: 0 15px 15px 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    &__preview {
+      width: 100%;
+      margin-right: 0;
+      height: 260px;
+      margin-bottom: 20px;
+      border-radius: 16px 16px 0 0;
+      @include media.lg {
+        height: 204px;
+      }
+    }
+    &__title {
+      font-size: 16px;
+    }
+    &__time {
+      font-size: 14px;
+    }
+    &__list {
+      font-size: 15px;
+    }
+  }
+  .dke_tour__tag{
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+  .dke_button{
+    transition: all variables.$transition;
+  }
+  .dke_button:not(:hover){
+    border: 1px solid #e3e3e3;
+    background-color: #f5f5f5;
+  }
+  .dke_button:hover{
+    border: 1px solid #e8b705;
+  }
+  .dke_price{
+    font-size: 26px;
+  }
+  .dke_price > svg, .dke_price > img{
+    max-height: 20px;
+  }
+  .dke_price-box{
+    width: 100%;
     justify-content: space-between;
   }
 }

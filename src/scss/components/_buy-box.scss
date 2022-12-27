@@ -1,0 +1,15 @@
+@use '../media';
+
+.dke_buy-box{
+  margin-bottom: 20px;
+
+  @include media.xs {
+    display: none;
+  }
+
+  .dke_price-box{
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
