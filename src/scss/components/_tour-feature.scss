@@ -4,6 +4,7 @@
 
 .dke_tour-feature {
   display: flex;
+  position: relative;
 
   &__icon-wrapper {
     flex-shrink: 0;
@@ -23,6 +24,7 @@
 
   &__text {
     font-size: 17px;
+    position: relative;
 
     @include media.sm {
       font-size: 15px;
@@ -45,8 +47,6 @@
   }
 
   &__onboard-icon {
-    font-family: 'icomoon';
-    font-size: 15px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -55,5 +55,37 @@
     border-radius: 5px;
     background: colors.$buttonMain;
     padding: 5px;
+  }
+
+  &__flag {
+    font-size: 17px;
+    display: inline-block;
+    width: 22px;
+    height: 17px;
+  }
+
+  &__flag-icon {
+    margin-top: 3px;
+  }
+
+  &__prices-button {
+    color: colors.$main;
+
+    &::after {
+      content: '';
+      margin-bottom: 2px;
+      margin-left: 4px;
+      display: inline-block;
+      width: 11px;
+      height: 6px;
+      background: url('src/icons/arrow-drop-down-blue.system.svg');
+    }
+  }
+
+  &__drop-down-price {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
   }
 }

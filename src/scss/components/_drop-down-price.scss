@@ -1,0 +1,51 @@
+@use '../colors';
+@use '../variables';
+
+.js_dke_drop-down-price-active {
+  padding: 15px 20px;
+}
+
+.dke_drop-down-price {
+  padding: 0;
+  border: 1px solid colors.$main;
+  border-radius: 12px;
+  font-size: 14px;
+  overflow: hidden;
+  transition: height variables.$transition;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-weight: 600;
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  &__question-wrapper {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+
+    & > img {
+      margin-top: 1px;
+    }
+  }
+
+  &__price {
+    padding: 8px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url('src/icons/cross.system.svg') center center no-repeat;
+  }
+}
