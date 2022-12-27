@@ -22,7 +22,11 @@ function ready() {
     remindModal.openModal();
   });
 
-  new dropDownElement(document.querySelector('.dke_drop-down-price'));
+  new dropDownElement(
+    document.querySelector('.dke_drop-down-price'),
+    'js_dke_active',
+    null
+  );
 
   // список достопримечательностей
   sightList();

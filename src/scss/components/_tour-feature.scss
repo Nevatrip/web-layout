@@ -6,6 +6,10 @@
   display: flex;
   position: relative;
 
+  &_wrap {
+    flex-wrap: wrap;
+  }
+
   &__icon-wrapper {
     flex-shrink: 0;
     display: inline-flex;
@@ -85,7 +89,16 @@
   &__drop-down-price {
     position: absolute;
     top: 0;
-    left: 100%;
-    margin-left: 10px;
+    left: 310px;
+
+    @include media.sm {
+      left: 280px;
+    }
+
+    @include media.xs {
+      position: relative;
+      left: 0;
+      margin-top: 10px;
+    }
   }
 }

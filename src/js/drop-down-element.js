@@ -1,18 +1,54 @@
 export default class dropDownElement {
-  constructor(element) {
+  constructor(element, activeCLass, disabledClass) {
     this.element = element;
+    this.activeCLass = activeCLass;
+    this.disabledClass = disabledClass;
     this.toggleElement = document.querySelector('.js_dke_toggle');
     this.closeButton = element.querySelector('.js_dke_close-button');
 
     this.toggleElement.addEventListener('click', () => {
-      if (this.element.style.height === '0px') {
-        this.element.style.height = `${this.element.scrollHeight}px`;
+      if (this.element.style.height === '') {
+        this.open();
       } else {
-        this.element.style.height = `${this.element.scrollHeight}px`;
-        window.getComputedStyle(this.element).height;
-        this.element.style.height = '0';
-        // this.element.removeAttribute('style');
+        this.close();
       }
     });
+
+    this.closeButton.addEventListener('click', () => this.close());
+  }
+
+  open() {
+    if (this.activeCLass) {
+      this.element.classList.add(this.activeCLass);
+    }
+    const endHeight = window.getComputedStyle(this.element).height;
+    this.element.style.height = '0px';
+    requestAnimationFrame(() => {
+      this.element.style.height = endHeight;
+    });
+    this.element.addEventListener(
+      'transitionend',
+      () => {
+        this.element.style.overflow = 'visible';
+      },
+      { once: true }
+    );
+  }
+
+  close() {
+    this.element.style.overflow = 'hidden';
+    this.element.style.height = '0px';
+    this.element.addEventListener(
+      'transitionend',
+      () => {
+        this.element.classList.remove(this.activeCLass);
+        if (this.disabledClass) {
+          this.element.classList.add(this.disabledClass);
+        }
+        this.element.style.height = '';
+        this.element.removeAttribute.style;
+      },
+      { once: true }
+    );
   }
 }
