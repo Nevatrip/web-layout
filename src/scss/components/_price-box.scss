@@ -23,7 +23,7 @@
     &_sticky {
       justify-content: space-around;
       z-index: 30;
-      background: #ffffff;
+      background: colors.$background4;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -44,7 +44,7 @@
 
   &__price {
     font-size: 36px;
-    color: colors.$body;
+    color: colors.$text;
     margin-right: 12px;
 
     @include media.md {

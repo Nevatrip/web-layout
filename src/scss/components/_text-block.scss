@@ -58,12 +58,12 @@ ul:not([class]) {
 }
 
 p:not([class]) a, ul:not([class]) li:not([class]) a, ol:not([class]) li:not([class]) a {
-  color: colors.$blue1;
+  color: colors.$link;
   border-bottom: 1px solid transparent;
   transition: border-color variables.$transition;
 
   &:hover {
-    border-bottom: 1px solid colors.$blue1;
+    border-bottom: 1px solid colors.$link;
   }
 }
 

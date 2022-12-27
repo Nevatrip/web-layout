@@ -5,9 +5,9 @@
 .dke_button {
   font-size: 17px;
   line-height: 1.33;
-  color: colors.$body;
+  color: colors.$text;
   border: none;
-  background-color: colors.$buttonMain;
+  background-color: colors.$button;
   padding: 13px 24px;
   border-radius: 30px;
   cursor: pointer;
@@ -23,7 +23,7 @@
   }
 
   &:hover {
-    background-color: colors.$buttonMainHover;
+    background-color: colors.$buttonHover;
   }
 
   &_not-shrink {
