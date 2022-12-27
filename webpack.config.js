@@ -49,6 +49,26 @@ const PAGES = [
     dir: 'faq',
     filename: 'faq',
   },
+  {
+    dir: 'list',
+    filename: 'list',
+  },
+  {
+    dir: 'list-map',
+    filename: 'list-map',
+  },
+  {
+    dir: 'group',
+    filename: 'group',
+  },
+  {
+    dir: 'arenda-main',
+    filename: 'arenda-main',
+  },
+  {
+    dir: 'arenda-list',
+    filename: 'arenda-list',
+  },
 ];
 
 const config = {
