@@ -3,6 +3,7 @@ import '../../scss/pages/excursion.scss';
 import '../../icons/boat.sprite.svg';
 import '../../icons/anchor.sprite.svg';
 import '../../icons/lifebuoy.sprite.svg';
+import '../../icons/ticket.sprite.svg';
 import '../../icons/star.sprite.svg';
 
 import { dropDownMenu } from './../../js/drop-down-menu.js';
