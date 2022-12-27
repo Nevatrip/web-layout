@@ -69,6 +69,10 @@ const PAGES = [
     dir: 'arenda-list',
     filename: 'arenda-list',
   },
+  {
+    dir: 'vlog-main',
+    filename: 'vlog-main',
+  },
 ];
 
 const config = {
