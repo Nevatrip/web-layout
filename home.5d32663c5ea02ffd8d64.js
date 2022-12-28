@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("load",(function(){document.body.classList.remove("preload")})),document.addEventListener("DOMContentLoaded",(function(){console.log("loaded")}))})();
