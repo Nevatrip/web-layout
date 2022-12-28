@@ -1,0 +1,73 @@
+@use '../media';
+
+.dke_subscribe-form{
+  margin-bottom: 50px;
+  
+  &__title{
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.9px;
+  }
+
+  &__form{
+    display: flex;
+    width: 48%;
+    margin-bottom: 16px;
+
+    @include media.md{
+      width: 100%;
+    }
+    
+    @media screen and (max-width: 442px) {
+      flex-direction: column; 
+    }
+  }
+
+  &__input{
+    border: 1px solid #cccccc;
+    border-radius: 30px 0 0 30px;
+    flex-grow: 1;
+    overflow: hidden;
+
+    @media screen and (max-width: 442px) {
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    input{
+      width: 100%;
+      height: 100%;
+      padding: 6px 12px 6px 25px;
+      height: 50px;
+      font-size: 15px;
+      line-height: 1.42;
+      font-weight: 600;
+      color: #8a7f7f;
+      box-shadow: inset 0 1px 1px rgb(0, 0, 0, .08);
+    }
+  }
+
+  &__button{
+    color: #312d2d;
+    background-color: #ffd84a;
+    border: 1px solid #dcbe00;
+    padding: 10px 30px 10px 24px;
+    font-size: 21px;
+    line-height: 1.3333333;
+    border-radius: 0 30px 30px 0;
+    margin-left: -1px;
+
+    @media screen and (max-width: 442px) {
+      border-radius: 30px;
+      text-align: center;
+    }
+  }
+
+  .dke_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
