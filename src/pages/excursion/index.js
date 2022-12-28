@@ -3,17 +3,19 @@ import '../../scss/pages/excursion.scss';
 import '../../icons/boat.sprite.svg';
 import '../../icons/anchor.sprite.svg';
 import '../../icons/lifebuoy.sprite.svg';
+import '../../icons/ticket.sprite.svg';
 import '../../icons/star.sprite.svg';
 
 import { dropDownMenu } from './../../js/drop-down-menu.js';
 import Topbar from '../../js/topbar.js';
 import { sightList } from './../../js/sight-list.js';
 import { faq } from './../../js/faq.js';
+import { faqSimple } from './../../js/faq-simple.js';
+import { program } from './../../js/program.js';
 import Modal from '../../js/modal.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 import Gallery from '../../js/gallery.js';
 import LiveNotify from '../../js/live-notify.js';
-
 
 function ready() {
   // выпадающее меню (desktop), бургер-меню (mobile)
@@ -32,6 +34,12 @@ function ready() {
 
   // блок FAQ
   faq();
+
+  // упрощенный блок FAQ
+  faqSimple();
+  
+  // блок с программой мероприятия
+  program();
   
   //Инициализация слайдера и попапа галереи
   new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');

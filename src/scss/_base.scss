@@ -164,3 +164,28 @@ hr {
     order: -1;
   }
 }
+
+.dke_subtitle{
+  font-size: 19px;
+  margin-bottom: 2em;
+
+  @include media.sm{
+    font-size: 17px;
+  }
+}
+
+.dke_drop-down-arrow::after{
+  content: '';
+  transition: bottom variables.$transition, 
+              transform variables.$transition;;
+  bottom: 40%;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 7px;
+  height: 15px;
+  width: 15px;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}

@@ -1,0 +1,56 @@
+@use '../colors';
+@use '../variables';
+
+.dke_faq-simple {
+  &__accordion {
+    list-style-type: none;
+    padding: 0;
+  }
+  &__accordion-item {
+    & + & {
+      padding-top: 7px;
+      margin-top: 16px;
+      border-top: 1px solid colors.$border;
+    }
+  }
+}
+
+.dke_item-faq-simple {
+  &__head {
+    width: 100%;
+    color: colors.$text7;
+    padding-right: 30px;
+    text-align: left;
+    position: relative;
+
+    &::after{
+      border-color: colors.$border5;
+    }
+  }
+  
+  &__head-title {
+    font-size: 19px;
+
+    &:hover {
+      border-bottom: 1px solid colors.$link;
+    }    
+  }
+
+  &__body {
+    transition: max-height variables.$transition;
+    max-height: 0;
+    overflow-y: hidden;
+  }
+
+  &__body-content {
+    font-size: 15px;
+    overflow-y: auto;
+  }
+
+  &.js_dke_active{
+    .dke_item-faq-simple__head::after{
+      bottom: 20%;
+      transform: rotate(-135deg);
+    }
+  }
+}

@@ -43,8 +43,8 @@ const PAGES = [
     filename: 'ru-thaibuytrip',
   },
   {
-    dir: 'excursion',
-    filename: 'excursion',
+    dir: 'trip-icons',
+    filename: 'trip-icons'
   },
   {
     dir: 'faq',
@@ -155,7 +155,6 @@ const config = {
       {
         test: /\.sprite\.svg$/,
         loader: 'svg-sprite-loader',
-        
         options: {
           extract: true,
           outputPath: 'assets/sprites/'
@@ -185,13 +184,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new SVGSpriteLoaderPlugin({
-      // plainSprite: true,
-      // spriteAttrs: {
-      //   id: 'my-custom-sprite-id'
-      // }
-    })
-    // new SpriteLoaderPlugin()
+    new SVGSpriteLoaderPlugin()
   ],
 };
 
