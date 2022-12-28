@@ -54,5 +54,10 @@
     &:hover{
       color: colors.$linkHover;
     }
+
+    &.dke_active{
+      color: colors.$link5;
+      border-bottom: 2px solid colors.$border8;
+    }
   }
 }

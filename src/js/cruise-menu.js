@@ -9,8 +9,13 @@ export function cruiseMenu() {
     sectionCruiseMenu.style.top = bottomNavbar + 'px';
 
     linksCruiseMenu.forEach(function(element) {
-      element.addEventListener('click', function(e) { 
+      element.addEventListener('click', function(e) {
+        const activeLink = sectionCruiseMenu.querySelector('.dke_cruise-menu__list-link.dke_active');
+        if (activeLink) activeLink.classList.remove('dke_active');
+
+        element.classList.add('dke_active');
         scrollToSection.call(this, e, bottomNavbar);
+        
       });
     });
   }
@@ -19,7 +24,7 @@ export function cruiseMenu() {
   //Прокрутка страницы до блока с нужным id при клике
 function scrollToSection(e, bottomNavbar){
   e.preventDefault();
-  
+
   const href = this.getAttribute("href");
   const section = document.querySelector(href);
 
