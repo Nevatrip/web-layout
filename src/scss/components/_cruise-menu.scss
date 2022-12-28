@@ -1,0 +1,58 @@
+@use '../colors';
+@use '../media';
+@use '../variables';
+
+.dke_cruise-menu {
+  position: sticky;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: colors.$background4;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 10%);
+  margin-bottom: 25px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -70%;
+    height: 70%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: colors.$background4;
+  }
+
+  @include media.sm {
+    padding-top: 10px;
+  }
+
+  &__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &__list {
+    font-size: 17px;
+
+    @include media.sm {
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+
+  &__list-item {
+    white-space: nowrap;
+  }
+
+  &__list-link {
+    transition: color variables.$transition;
+    color: colors.$link4;
+    font-weight: 600;
+    padding: 0.95em 0.45em;
+
+    &:hover{
+      color: colors.$linkHover;
+    }
+  }
+}

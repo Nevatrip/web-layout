@@ -12,6 +12,7 @@ import { sightList } from './../../js/sight-list.js';
 import { faq } from './../../js/faq.js';
 import { faqSimple } from './../../js/faq-simple.js';
 import { program } from './../../js/program.js';
+import { cruiseMenu } from './../../js/cruise-menu.js';
 import Modal from '../../js/modal.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
 import Gallery from '../../js/gallery.js';
@@ -40,6 +41,9 @@ function ready() {
   
   // блок с программой мероприятия
   program();
+
+  // навигационное меню в экскурсии
+  cruiseMenu();
   
   //Инициализация слайдера и попапа галереи
   new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');
