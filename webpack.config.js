@@ -44,7 +44,7 @@ const PAGES = [
   },
   {
     dir: 'trip-icons',
-    filename: 'trip-icons'
+    filename: 'trip-icons',
   },
   {
     dir: 'faq',
@@ -157,8 +157,8 @@ const config = {
         loader: 'svg-sprite-loader',
         options: {
           extract: true,
-          outputPath: 'assets/sprites/'
-        }
+          outputPath: 'assets/sprites/',
+        },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
@@ -177,6 +177,15 @@ const config = {
           template: `./src/pages/${dir}/${filename}.hbs`,
           filename: `./${filename}.html`,
           chunks: ['main', dir],
+          minify: {
+            collapseWhitespace: false,
+            keepClosingSlash: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
+          },
         })
     ),
 
@@ -184,7 +193,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new SVGSpriteLoaderPlugin()
+    new SVGSpriteLoaderPlugin(),
   ],
 };
 
