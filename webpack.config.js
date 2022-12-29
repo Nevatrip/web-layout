@@ -50,6 +50,18 @@ const PAGES = [
     dir: 'faq',
     filename: 'faq',
   },
+  {
+    dir: 'blog-detail-old',
+    filename: 'blog-detail-old',
+  },
+  {
+    dir: 'sights-list',
+    filename: 'sights-list',
+  },
+  {
+    dir: 'sight',
+    filename: 'sight',
+  },
 ];
 
 const config = {
@@ -137,7 +149,7 @@ const config = {
       },
       {
         test: /\.svg$/,
-        exclude: /\.sprite\.svg$/,
+        exclude: [/\.sprite\.svg$/, /flags/],
         type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
@@ -158,6 +170,17 @@ const config = {
         options: {
           extract: true,
           outputPath: 'assets/sprites/',
+        },
+      },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'src/flags'),
+        type: 'asset/resource',
+        generator: {
+          filename: name => {
+            const path = name.filename.split('/').slice(1, -1).join('/');
+            return `assets/${path}/[name][ext]`;
+          },
         },
       },
       {

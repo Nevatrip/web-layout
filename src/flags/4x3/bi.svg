@@ -1,29 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg id="svg548" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="480" width="640" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata3031">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs id="defs550">
-  <clipPath id="clipPath3172" clipPathUnits="userSpaceOnUse">
-   <rect id="rect3174" fill-opacity="0.67" height="512" width="682.67" y=".000038539" x="-90.533"/>
-  </clipPath>
- </defs>
- <g id="flag" clip-path="url(#clipPath3172)" fill-rule="evenodd" transform="matrix(.93750 0 0 .93750 84.875 -.000036130)">
-  <path id="path551" d="m-178 0.000038 428.8 256-428.8 256z" stroke-width="1pt" fill="#00cf00"/>
-  <path id="path552" d="m679.6 0.000038-428.8 256 428.8 256z" stroke-width="1pt" fill="#00cf00"/>
-  <path id="path556" d="m-178 0.000038 428.8 256 428.8-256z" stroke-width="1pt" fill="#f00"/>
-  <path id="path557" d="m-178 512 428.8-256 428.8 256z" stroke-width="1pt" fill="#f00"/>
-  <path id="path558" d="m679.6 0.000038h-79.902l-777.7 464.3v47.703h79.902l777.7-464.3z" stroke-width="1pt" fill="#fff"/>
-  <path id="path571" d="m196.84 88.136c0 27.948-22.656 50.604-50.604 50.604s-50.604-22.656-50.604-50.604 22.656-50.604 50.604-50.604 50.604 22.656 50.604 50.604z" transform="matrix(2.9257 0 0 2.9257 -177.04 -1.8602)" fill="#fff"/>
-  <path id="path566" d="m-178 0.000038v47.703l777.7 464.3h79.902v-47.703l-777.7-464.3z" stroke-width="1pt" fill="#fff"/>
-  <polygon id="polygon576" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="matrix(2.9257 0 0 2.9257 -112.92 -109.58)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
-  <polygon id="polygon577" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="matrix(2.9257 0 0 2.9257 -177.42 2.0402)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
-  <polygon id="polygon578" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="matrix(2.9257 0 0 2.9257 -46.85 2.0402)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-bi" viewBox="0 0 640 480">
+  <defs>
+    <clipPath id="a">
+      <path fill-opacity=".7" d="M-90.5 0H592v512H-90.5z"/>
+    </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#a)" transform="translate(84.9) scale(.9375)">
+    <path fill="#18b637" d="m-178 0 428.8 256L-178 512zm857.6 0L250.8 256l428.8 256z"/>
+    <path fill="#cf0921" d="m-178 0 428.8 256L679.6 0zm0 512 428.8-256 428.8 256z"/>
+    <path fill="#fff" d="M679.6 0h-79.9L-178 464.3V512h79.9L679.6 47.7z"/>
+    <path fill="#fff" d="M398.9 256a148 148 0 1 1-296.1 0 148 148 0 0 1 296 0z"/>
+    <path fill="#fff" d="M-178 0v47.7L599.7 512h79.9v-47.7L-98.1 0z"/>
+    <path fill="#cf0921" stroke="#18b637" stroke-width="3.9" d="m280 200.2-19.3.3-10 16.4-9.9-16.4-19.2-.4 9.3-16.9-9.2-16.8 19.2-.4 10-16.4 9.9 16.5 19.2.4-9.3 16.8zm-64.6 111.6-19.2.3-10 16.4-9.9-16.4-19.2-.4 9.3-16.9-9.2-16.8 19.2-.4 10-16.4 9.9 16.5 19.2.4-9.3 16.8zm130.6 0-19.2.3-10 16.4-10-16.4-19.1-.4 9.3-16.9-9.3-16.8 19.2-.4 10-16.4 10 16.5 19.2.4-9.4 16.8z"/>
+  </g>
 </svg>

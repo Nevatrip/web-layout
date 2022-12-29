@@ -1,55 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<!-- /Creative Commons Public Domain -->
-<!--
-<rdf:RDF xmlns="http://web.resource.org/cc/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<Work rdf:about="">
-    <dc:title>New Zealand, Australia, United Kingdom, United States, 
-Bosnia and Herzegovina, Azerbaijan, Armenia, Bahamas, Belgium, Benin, 
-Bulgaria, Estonia, Finland, Gabon, Gambia, Germany, Greece, Greenland, 
-Guinea, Honduras, Israel, Jamaica, Jordan, and Romania Flags</dc:title>
-    <dc:rights><Agent>
-       <dc:title>Daniel McRae</dc:title>
-    </Agent></dc:rights>
-    <license rdf:resource="http://web.resource.org/cc/PublicDomain" />
-</Work>
-
-<License rdf:about="http://web.resource.org/cc/PublicDomain">
-    <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
-    <permits rdf:resource="http://web.resource.org/cc/Distribution" />
-    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
-</License>
-</rdf:RDF>
--->
-<svg id="svg609" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 512 512" width="512" version="1.0" y="0" x="0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata3231">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs id="defs611">
-  <clipPath id="clipPath5084" clipPathUnits="userSpaceOnUse">
-   <rect id="rect5086" fill-opacity="0.67" height="512" width="512" y="0" x="0"/>
-  </clipPath>
- </defs>
- <g id="flag" fill-rule="evenodd" clip-path="url(#clipPath5084)">
-  <rect id="rect614" height="512" width="512" y=".000015259" x="0" fill="#009"/>
-  <path id="path615" d="m77 0.0064678 436.91 436.91v-436.91h-436.91z" fill="#fc0"/>
-  <g id="g629" fill="#fff" transform="matrix(.43691 0 0 .43691 -93.246 54.433)">
-   <polygon id="polygon621" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon622" transform="translate(125,125)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon616" transform="translate(250,250)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon623" transform="translate(375,375)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon624" transform="translate(500,500)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon625" transform="translate(625,625)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon626" transform="translate(750,750)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon627" transform="translate(875,875)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
-   <polygon id="polygon628" transform="translate(1e3 1e3)" points="304.67 -43.357 326 -109 326 -109 347.33 -43.357 416.35 -43.357 360.51 -2.7868 381.84 62.857 326 22.287 270.16 62.857 291.49 -2.7868 235.65 -43.357"/>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ba" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="a">
+      <path fill-opacity=".7" d="M0 0h512v512H0z"/>
+    </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#a)">
+    <path fill="#009" d="M0 0h512v512H0z"/>
+    <path fill="#fc0" d="m77 0 437 437V0H77z"/>
+    <path fill="#FFF" d="m461.4 470.4-26.1-19.1-26.9 19 10.2-31.2-26.4-19.2h32.7l10.2-31 10 31.1 32.8.1-26.2 19.4 9.7 30.9zm76.7 10.4h-32.7l-10-31.2-10.2 31.1h-32.8l26.4 19.2-10.1 31.2 26.8-19 26.2 19-9.8-30.9 26.2-19.4zM391.8 379.6l26.2-19.4h-32.7L375.2 329 365 360h-32.7l26.4 19.3-10.1 31.1 26.8-19 26.1 19.1-9.7-31zm-60.3-60.4 26.2-19.4-32.8-.1-10-31.2-10.2 31.2-32.7-.1 26.4 19.2-10.2 31.2 26.9-19 26.1 19.1-9.7-31zm-59.7-59.7 26.2-19.4h-32.7l-10.1-31.2L245 240h-32.7l26.4 19.2-10.1 31.2 26.8-19 26.1 19-9.7-30.9zm-60.4-60.3 26.2-19.3-32.8-.1-10-31.2-10.2 31.2-32.7-.1 26.4 19.2-10.2 31.2 26.9-19 26.1 19-9.7-30.8zm-59.7-59.9L178 120l-32.7-.1-10-31.2-10.3 31.1H92.2l26.4 19.2-10.1 31.2 26.8-19 26.1 19-9.7-30.9zm-60-60L118 60l-32.7-.1-10-31.2L65 59.8H32.2L58.6 79l-10.1 31.2 26.8-19 26.2 19-9.8-30.9zm-60-60L58 0 25.2-.1l-10-31.2L4.8-.2h-32.7L-1.4 19l-10.1 31.2 26.8-19 26.1 19-9.7-30.9z"/>
   </g>
- </g>
 </svg>

@@ -1,29 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg id="svg548" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="512" width="512" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata3031">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs id="defs550">
-  <clipPath id="clipPath3072" clipPathUnits="userSpaceOnUse">
-   <rect id="rect3074" height="175" width="175" y="337" x="60.84" fill="#808080"/>
-  </clipPath>
- </defs>
- <g id="flag" clip-path="url(#clipPath3072)" fill-rule="evenodd" transform="matrix(2.9257 0 0 2.9257 -178 -985.97)">
-  <path id="path551" d="m0.000019073 337 146.56 87.5-146.56 87.5z" stroke-width="1pt" fill="#00cf00"/>
-  <path id="path552" d="m293.12 337-146.56 87.5 146.56 87.5z" stroke-width="1pt" fill="#00cf00"/>
-  <path id="path556" d="m0.000019073 337 146.56 87.5 146.56-87.5z" stroke-width="1pt" fill="#f00"/>
-  <path id="path557" d="m0.000019073 512 146.56-87.5 146.56 87.5z" stroke-width="1pt" fill="#f00"/>
-  <path id="path558" d="m293.12 337h-27.31l-265.81 158.7v16.305h27.31l265.81-158.7z" stroke-width="1pt" fill="#fff"/>
-  <path id="path571" d="m196.84 88.136c0 27.948-22.656 50.604-50.604 50.604s-50.604-22.656-50.604-50.604 22.656-50.604 50.604-50.604 50.604 22.656 50.604 50.604z" transform="translate(.32784 336.36)" fill="#fff"/>
-  <path id="path566" d="m0.000019073 337v16.305l265.81 158.7h27.31v-16.305l-265.81-158.7z" stroke-width="1pt" fill="#fff"/>
-  <polygon id="polygon576" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="translate(22.243 299.54)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
-  <polygon id="polygon577" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="translate(.19924 337.7)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
-  <polygon id="polygon578" d="m 134.28087,105.86726 -6.57603,0.1131 -3.40832,5.62497 -3.38596,-5.63845 -6.57553,-0.13921 3.19007,-5.75156 -3.16721,-5.764175 6.57603,-0.1131 3.40832,-5.624968 3.38596,5.638455 6.57553,0.139209 -3.19007,5.751559 z" transform="translate(44.827 337.7)" stroke="#00de00" points="134.28 105.87 127.7 105.98 124.3 111.6 120.91 105.97 114.34 105.83 117.52 100.08 114.36 94.312 120.93 94.199 124.34 88.574 127.73 94.212 134.3 94.352 131.11 100.1" stroke-width="1pt" fill="#f00"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-bi" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="a">
+      <path fill="gray" d="M60.8 337h175v175h-175z"/>
+    </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#a)" transform="translate(-178 -986) scale(2.9257)">
+    <path fill="#18b637" d="m0 337 146.6 87.5L0 512zm293.1 0-146.5 87.5L293 512z"/>
+    <path fill="#cf0921" d="m0 337 146.6 87.5L293 337zm0 175 146.6-87.5L293 512z"/>
+    <path fill="#fff" d="M293.1 337h-27.3L0 495.7V512h27.3l265.8-158.7z"/>
+    <path fill="#fff" d="M197.2 424.5a50.6 50.6 0 1 1-101.2 0 50.6 50.6 0 0 1 101.2 0z"/>
+    <path fill="#fff" d="M0 337v16.3L265.8 512h27.3v-16.3L27.3 337z"/>
+    <path fill="#cf0921" stroke="#18b637" stroke-width="1pt" d="m156.5 405.4-6.6.1-3.4 5.6-3.4-5.6-6.5-.1 3.2-5.8-3.2-5.7 6.6-.2 3.4-5.6 3.4 5.7h6.5l-3.1 5.8zm-22 38.2h-6.6l-3.4 5.7-3.4-5.6-6.6-.2 3.2-5.7-3.1-5.8 6.5-.1 3.4-5.6 3.4 5.6 6.6.2-3.2 5.7zm44.6 0h-6.6l-3.4 5.7-3.4-5.6-6.5-.2 3.1-5.7-3.1-5.8 6.6-.1 3.4-5.6 3.4 5.6 6.5.2-3.2 5.7z"/>
+  </g>
 </svg>
