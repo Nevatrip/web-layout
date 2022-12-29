@@ -1,0 +1,98 @@
+@use '../variables';
+
+.dke_blog-inner-content{
+  &__title{
+    font-size: 32px;
+    margin-bottom: 0.43em;
+    font-weight: 900;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  &__readtime{
+    display: inline-block;
+    color: #9C9C9C;
+    font-size: 14px;
+    border-radius: 17px;
+    border: 1px solid #E7E7E7;
+    background-image: url('src/icons/readtime-gray.system.svg');
+    background-position: 11px 10px;
+    background-repeat: no-repeat;
+    padding: 9px 16px 7px 36px;
+    margin-left: 11px;
+  }
+  &__date{
+    color: #9C9C9C;
+    font-size: 12px;
+  }
+  .dke_container{
+    flex-direction: column;
+  }
+  .dke_article__img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 17px 0 41px;
+    display: block;
+    &-author{
+      position: absolute;
+      left: 13px;
+      bottom: 14px;
+      background-color: rgb(7, 15, 30, .47);
+      color: #fff;
+      font-size: 14px;
+      padding: 9px 32px;
+      border-radius: 17px;
+    }
+  }
+  h2, .h2{
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 0.7em;
+  }
+  .h3{
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 0.7em;
+  }
+  h3{
+    font-size: 22px;
+  }
+  p{
+    margin-bottom: 1.3em;
+  }
+  ol{
+    padding-left: 0;
+    list-style-position: inside;
+    counter-reset: item;
+    list-style-type: none;
+    li{
+      margin-bottom: 1em;
+      counter-increment: item;
+      position: relative;
+      padding-left: 38px;
+      font-size: 20px;
+      padding-top: 3px;
+      &::before {
+        font-size: 20px;
+        font-weight: 900;
+        content: counter(item) " ";
+        content: counter(item, decimal-leading-zero);
+        position: absolute;
+        top: 2px;
+        left: 0;
+      }
+      a{
+        color: #312d2d;
+        border-bottom: 2px solid #312d2d;
+        display: inline;
+        transition: border-color variables.$transition;
+        &:hover{
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
