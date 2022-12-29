@@ -5,6 +5,7 @@ import '../../icons/anchor.sprite.svg';
 import '../../icons/lifebuoy.sprite.svg';
 import '../../icons/ticket.sprite.svg';
 import '../../icons/star.sprite.svg';
+import '../../icons/stars-rating.sprite.svg';
 
 function ready() {
   console.log('loaded');
