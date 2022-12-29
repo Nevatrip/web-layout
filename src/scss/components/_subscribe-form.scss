@@ -23,6 +23,27 @@
     @media screen and (max-width: 442px) {
       flex-direction: column; 
     }
+
+    &_vertical{
+      flex-direction: column;
+      width: 100%;
+
+      .dke_subscribe-form__input{
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 25px;
+        
+        input{
+          padding: 6px 25px;
+          font-weight: 400;
+        }
+      }
+      .dke_subscribe-form__button{
+        width: 100%;
+        border-radius: 30px;
+        text-align: center;
+      }
+    }
   }
 
   &__input{
