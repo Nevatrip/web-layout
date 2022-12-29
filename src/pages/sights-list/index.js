@@ -10,15 +10,6 @@ function ready() {
 
   new Topbar(document.querySelector('.dke_topbar'));
 
-  // блок FAQ
-  faq();
-
-  //Инициализация слайдера и попапа галереи
-  new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');
-
-  //Инициализация попапа уведомления
-  new LiveNotify('#dke_live-notify');
-
   // кнопка прокрутки страницы вверх
   new ButtonScrollTop('.dke_button-scroll-top');
 }

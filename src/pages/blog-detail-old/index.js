@@ -1,11 +1,5 @@
 import '../../scss/pages/blog-detail-old.scss';
 
-import '../../icons/boat.sprite.svg';
-import '../../icons/anchor.sprite.svg';
-import '../../icons/lifebuoy.sprite.svg';
-import '../../icons/ticket.sprite.svg';
-import '../../icons/star.sprite.svg';
-
 import { dropDownMenu } from './../../js/drop-down-menu.js';
 import Topbar from '../../js/topbar.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
