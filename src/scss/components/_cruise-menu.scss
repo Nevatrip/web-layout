@@ -3,25 +3,13 @@
 @use '../variables';
 
 .dke_cruise-menu {
-  position: sticky;
-  left: 0;
-  right: 0;
+  position: relative;
+  // left: 0;
+  // right: 0;
   z-index: 3;
   background: colors.$background4;
   box-shadow: 0 4px 4px rgb(0, 0, 0, 10%);
   margin-bottom: 25px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: -70%;
-    height: 70%;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    background-color: colors.$background4;
-  }
 
   @include media.sm {
     padding-top: 10px;

@@ -1,12 +1,20 @@
+import { offset } from './utils.js';
+
+const sectionCruiseMenu = document.querySelector('.dke_cruise-menu');
+
 export function cruiseMenu() {
-  const sectionCruiseMenu = document.querySelector('.dke_cruise-menu');
   const linksCruiseMenu = sectionCruiseMenu.querySelectorAll('.dke_cruise-menu__list-link');
   const navbar = document.querySelector('.dke_navbar');
 
   // установка отступа навигационного меню от верхней части экрана
   if (sectionCruiseMenu && navbar) {
-    const bottomNavbar = navbar.getBoundingClientRect()?.bottom;
-    sectionCruiseMenu.style.top = bottomNavbar + 'px';
+    const sectionCruiseMenu = document.querySelector('.dke_cruise-menu');
+    const topCruiseMenu = offset(sectionCruiseMenu).top;
+
+
+    window.addEventListener('scroll', () => {
+      changeStickyCruiseMenu(topCruiseMenu);
+    });
 
     linksCruiseMenu.forEach(function(element) {
       element.addEventListener('click', function(e) {
@@ -21,11 +29,37 @@ export function cruiseMenu() {
   }
 }
 
-  //Прокрутка страницы до блока с нужным id при клике
+let sticky = false;
+let node1 = null;
+let nodeHeight = null;
+
+// прилипание навигационного меню при скролле
+function changeStickyCruiseMenu(top){
+  const windowY = window.pageYOffset;
+
+  const navbar = document.querySelector('.dke_navbar');
+  if (windowY + document.querySelector('.dke_head-navbar').offsetHeight > top && !sticky) {
+    node1 = document.querySelector('.dke_cruise-menu');
+    const cloneNode = a.cloneNode(true);
+    navbar.append(cloneNode);
+    sticky = true;
+  } 
+  else if (windowY <= top + nodeHeight && sticky) {
+    const node2 = navbar.querySelector('.dke_cruise-menu');
+    nodeHeight = navbar.querySelector('.dke_cruise-menu').offsetHeight;
+    const cloneNode = node2.cloneNode(true);
+    node1?.remove();
+    document.querySelector('#cruise-menu').append(cloneNode);
+    node2.remove();
+    sticky = false;
+  }
+}
+
+// Прокрутка страницы до блока с нужным id при клике
 function scrollToSection(e, bottomNavbar){
   e.preventDefault();
 
-  const href = this.getAttribute("href");
+  const href = this.getAttribute('href');
   const section = document.querySelector(href);
 
   if (section) {
