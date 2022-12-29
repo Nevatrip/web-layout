@@ -73,6 +73,18 @@ const PAGES = [
     dir: 'vlog-main',
     filename: 'vlog-main',
   },
+  {
+    dir: 'vlog-inner-page',
+    filename: 'vlog-inner-page',
+  },
+  {
+    dir: 'blog',
+    filename: 'blog',
+  },
+  {
+    dir: 'blog-inner',
+    filename: 'blog-inner',
+  },
 ];
 
 const config = {
