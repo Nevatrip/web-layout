@@ -1,0 +1,14 @@
+@use '../media';
+@use '../colors';
+
+.dke_see-all {
+  text-align: center;
+
+  &__btn {
+    font-size: 18px;
+
+    @include media.sm {
+      font-size: 16px;
+    }
+  }
+}

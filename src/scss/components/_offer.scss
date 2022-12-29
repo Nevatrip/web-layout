@@ -4,10 +4,14 @@
 .dke_offer {
   margin: 14px 0 37px;
   padding: 21px 16px;
-  background-color: colors.$background9;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 7%);
+  background-color: colors.$background7;
+  box-shadow: 0px 4px 4px rgb(0, 0, 0, 7%);
   border-radius: 13px;
-  color: #000000;
+  color: colors.$text8;
+  
+  @include media.sm {
+    background-color: colors.$background9;
+  }
 
   &__text {
     font-weight: 600;
@@ -26,15 +30,17 @@
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      bottom: -24px;
-      margin: auto;
-      height: 1px;
-      width: 100px;
-      background: colors.$link3;
-      left: 0;
-      right: 0;
+      @include media.sm {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        margin: auto;
+        height: 1px;
+        width: 100px;
+        background: colors.$link3;
+        left: 0;
+        right: 0;
+      }
     }
   }
 
