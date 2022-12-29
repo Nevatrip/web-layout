@@ -1,0 +1,31 @@
+@use '../variables';
+
+.dke_vlog-modal{
+  padding: 40px 25px 20px 25px;
+
+  &__title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0.83em;
+  }
+
+  &__content{
+    a{
+      display: inline;
+    }
+  }
+
+  &__link{
+    display: inline;
+    color: gray;
+    border-bottom: 1px solid transparent;
+    transition: border-color variables.$transition;
+    &:hover{
+      border-color: gray;
+    }
+  }
+
+  iframe{
+    width: 100%;
+  }
+}
