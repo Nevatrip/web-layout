@@ -103,6 +103,10 @@ img {
     flex-direction: column;
     max-width: media.$lgContainerWidth;
   }
+
+  &_small{
+    max-width: 708px;
+  }
 }
 
 .dke_row {
