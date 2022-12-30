@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../media';
+@use '../icons' as *;
 
 .dke_list {
   margin: 0;
@@ -25,8 +26,8 @@
       height: 30px;
       border-radius: 50%;
       background: colors.$icon;
-      background-image: url('/src/icons/list-black-arrow.system.svg');
-      background-size: 12px auto;
+      background-image: get-icon('list-arrow', colors.$text);
+      background-size: 12px 12px;
       background-position: center;
       background-repeat: no-repeat;
       margin-right: 10px;
