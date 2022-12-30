@@ -16,15 +16,6 @@
     width: 30px;
     height: 30px;
 
-    &_instagram {
-      background: get-icon('instagram', colors.$link) no-repeat;
-    }
-  }
-
-  &__icon {
-    width: 30px;
-    height: 30px;
-
     @include media.sm {
       width: 27px;
       height: 27px;
@@ -33,6 +24,38 @@
     &_large {
       width: 32px;
       height: 32px;
+    }
+
+    &_instagram {
+      background: get-icon('instagram', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('instagram', colors.$text2) no-repeat;
+      }
+    }
+
+    &_vk {
+      background: get-icon('vk', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('vk', colors.$text2) no-repeat;
+      }
+    }
+
+    &_youtube {
+      background: get-icon('youtube', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('youtube', colors.$text2) no-repeat;
+      }
+    }
+
+    &_telegram {
+      background: get-icon('telegram', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('telegram', colors.$text2) no-repeat;
+      }
     }
   }
 }

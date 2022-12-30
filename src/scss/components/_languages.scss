@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../variables';
+@use '../icons' as *;
 
 .dke_languages {
   font-size: 14px;
@@ -18,8 +19,7 @@
       width: 8px;
       height: 8px;
       margin-left: 10px;
-      background: url('src/icons/small-dropdown.system.svg') center center
-        no-repeat;
+      background: get-icon('arrow-drop-down', colors.$border5) no-repeat;
     }
   }
 
