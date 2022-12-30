@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nevatrip-ru</title>
+  </head>
+
+  <body class="preload">
+    {{> "topbar/nevatrip-ru/topbar"}}
+    {{> "navbar/nevatrip-ru/navbar"}}
+    {{> "menu-mobile/nevatrip-ru/menu-mobile"}}
+
+    {{> "banner/banner-title" modifier="bottom-title" container="content"}}
+    {{> "breadcrumbs" container="content"}}
+    <div class="dke_sight dke_container dke_container_content">
+      <div class="dke_row dke_row_lg-column">
+        <div class="dke_col-8 dke_col-8_lg-full-width">
+          {{> "sight-features"}}
+          <hr>
+          {{> "sight-description"}}
+        </div>
+        <div class="dke_col-4 dke_col-4_lg-full-width">
+          {{> "sight-aside-map"}}
+        </div>
+      </div>
+    </div>
+
+    {{> "footer"}}
+  </body>
+
+</html>

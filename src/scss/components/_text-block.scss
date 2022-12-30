@@ -47,7 +47,7 @@ b {
   font-weight: 600;
 }
 
-ul:not([class]) {
+ul:not([class]), ol:not([class]) {
   font-size: 14px;
   padding: revert;
   list-style-type: revert;
@@ -58,12 +58,12 @@ ul:not([class]) {
 }
 
 p:not([class]) a, ul:not([class]) li:not([class]) a, ol:not([class]) li:not([class]) a {
-  color: colors.$blue1;
+  color: colors.$link;
   border-bottom: 1px solid transparent;
   transition: border-color variables.$transition;
 
   &:hover {
-    border-bottom: 1px solid colors.$blue1;
+    border-bottom: 1px solid colors.$link;
   }
 }
 
@@ -77,7 +77,7 @@ table th {
 
 table td,
 table th {
-  border: 1px solid #000;
+  border: 1px solid colors.$border7;
 }
 
 .dke {

@@ -1,5 +1,6 @@
 @use '../variables';
 @use '../media';
+@use '../colors';
 
 .dke_blog-inner-content{
   &__title{
@@ -20,10 +21,10 @@
 
   &__readtime{
     display: inline-block;
-    color: #9C9C9C;
+    color: colors.$text11;
     font-size: 14px;
     border-radius: 17px;
-    border: 1px solid #E7E7E7;
+    border: 1px solid colors.$border13;
     background-image: url('/src/icons/readtime-gray.system.svg');
     background-position: 11px 10px;
     background-repeat: no-repeat;
@@ -36,7 +37,7 @@
   }
 
   &__date{
-    color: #9C9C9C;
+    color: colors.$text11;
     font-size: 12px;
   }
 
@@ -56,7 +57,7 @@
       left: 13px;
       bottom: 14px;
       background-color: rgb(7, 15, 30, .47);
-      color: #fff;
+      color: colors.$text3;
       font-size: 14px;
       padding: 9px 32px;
       border-radius: 17px;
@@ -152,7 +153,7 @@
         display: inline;
 
         &:hover{
-          border-color: #59B8E9;
+          border-color: colors.$border9;
         }
       }
     }
@@ -192,8 +193,8 @@
       }
 
       a{
-        color: #312d2d;
-        border-bottom: 2px solid #312d2d;
+        color: colors.$text;
+        border-bottom: 2px solid colors.$border14;
         display: inline;
         transition: border-color variables.$transition;
 

@@ -32,10 +32,10 @@
     align-items: center;
     flex: 0 1 auto;
     column-gap: 20px;
-    box-shadow: 2px 2px 5px rgba(colors.$gray4, 25%);
+    box-shadow: 2px 2px 5px rgba(colors.$shadow, 25%);
     border-radius: 12px;
     line-height: 1.1;
-    color: colors.$dark5;
+    color: colors.$text;
     font-size: 16px;
     padding: 12px 25px;
     min-width: 190px;
@@ -87,7 +87,7 @@
 
     &:hover, &:focus {
       span {
-        color: colors.$blue1;
+        color: colors.$link;
         text-decoration: underline;
       }
     }

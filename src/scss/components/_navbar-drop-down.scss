@@ -4,18 +4,18 @@
 .dke_drop-down-navbar {
   width: 100%;
   box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
-  background-color: #fff;
+  background-color: colors.$background4;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
-  color: colors.$dark3;
+  color: colors.$text;
   max-height: 0;
   overflow-y: hidden;
   padding: 0;
   transition: all .3s ease-out;
   border: 0 solid transparent;
   position: absolute;
-  z-index: 4;
+  z-index: 5;
 
   @media screen and (max-width: 1050px) {
     font-size: 14px;

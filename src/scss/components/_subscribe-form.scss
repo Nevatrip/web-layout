@@ -1,4 +1,5 @@
 @use '../media';
+@use '../colors';
 
 .dke_subscribe-form{
   margin-bottom: 50px;
@@ -47,7 +48,7 @@
   }
 
   &__input{
-    border: 1px solid #cccccc;
+    border: 1px solid colors.$border11;
     border-radius: 30px 0 0 30px;
     flex-grow: 1;
     overflow: hidden;
@@ -65,18 +66,18 @@
       font-size: 15px;
       line-height: 1.42;
       font-weight: 600;
-      color: #8a7f7f;
+      color: colors.$text9;
       box-shadow: inset 0 1px 1px rgb(0, 0, 0, .08);
       &::placeholder{
-        color: #8a7f7f;
+        color: colors.$text9;
       }
     }
   }
 
   &__button{
-    color: #312d2d;
-    background-color: #ffd84a;
-    border: 1px solid #dcbe00;
+    color: colors.$text;
+    background-color: colors.$button;
+    border: 1px solid colors.$buttonBorderColor;
     padding: 10px 30px 10px 24px;
     font-size: 21px;
     line-height: 1.3333333;

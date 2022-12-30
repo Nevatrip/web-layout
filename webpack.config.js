@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 import svgToTinyDataUri from 'mini-svg-data-uri';
+import SVGSpriteLoaderPlugin from 'svg-sprite-loader/plugin.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,8 +43,8 @@ const PAGES = [
     filename: 'ru-thaibuytrip',
   },
   {
-    dir: 'excursion',
-    filename: 'excursion',
+    dir: 'trip-icons',
+    filename: 'trip-icons',
   },
   {
     dir: 'faq',
@@ -84,6 +85,18 @@ const PAGES = [
   {
     dir: 'blog-inner',
     filename: 'blog-inner',
+  },
+  {
+    dir: 'blog-detail-old',
+    filename: 'blog-detail-old',
+  },
+  {
+    dir: 'sights-list',
+    filename: 'sights-list',
+  },
+  {
+    dir: 'sight',
+    filename: 'sight',
   },
 ];
 
@@ -172,6 +185,7 @@ const config = {
       },
       {
         test: /\.svg$/,
+        exclude: [/\.sprite\.svg$/, /flags/],
         type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename, module }) => {
@@ -183,6 +197,25 @@ const config = {
           dataUrl: content => {
             content = content.toString();
             return svgToTinyDataUri(content);
+          },
+        },
+      },
+      {
+        test: /\.sprite\.svg$/,
+        loader: 'svg-sprite-loader',
+        options: {
+          extract: true,
+          outputPath: 'assets/sprites/',
+        },
+      },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'src/flags'),
+        type: 'asset/resource',
+        generator: {
+          filename: name => {
+            const path = name.filename.split('/').slice(1, -1).join('/');
+            return `assets/${path}/[name][ext]`;
           },
         },
       },
@@ -203,6 +236,15 @@ const config = {
           template: `./src/pages/${dir}/${filename}.hbs`,
           filename: `./${filename}.html`,
           chunks: ['main', dir],
+          minify: {
+            collapseWhitespace: false,
+            keepClosingSlash: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
+          },
         })
     ),
 
@@ -210,6 +252,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new SVGSpriteLoaderPlugin(),
   ],
 };
 

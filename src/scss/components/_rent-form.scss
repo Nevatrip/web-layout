@@ -1,4 +1,5 @@
 @use '../media';
+@use '../colors';
 
 .dke_rent-form {
   padding: 50px 0 30px 0;
@@ -10,7 +11,7 @@
   &__title {
     font-size: 22px;
     margin: 0 0 0.772em;
-    color: #2b2b2b;
+    color: colors.$text;
     font-weight: 600;
   }
 
@@ -36,7 +37,7 @@
   &__name {
     font-size: 12px;
     margin: 0 0 23px;
-    color: #bcbcbc;
+    color: colors.$text4;
     font-weight: 400;
     width: 100%;
   }
@@ -44,7 +45,7 @@
   &__label {
     font-size: 18px;
     margin: 0 0 0.8em;
-    color: #181818;
+    color: colors.$text;
     font-weight: 600;
     width: 100%;
   }

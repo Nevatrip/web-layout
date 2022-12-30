@@ -40,7 +40,7 @@
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     margin-left: auto;
-    color: colors.$body;
+    color: colors.$text;
 
     @include media.sm {
       max-width: 100%;
@@ -63,7 +63,7 @@
         h2,
         span,
         p {
-          border-bottom: 2px solid colors.$body;
+          border-bottom: 2px solid colors.$text;
         }
       }
     }
@@ -75,7 +75,7 @@
 
     &_dark {
       background: rgba(40, 40, 40, 0.63);
-      color: #ffffff;
+      color: colors.$text3;
       padding: 44px 67px;
 
       @include media.xs {
@@ -88,7 +88,7 @@
 
       .dke_banner__title,
       .dke_price {
-        color: #ffffff;
+        color: colors.$text3;
       }
 
       & > a {
@@ -109,7 +109,7 @@
     font-size: 35px;
     font-weight: 400;
     line-height: 1.1;
-    color: colors.$body;
+    color: colors.$text;
 
     @include media.xs {
       font-size: 26px;
@@ -129,7 +129,7 @@
       display: inline-block;
 
       .dke_banner__title {
-        color: #ffffff;
+        color: colors.$text3;
         margin: 0;
         font-weight: 600;
         display: inline;
@@ -145,7 +145,7 @@
     }
 
     & > .dke_banner__title {
-      color: #ffffff;
+      color: colors.$text3;
       margin: 0;
       font-weight: 600;
     }
@@ -191,7 +191,7 @@
         right: 0;
         bottom: 0;
         height: 30px;
-        background-color: #fff;
+        background-color: colors.$background4;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
         z-index: 20;
@@ -208,7 +208,7 @@
         width: 60px;
         border-radius: 4px;
         margin: 0 auto;
-        background-color: colors.$lightGrey;
+        background-color: colors.$border;
         z-index: 21;
       }
     }

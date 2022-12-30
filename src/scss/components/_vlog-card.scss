@@ -1,5 +1,6 @@
 @use '../variables';
 @use '../media';
+@use '../colors';
 
 .dke_vlog-item{
   display: flex;
@@ -37,7 +38,7 @@
     margin-bottom: 0.4em;
 
     a{
-      color: #312d2d;
+      color: colors.$text;
       transition: opacity variables.$transition;
       &:hover{
         opacity: 0.8;
@@ -52,11 +53,11 @@
   }
 
   &__link{
-    color: #49AADA;
+    color: colors.$link;
     margin-top: auto;
     font-weight: 600;
     align-self: baseline;
-    border-bottom: 1px solid #49AADA;
+    border-bottom: 1px solid colors.$link;
     transition: border-color variables.$transition;
 
     &:hover{

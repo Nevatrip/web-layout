@@ -1,32 +1,83 @@
-$main: #59b8e9;
-$mainLighter: #e4f6ff;
-$body: #312d2d;
-$grey: #777777;
-$lightGrey: #ededed;
-$lightGrey2: #e5e5e5;
-$lightGrey3: #f5f5f5;
-$lightGrey4: #e3e3e3;
-$twilightGrey: #3a4145;
-$buttonMain: #fed74b;
-$buttonMainHover: #e8b705;
-$orange: #eb9412;
-$purple: #7553ff;
-$blue: #46aee8;
-$darkBlue: #055c8c;
-$darkBlue2: #1B334E;
-$darkBlue3: #25557a;
-$darkBlue4: #355363;
-$lightBlue: #ebf3ff;
-$dark2: #272d30;
-$dark3: #242424;
-$dark4: #2c3438;
-$dark5: #313131;
-$dark6: #484444;
-$dark7: #423e3e;
-$gray1: #c8c8c8;
-$gray2: #929292;
-$gray3: #b8b8b8;
-$gray4: #969696;
-$blue1: #49aada;
-$red: #e02131;
-$darkRed: #b11925;
+//цвета ссылок
+$link: #59b8e9;
+$link2: #055c8c;
+$link3: #c8c8c8;
+$link4: #929292;
+$link5: #272727;
+$linkHover: #272727;
+
+//цвета текстовых элементов
+$text: #312d2d;
+$text2: #777777;
+$text3: #ffffff;
+$text4: #bcbcbc;
+$text5: #1b334e;
+$text6: #355363;
+$text7: #49aada;
+$text8: #000000;
+$text9: #8a7f7f;
+$text10: #6B6B6B;
+$text11: #9C9C9C;
+
+//цвета кнопок
+$button: #fed74b;
+$buttonHover: #e8b705;
+$button2: #d9e8ff;
+$buttonHover2: #6ba6ff;
+$buttonBorderColor: #dcbe00;
+
+//цвета иконок
+$icon: #fed74b;
+$icon2: #312d2d;
+$icon3: #f4f4f4;
+$icon4: #969696;
+
+//цвета границ
+$border: #ededed;
+$border2: #929292;
+$border3: #ffffff;
+$border4: #e5e5e5;
+$border5: #b8b8b8;
+$border6: #b3c4d1;
+$border7: #000000;
+$border8: #49aada;
+$border9: #59b8e9;
+$border10: #e3e3e3;
+$border11: #cccccc;
+$border12: #e8b705;
+$border13: #e7e7e7;
+$border14: #312d2d;
+
+
+//фоновые цвета
+$background: #272d30;
+$background2: #2c3438;
+$background3: #3a4145;
+$background4: #ffffff;
+$background5: #081318;
+$background6: #192023;
+$background7: #f5f5f5;
+$background8: #ebf3ff;
+$background9: #e4f6ff;
+$background10: #e8eef1;
+$background11: #eeeeee;
+
+$tourIcon: #59b8e9;
+
+$shadow: #969696;
+
+//bus guide
+$busLink: #e02131;
+$busLinkHover: #b11925;
+
+//mobile-menu-theme
+$mobileBackground: #363232;
+$mobileBackground2: #484444;
+
+//metro
+$metroGreen: #4c9b56;
+$metroBlue: #229ee0;
+$metroPurple: #b94f8d;
+$metroRed: #ef4e34;
+$metroOrange: #f8aa36;
+
