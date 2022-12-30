@@ -73,7 +73,6 @@ function setActiveLink(link, menuBottom) {
             left: x,
             behavior: 'smooth'
           });    
-          console.log(x);
           link.classList.add('js_dke_active');
         }
       }
