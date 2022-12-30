@@ -34,4 +34,18 @@
       padding: 13px 16px;
     }
   }
+
+  &_small {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  &_link-color {
+    color: #ffffff;
+    background-color: colors.$link;
+
+    &:hover {
+      background-color: colors.$link;
+    }
+  }
 }

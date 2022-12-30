@@ -1,9 +1,9 @@
 export default class dropDownElement {
-  constructor(element, activeCLass, disabledClass) {
+  constructor(element, toggleElement, activeCLass, disabledClass) {
     this.element = element;
     this.activeCLass = activeCLass;
     this.disabledClass = disabledClass;
-    this.toggleElement = document.querySelector('.js_dke_toggle');
+    this.toggleElement = toggleElement;
     this.closeButton = element.querySelector('.js_dke_close-button');
 
     this.toggleElement.addEventListener('click', () => {
@@ -45,8 +45,7 @@ export default class dropDownElement {
         if (this.disabledClass) {
           this.element.classList.add(this.disabledClass);
         }
-        this.element.style.height = '';
-        this.element.removeAttribute.style;
+        this.element.removeAttribute('style');
       },
       { once: true }
     );

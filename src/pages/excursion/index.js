@@ -30,6 +30,7 @@ function ready() {
 
   new dropDownElement(
     document.querySelector('.dke_drop-down-price'),
+    document.querySelector('.dke_tour-feature__prices-button'),
     'js_dke_active',
     null
   );

@@ -61,6 +61,33 @@
     padding: 5px;
   }
 
+  &__metro {
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+
+    &_green {
+      background-color: colors.$metroGreen;
+    }
+
+    &_red {
+      background-color: colors.$metroRed;
+    }
+
+    &_blue {
+      background-color: colors.$metroBlue;
+    }
+
+    &_orange {
+      background-color: colors.$metroOrange;
+    }
+
+    &_purple {
+      background-color: colors.$metroPurple;
+    }
+  }
+
   &__flag {
     font-size: 17px;
     display: inline-block;
