@@ -1,0 +1,72 @@
+@use '../colors';
+@use '../media';
+@use '../variables';
+@use './drop-down-arrow';
+
+.dke_program {
+  &__accordion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.dke_item-program {
+  padding: 0 15px 0;
+  margin-bottom: 10px;
+  border: 1px solid colors.$border6;
+  border-radius: 12px;
+
+  &__head {
+    padding: 13px 24px 13px 0;
+    color: colors.$text6;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    &::after{
+      border-color: colors.$border2;
+    }
+  }
+
+  &__head-num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 22px;
+    color: colors.$text6;
+    background-color: colors.$background8;
+    box-shadow: 0px 1px 4px rgb(0, 0, 0, .14);
+    border-radius: 7px;
+  }
+
+  &__head-title {
+    font-size: 19px;
+  }
+
+  &__body {
+    transition: max-height variables.$transition;
+    max-height: 0;
+    overflow-y: hidden;
+
+    &-content {
+      padding: 0 3.3em 1.3em 3.67em;
+      overflow-y: auto;
+
+      @include media.xs {
+        padding: 0 1em 1.3em;
+      }
+    }
+  }
+
+  &.js_dke_active{
+    .dke_item-program__head::after{
+      bottom: 20%;
+      transform: rotate(-135deg);
+    }
+  }
+}

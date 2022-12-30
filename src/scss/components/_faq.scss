@@ -2,13 +2,9 @@
 @use '../media';
 @use '../variables';
 
-.dke {
-  &_faq {
-    margin-bottom: 30px;
-  }
-}
-
 .dke_faq {
+  margin-bottom: 30px;
+
   &__title {
     margin: 1.7em 0 2.2em;
     font-size: 35px;
@@ -87,7 +83,7 @@
   width: calc((100% - 3 * 16px) / 4);
   line-height: 22px;
   border-radius: 7px;
-  box-shadow: 2px 2px 5px rgb(0 0 0 / 7%);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 7%);
   transition: all variables.$transition;
   text-align: center;
   border: 2px solid colors.$border4;
@@ -294,36 +290,20 @@
     
     &-content {
       padding: 0 70px 24px 33px;
-      font-size: 17px;
       overflow-y: auto;
       color: colors.$text5;
 
-      ul, ol {
-        padding: revert;
-        list-style-type: revert;    
+      &, ul, ol {
+        font-size: 16px;
+        line-height: 1.6;
 
-        li {
-          margin-bottom: 0.714em;
-        }      
-      } 
-      
-      a {
-        color: colors.$link;
-        border-bottom: 1px solid transparent;
-        transition: border-color variables.$transition;
-      
-        &:hover {
-          border-bottom: 1px solid colors.$link;
+        @media screen and (max-width: media.$breakpointWidth1) {
+          font-size: 14px;
         }
-      }
-
-      @include media.lg{
-        font-size: 15px;
       }
 
       @media screen and (max-width: media.$breakpointWidth1) {
         padding: 0 25px 31px 20px;
-        font-size: 14px;
       }
     }
   }
@@ -442,7 +422,13 @@
         }
       }
     }
+
+    &__body-content {
+      font-size: 17px;
+
+      @include media.lg{
+        font-size: 15px;
+      }
+    }
   }  
 }
-
-

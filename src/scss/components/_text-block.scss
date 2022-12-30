@@ -47,7 +47,7 @@ b {
   font-weight: 600;
 }
 
-ul:not([class]) {
+ul:not([class]), ol:not([class]) {
   font-size: 14px;
   padding: revert;
   list-style-type: revert;
@@ -77,7 +77,7 @@ table th {
 
 table td,
 table th {
-  border: 1px solid #000;
+  border: 1px solid colors.$border7;
 }
 
 .dke {

@@ -171,7 +171,7 @@ td {
 }
 
 hr {
-  margin: 21px 0;
+  margin: 21px auto;
   border: 0;
   border-top: 1px solid #edeceb;
 
@@ -183,5 +183,14 @@ hr {
 .dke_col-4_top {
   @include media.sm {
     order: -1;
+  }
+}
+
+.dke_subtitle{
+  font-size: 19px;
+  margin-bottom: 2em;
+
+  @include media.sm{
+    font-size: 17px;
   }
 }

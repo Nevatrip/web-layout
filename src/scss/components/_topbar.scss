@@ -17,6 +17,7 @@
   &__burger {
     display: block;
     margin-right: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include media.sm {
       display: none;
