@@ -1,4 +1,6 @@
 @use '../media';
+@use '../colors';
+@use '../icons' as *;
 
 .dke_social-item {
   display: block;
@@ -11,6 +13,12 @@
 
   &__link {
     display: block;
+    width: 30px;
+    height: 30px;
+
+    &_instagram {
+      background: get-icon('instagram', colors.$link) no-repeat;
+    }
   }
 
   &__icon {
