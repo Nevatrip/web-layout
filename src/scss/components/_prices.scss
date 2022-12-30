@@ -1,0 +1,18 @@
+@use '../colors';
+
+.dke_prices {
+  &__table {
+    display: block;
+    overflow: auto;
+    max-width: calc(100vw - 30px);
+    border: colors.$border7;
+    margin-bottom: 25px;
+    font-size: 15px;
+
+    th, td {
+      text-align: center;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+}

@@ -10,6 +10,9 @@ import { dropDownMenu } from './../../js/drop-down-menu.js';
 import Topbar from '../../js/topbar.js';
 import { sightList } from './../../js/sight-list.js';
 import { faq } from './../../js/faq.js';
+import { faqSimple } from './../../js/faq-simple.js';
+import { program } from './../../js/program.js';
+import { cruiseMenu } from './../../js/cruise-menu.js';
 import Modal from '../../js/modal.js';
 import dropDownElement from '../../js/drop-down-element.js';
 import ButtonScrollTop from '../../js/button-scroll-top.js';
@@ -39,7 +42,16 @@ function ready() {
   sightList();
 
   // блок FAQ
-  faq();
+  faq();  
+
+  // упрощенный блок FAQ
+  faqSimple();
+  
+  // блок с программой мероприятия
+  program();
+
+  // навигационное меню экскурсии
+  cruiseMenu();
 
   //Инициализация слайдера и попапа галереи
   new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');

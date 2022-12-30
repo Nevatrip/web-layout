@@ -209,11 +209,11 @@
     }
 
     &_mail::before{
-      background-image: url("/src/icons/mail.system.svg");
+      background-image: url('/src/icons/mail.system.svg');
     }
 
     &_tel::before{
-      background-image: url("/src/icons/tel.system.svg");
+      background-image: url('/src/icons/tel.system.svg');
     }
   }
 
