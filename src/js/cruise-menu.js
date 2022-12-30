@@ -1,73 +1,67 @@
-import { offset } from './utils.js';
-
+const navbar = document.querySelector('.dke_navbar');
 const sectionCruiseMenu = document.querySelector('.dke_cruise-menu');
 
 export function cruiseMenu() {
   const linksCruiseMenu = sectionCruiseMenu.querySelectorAll('.dke_cruise-menu__list-link');
-  const navbar = document.querySelector('.dke_navbar');
 
   // установка отступа навигационного меню от верхней части экрана
-  if (sectionCruiseMenu && navbar) {
-    const sectionCruiseMenu = document.querySelector('.dke_cruise-menu');
-    const topCruiseMenu = offset(sectionCruiseMenu).top;
+  setTopExcursionMenu();
 
-
-    window.addEventListener('scroll', () => {
-      changeStickyCruiseMenu(topCruiseMenu);
+  // нажатие на якорные ссылки нав. меню экскурсии
+  if (sectionCruiseMenu)
+    linksCruiseMenu?.forEach(function(link) {
+      link?.addEventListener('click', scrollToSection);
     });
 
-    linksCruiseMenu.forEach(function(element) {
-      element.addEventListener('click', function(e) {
-        const activeLink = sectionCruiseMenu.querySelector('.dke_cruise-menu__list-link.dke_active');
-        if (activeLink) activeLink.classList.remove('dke_active');
+  window.addEventListener('scroll', function() {
+    const sectionCruiseMenuBottom = sectionCruiseMenu.getBoundingClientRect().bottom;
 
-        element.classList.add('dke_active');
-        scrollToSection.call(this, e, bottomNavbar);
-        
-      });
+    linksCruiseMenu?.forEach(function(link) {
+      setActiveLink.call(this, link, sectionCruiseMenuBottom)
     });
+  });
+}
+
+window.addEventListener('resize', () => {
+  setTopExcursionMenu();
+});
+
+// установка отступа меню экскурсии от верхней части экрана
+function setTopExcursionMenu() {
+  if (navbar && sectionCruiseMenu) {
+    const bottomHeight = navbar.getBoundingClientRect().bottom;
+    sectionCruiseMenu.style.top = bottomHeight + 'px';
   }
 }
 
-let sticky = false;
-let node1 = null;
-let nodeHeight = null;
-
-// прилипание навигационного меню при скролле
-function changeStickyCruiseMenu(top){
-  const windowY = window.pageYOffset;
-
-  const navbar = document.querySelector('.dke_navbar');
-  if (windowY + document.querySelector('.dke_head-navbar').offsetHeight > top && !sticky) {
-    node1 = document.querySelector('.dke_cruise-menu');
-    const cloneNode = a.cloneNode(true);
-    navbar.append(cloneNode);
-    sticky = true;
-  } 
-  else if (windowY <= top + nodeHeight && sticky) {
-    const node2 = navbar.querySelector('.dke_cruise-menu');
-    nodeHeight = navbar.querySelector('.dke_cruise-menu').offsetHeight;
-    const cloneNode = node2.cloneNode(true);
-    node1?.remove();
-    document.querySelector('#cruise-menu').append(cloneNode);
-    node2.remove();
-    sticky = false;
-  }
-}
-
-// Прокрутка страницы до блока с нужным id при клике
-function scrollToSection(e, bottomNavbar){
+// прокрутка страницы до блока с нужным id при клике по ссылке-якорь 
+function scrollToSection(e){
   e.preventDefault();
 
   const href = this.getAttribute('href');
   const section = document.querySelector(href);
-
-  if (section) {
-    const y = section.getBoundingClientRect().top + window.pageYOffset - bottomNavbar * 3;
+  
+  if (navbar && section && sectionCruiseMenu) {
+    const sectionCruiseMenuHeight = sectionCruiseMenu.offsetHeight;
+    const navbarHeight = navbar.offsetHeight;
+    const y = section.getBoundingClientRect().top + window.pageYOffset - sectionCruiseMenuHeight - navbarHeight;
     
     window.scrollTo({
       top: y,
       behavior: 'smooth'
     });
   }
+}
+
+// изменение активной ссылки нав. меню экскурсии
+function setActiveLink(link, menuBottom) {
+  const href = link.getAttribute('href');
+  const section = document.querySelector(href);
+  const { top: sectionTop, 
+          bottom: sectionBottom } = section.getBoundingClientRect();
+  
+  if (sectionTop <= menuBottom + 30
+      && sectionBottom > menuBottom)
+        link.classList.add('js_dke_active');
+  else link.classList.remove('js_dke_active');
 }

@@ -1,15 +1,16 @@
 @use '../colors';
 @use '../media';
+@use '../variables';
 
 .dke {
   &_menu-mobile {
-    transition: left .3s ease-out;
+    transition: left variables.$transition;
     position: fixed;
     left: -110%;
     bottom: 0;
     width: 100%;
     overflow-y: auto;
-    z-index: 4;
+    z-index: 5;
     color: colors.$text3;  
 
     &._cool-dark {
