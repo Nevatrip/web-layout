@@ -3,7 +3,7 @@
 .dke_drop-down-arrow::after{
   content: '';
   transition: bottom variables.$transition, 
-              transform variables.$transition;;
+              transform variables.$transition;
   bottom: 40%;
   transform: rotate(45deg);
   position: absolute;

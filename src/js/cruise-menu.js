@@ -28,9 +28,13 @@ window.addEventListener('resize', () => {
 
 // установка отступа меню экскурсии от верхней части экрана
 function setTopExcursionMenu() {
-  if (navbar && sectionCruiseMenu) {
-    const bottomHeight = navbar.getBoundingClientRect().bottom;
-    sectionCruiseMenu.style.top = bottomHeight + 'px';
+  const topbar = document.querySelector('.dke_topbar');
+  const topbarBottom = topbar.getBoundingClientRect().bottom;
+  const navbarBottom = navbar.getBoundingClientRect().bottom;
+  const topbarHeight = topbar.offsetHeight;
+  if (topbar && navbar && sectionCruiseMenu) {
+    const cruiseMenuBottom = navbarBottom - (topbarBottom > 0 ? topbarHeight : 0);
+    sectionCruiseMenu.style.top = cruiseMenuBottom + 'px';
   }
 }
 
@@ -61,7 +65,17 @@ function setActiveLink(link, menuBottom) {
           bottom: sectionBottom } = section.getBoundingClientRect();
   
   if (sectionTop <= menuBottom + 30
-      && sectionBottom > menuBottom)
-        link.classList.add('js_dke_active');
+      && sectionBottom > menuBottom) {
+        if (!link.classList.contains('js_dke_active')) {
+          const sectionCruiseMenuWrapper = sectionCruiseMenu.querySelector('.dke_cruise-menu__wrapper');
+          const x = link.getBoundingClientRect().left - window.innerWidth / 2 + link.offsetWidth / 2;
+          sectionCruiseMenuWrapper.scrollTo({
+            left: x,
+            behavior: 'smooth'
+          });    
+          console.log(x);
+          link.classList.add('js_dke_active');
+        }
+      }
   else link.classList.remove('js_dke_active');
 }
