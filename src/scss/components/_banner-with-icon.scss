@@ -1,0 +1,25 @@
+@use '../colors';
+
+.dke_banner-with-icon {
+  margin: 20px 0;
+  padding: 20px 15px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: colors.$background9;
+
+  &__icon-wrapper {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    text-align: center;
+    max-width: 90%;
+  }
+}

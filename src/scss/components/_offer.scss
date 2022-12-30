@@ -10,7 +10,7 @@
   color: colors.$text8;
   
   @include media.sm {
-    background-color: colors.$background9;
+    background-color: colors.$background10;
   }
 
   &__text {
@@ -49,7 +49,7 @@
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     margin: 18px auto 2px;
-    background-color: colors.$background10;
+    background-color: colors.$background11;
     overflow: hidden;
 
     @include media.sm {

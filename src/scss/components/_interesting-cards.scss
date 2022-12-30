@@ -1,0 +1,43 @@
+@use '../media';
+
+.dke_interesting-cards {
+  margin-top: 50px;
+
+  @include media.md {
+    display: block;
+  }
+
+  &__container {
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media.sm {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    width: 33.333%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+
+    @include media.md {
+      width: 50%;
+    }
+
+    @include media.sm {
+      width: 100%;
+      max-width: 546px;
+    }
+  }
+}
