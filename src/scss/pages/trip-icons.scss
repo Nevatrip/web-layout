@@ -13,6 +13,21 @@ ul {
 
   li {
     flex: 0 1 10%;
-    height: 100px;
+    
+    figure{
+      height: 100px;
+      font-size: 12px;
+      
+      img {
+        margin: 0 auto;
+        height: 70px;
+        object-fit: contain;
+      }
+      
+      figcaption{
+        min-height: 30px;
+        word-break: break-all;
+      }
+    }
   }
 }
