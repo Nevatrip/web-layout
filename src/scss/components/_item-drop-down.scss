@@ -1,4 +1,5 @@
 @use '../colors';
+@use '../icons' as *;
 
 .dke_item-drop-down {
   transition: max-height 0.3s ease-out;
@@ -39,7 +40,7 @@
     background: none;
     padding: 0;
 
-    &._disabled{
+    &._disabled {
       pointer-events: none;
     }
 
@@ -57,9 +58,9 @@
 
           &::after {
             content: '';
-            background-image: url('/src/icons/arrow-drop-down.system.svg');
+            background: get-icon('arrow-drop-down', colors.$text) no-repeat;
             width: 11px;
-            height: 6px;
+            height: 11px;
             transition: transform 0.3s ease-out;
             display: inline-block;
             position: relative;
@@ -76,8 +77,8 @@
     margin: 0;
     padding: 0;
     overflow-y: auto;
-    
-    &-wrapper{
+
+    &-wrapper {
       transition: all 0.3s ease-out;
       max-height: 0;
       overflow: hidden;
@@ -100,15 +101,15 @@
       text-decoration: underline;
     }
   }
-  
-  &.js_dke_active{
+
+  &.js_dke_active {
     .dke_item-drop-down__text-wrapper {
       &::after {
         transform: rotate(180deg);
       }
     }
-    
-    .dke_item-drop-down__sublist-wrapper{
+
+    .dke_item-drop-down__sublist-wrapper {
       margin-bottom: 10px;
     }
   }
