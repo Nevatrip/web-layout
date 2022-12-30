@@ -3,12 +3,13 @@
 .dke_read{
   padding-top: 30px;
   background: linear-gradient(135deg, rgba(240,250,251,0.6) 0%,rgba(240,250,251,0.6) 1%,rgba(227,246,255,0.5) 100%);
+  font-family: 'FuturaPT', sans-serif;
 
   &__icon{
     width: 63px;
     height: 63px;
     margin-bottom: 15px;
-    background-image: url('src/images/references.png');
+    background-image: url('/src/images/references.png');
     background-repeat: no-repeat;
     background-position: top center;
   }

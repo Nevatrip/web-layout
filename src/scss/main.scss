@@ -21,3 +21,37 @@
 @use './components/footer';
 
 @import 'https://fonts.googleapis.com/css?family=PT+Sans&family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic-ext,latin-ext';
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('src/fonts/futurapt/FuturaPTBook.eot');
+  src: url('src/fonts/futurapt/FuturaPTBook.woff2') format('woff2'),
+  url('src/fonts/futurapt/FuturaPTBook.woff') format('woff'),
+  url('src/fonts/futurapt/FuturaPTBook.ttf') format('truetype'),
+  url('src/fonts/futurapt/FuturaPTBook.svg#FuturaPTBook') format('svg'),
+  url('src/fonts/futurapt/FuturaPTBook.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('src/fonts/futurapt/FuturaPTMedium.eot');
+  src: url('src/fonts/futurapt/FuturaPTMedium.woff2') format('woff2'),
+  url('src/fonts/futurapt/FuturaPTMedium.woff') format('woff'),
+  url('src/fonts/futurapt/FuturaPTMedium.ttf') format('truetype'),
+  url('src/fonts/futurapt/FuturaPTMedium.svg#FuturaPTMedium') format('svg'),
+  url('src/fonts/futurapt/FuturaPTMedium.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('src/fonts/futurapt/FuturaPTBold.eot');
+  src: url('src/fonts/futurapt/FuturaPTBold.woff2') format('woff2'),
+  url('src/fonts/futurapt/FuturaPTBold.woff') format('woff'),
+  url('src/fonts/futurapt/FuturaPTBold.ttf') format('truetype'),
+  url('src/fonts/futurapt/FuturaPTBold.svg#FuturaPTBold') format('svg'),
+  url('src/fonts/futurapt/FuturaPTBold.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: normal;
+}

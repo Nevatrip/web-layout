@@ -20,6 +20,7 @@
     color: gray;
     border-bottom: 1px solid transparent;
     transition: border-color variables.$transition;
+    
     &:hover{
       border-color: gray;
     }
