@@ -38,15 +38,15 @@
     margin-right: 10px;
 
     &_tel {
-      background: get-icon('tel', colors.$text2) no-repeat;
+      background: get-icon('tel', colors.$icon7) no-repeat;
     }
 
     &_mail {
-      background: get-icon('mail', colors.$text2) no-repeat;
+      background: get-icon('mail', colors.$icon7) no-repeat;
     }
 
     &_telegram-bot {
-      background: get-icon('telegram-bot', colors.$text2) no-repeat;
+      background: get-icon('telegram-bot', colors.$icon7) no-repeat;
     }
   }
 }

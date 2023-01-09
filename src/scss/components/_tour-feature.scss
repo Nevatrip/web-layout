@@ -1,6 +1,7 @@
 @use '../colors';
 @use '../variables';
 @use '../media';
+@use '../icons' as *;
 
 .dke_tour-feature {
   display: flex;
@@ -10,7 +11,7 @@
     flex-wrap: wrap;
   }
 
-  &__icon-wrapper {
+  &__icon {
     flex-shrink: 0;
     display: inline-flex;
     justify-content: center;
@@ -18,12 +19,62 @@
     width: 26px;
     height: 26px;
     margin-right: 14px;
-  }
 
-  &__icon {
-    color: colors.$tourIcon;
-    width: 100%;
-    height: 100%;
+    &_duration {
+      background: get-icon('duration', colors.$tourIcon) no-repeat;
+    }
+
+    &_stops {
+      background: get-icon('stops', colors.$tourIcon) no-repeat;
+    }
+
+    &_schedule {
+      background: get-icon('schedule', colors.$tourIcon) no-repeat;
+    }
+
+    &_star {
+      background: get-icon('star', colors.$tourIcon) no-repeat;
+    }
+
+    &_placemark {
+      background: get-icon('placemark', colors.$tourIcon) no-repeat;
+    }
+
+    &_anchor {
+      background: get-icon('anchor', colors.$tourIcon) no-repeat;
+    }
+
+    &_steering {
+      background: get-icon('steering', colors.$tourIcon) no-repeat;
+    }
+
+    &_tour-language {
+      background: get-icon('tour-language', colors.$tourIcon) no-repeat;
+    }
+
+    &_compass {
+      background: get-icon('compass', colors.$tourIcon) no-repeat;
+    }
+
+    &_prices {
+      background: get-icon('prices', colors.$tourIcon) no-repeat;
+    }
+
+    &_price {
+      background: get-icon('price', colors.$tourIcon) no-repeat;
+    }
+
+    &_metro {
+      background: get-icon('metro', colors.$tourIcon) no-repeat;
+    }
+
+    &_discount {
+      background: get-icon('discount', colors.$icon6) no-repeat;
+    }
+
+    &_child {
+      background: get-icon('child', colors.$icon7) no-repeat;
+    }
   }
 
   &__text {
@@ -41,11 +92,8 @@
     }
 
     a {
-      border-bottom: 1px solid transparent;
-      transition: border-color variables.$transition;
-
       &:hover {
-        border-bottom: 1px solid colors.$link;
+        text-decoration: underline;
       }
     }
   }
@@ -104,12 +152,11 @@
 
     &::after {
       content: '';
-      margin-bottom: 2px;
       margin-left: 4px;
       display: inline-block;
       width: 11px;
-      height: 6px;
-      background: url('src/icons/arrow-drop-down-blue.system.svg');
+      height: 11px;
+      background: get-icon('arrow-drop-down', colors.$tourIcon) no-repeat;
     }
   }
 
