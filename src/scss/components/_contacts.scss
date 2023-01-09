@@ -44,5 +44,9 @@
     &_mail {
       background: get-icon('mail', colors.$text2) no-repeat;
     }
+
+    &_telegram-bot {
+      background: get-icon('telegram-bot', colors.$text2) no-repeat;
+    }
   }
 }
