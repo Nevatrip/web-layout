@@ -133,9 +133,18 @@
 }
 
 .dke_item-offer {
-  display: flex;
-  gap: 10px;
-  padding: .2em .2em 0;
+  padding: .2em .2em 0 2em;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+
+  }
 
   &__icon {
     height: 18px;
@@ -148,6 +157,6 @@
   }
 
   &__text {
-    flex: 0 1 calc(100% - 18px);
+    // flex: 0 1 calc(100% - 18px);
   }
 }

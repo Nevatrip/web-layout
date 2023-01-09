@@ -1,8 +1,9 @@
 @use '../colors';
+@use '../variables';
 @use '../icons' as *;
 
 .dke_item-drop-down {
-  transition: max-height 0.3s ease-out;
+  transition: max-height variables.$transition;
 
   &__link {
     display: flex;
@@ -61,7 +62,7 @@
             background: get-icon('arrow-drop-down', colors.$text) no-repeat;
             width: 11px;
             height: 11px;
-            transition: transform 0.3s ease-out;
+            transition: transform variables.$transition;
             display: inline-block;
             position: relative;
             right: -0.5em;
@@ -79,7 +80,7 @@
     overflow-y: auto;
 
     &-wrapper {
-      transition: all 0.3s ease-out;
+      transition: max-height variables.$transition;
       max-height: 0;
       overflow: hidden;
       padding: 0 0 0 45px;
@@ -94,7 +95,7 @@
     display: inline-block;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease-out;
+    transition: color variables.$transition;
 
     &:hover {
       color: colors.$link;
