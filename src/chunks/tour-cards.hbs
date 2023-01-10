@@ -1,4 +1,3 @@
-<h2>Карточки</h2>
 <section class="dke_tours">
   <div class="dke_container">
     <div class="dke_tour">
@@ -83,6 +82,9 @@
         </ul>
         <div class="dke_price-box">
           <div class="dke_price-box__price">
+            <small class="dke_price-box__sub-price">
+              Цена от
+            </small>
             4490&nbsp;₽
           </div>
           <a href="#" class="dke_button">
@@ -114,6 +116,9 @@
           </li>
           <li>
             Авторский маршрут от команды Nevatrip
+          </li>
+          <li>
+            <a href="#">Авторский маршрут от команды Nevatrip</a>
           </li>
           <li>
             Прогулка по «Золотому треугольнику» Петербурга
@@ -167,6 +172,9 @@
         </div>
       </div>
     </div>
+    {{#if hideNavigation}}
+    <hr class="short" />
+    {{else}}
     <div class="dke_tour-nav">
       <a href="#" class="dke_tour-nav__link dke_tour-nav__link_prev">
         <span>
@@ -179,5 +187,6 @@
         </span>
       </a>
     </div>
+    {{/if}}
   </div>
 </section>

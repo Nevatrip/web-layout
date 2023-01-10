@@ -1,10 +1,11 @@
 @use '../colors';
 @use '../variables';
 @use '../media';
+@use '../icons' as *;
 
 .dke_drop-down-price {
   z-index: 2;
-  background: #ffffff;
+  background: colors.$text3;
   display: none;
   height: 0;
   overflow: hidden;
@@ -49,21 +50,17 @@
     padding: 8px;
   }
 
-  &__question-wrapper {
+  &__question {
+    margin-bottom: -1px;
     position: relative;
     display: inline-block;
     width: 14px;
     height: 14px;
+    background: get-icon('question-sign', colors.$tourIcon) no-repeat;
 
-    & > img {
-      margin-top: 1px;
-    }
-  }
-
-  &__question-icon {
     &:hover,
     &:focus {
-      & + .dke_drop-down-price__tooltip {
+      .dke_drop-down-price__tooltip {
         opacity: 1;
       }
     }
@@ -76,7 +73,7 @@
     display: block;
     width: 11px;
     height: 11px;
-    background: url('src/icons/cross.system.svg') center center no-repeat;
+    background: get-icon('cross', colors.$tourIcon) no-repeat;
 
     @include media.xs {
       display: none;

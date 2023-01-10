@@ -1,8 +1,5 @@
-@use "../colors";
-
-body {
-  background-color: rgba(colors.$background3, .5);
-}
+@use '../icons' as *;
+@use '../colors';
 
 ul {
   display: flex; 
@@ -13,6 +10,218 @@ ul {
 
   li {
     flex: 0 1 10%;
-    height: 100px;
+    min-height: 100px;
+    text-align: center;
+
+    .dke_icon {
+      height: 70px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      svg {
+        color: colors.$text8;
+      }
+    }
+    
+    span{
+      font-size: 12px;
+      min-height: 30px;
+      word-break: break-all;
+    }
+  }
+
+  &.dke_system-icons li {
+    &:nth-child(1) .dke_icon {
+      background-image: get-icon('instagram', colors.$text8);
+    }
+    
+    &:nth-child(2) .dke_icon {
+      background-image: get-icon('vk', colors.$text8);
+    }
+
+    &:nth-child(3) .dke_icon {
+      background-image: get-icon('youtube', colors.$text8);
+    }
+
+    &:nth-child(4) .dke_icon {
+      background-image: get-icon('telegram', colors.$text8);
+    }
+
+    &:nth-child(5) .dke_icon {
+      background-image: get-icon('tel', colors.$text8);
+    }
+
+    &:nth-child(6) .dke_icon {
+      background-image: get-icon('mail', colors.$text8);
+    }
+
+    &:nth-child(7) .dke_icon {
+      background-image: get-icon('arrow-drop-down', colors.$text8);
+    }
+
+    &:nth-child(8) .dke_icon {
+      background-image: get-icon('list-arrow', colors.$text8);
+    }
+
+    &:nth-child(9) .dke_icon {
+      background-image: get-icon('gallery-arrow', colors.$text8);
+    }
+
+    &:nth-child(10) .dke_icon {
+      background-image: get-icon('check-mark', colors.$text8);
+    }
+
+    &:nth-child(11) .dke_icon {
+      background-image: get-icon('cross', colors.$text8);
+    }
+
+    &:nth-child(12) .dke_icon {
+      background-image: get-icon('time', colors.$text8);
+    }
+
+    &:nth-child(13) .dke_icon {
+      background-image: get-icon('telegram-bot', colors.$text8);
+    }
+
+    &:nth-child(14) .dke_icon {
+      background-image: get-icon('question-sign', colors.$text8);
+    }
+
+    &:nth-child(15) .dke_icon {
+      background-image: get-icon('duration', colors.$text8);
+    }
+
+    &:nth-child(16) .dke_icon {
+      background-image: get-icon('compass', colors.$text8);
+    }
+
+    &:nth-child(17) .dke_icon {
+      background-image: get-icon('cross-in-circle', colors.$text8);
+    }
+    
+    &:nth-child(18) .dke_icon {
+      background-image: get-icon('collapsed', colors.$text8);
+    }
+
+    &:nth-child(19) .dke_icon {
+      background-image: get-icon('deployed', colors.$text8);
+    }
+
+    &:nth-child(20) .dke_icon {
+      background-image: get-icon('prices', colors.$text8);
+    }
+
+    &:nth-child(21) .dke_icon {
+      background-image: get-icon('price', colors.$text8);
+    }
+
+    &:nth-child(22) .dke_icon {
+      background-image: get-icon('chat', colors.$text8);
+    }
+
+    &:nth-child(23) .dke_icon {
+      background-image: get-icon('call', colors.$text8);
+    }
+
+    &:nth-child(24) .dke_icon {
+      background-image: get-icon('guide', colors.$text8);
+    }
+
+    &:nth-child(25) .dke_icon {
+      background-image: get-icon('wc', colors.$text8);
+    }
+
+    &:nth-child(26) .dke_icon {
+      background-image: get-icon('glass', colors.$text8);
+    }
+
+    &:nth-child(27) .dke_icon {
+      background-image: get-icon('food', colors.$text8);
+    }
+
+    &:nth-child(28) .dke_icon {
+      background-image: get-icon('microphone', colors.$text8);
+    }
+
+    &:nth-child(29) .dke_icon {
+      background-image: get-icon('music', colors.$text8);
+    }
+
+    &:nth-child(30) .dke_icon {
+      background-image: get-icon('phones', colors.$text8);
+    }
+
+    &:nth-child(31) .dke_icon {
+      background-image: get-icon('stops', colors.$text8);
+    }
+
+    &:nth-child(32) .dke_icon {
+      background-image: get-icon('schedule', colors.$text8);
+    }
+
+    &:nth-child(33) .dke_icon {
+      background-image: get-icon('star-rounded', colors.$text8);
+    }
+    
+    &:nth-child(34) .dke_icon {
+      background-image: get-icon('placemark', colors.$text8);
+    }
+    
+    &:nth-child(35) .dke_icon {
+      background-image: get-icon('anchor', colors.$text8);
+    }
+    
+    &:nth-child(36) .dke_icon {
+      background-image: get-icon('steering', colors.$text8);
+    }
+    
+    &:nth-child(37) .dke_icon {
+      background-image: get-icon('tour-language', colors.$text8);
+    }
+    
+    &:nth-child(38) .dke_icon {
+      background-image: get-icon('discount', colors.$text8);
+    }
+    
+    &:nth-child(39) .dke_icon {
+      background-image: get-icon('child', colors.$text8);
+    }
+    
+    &:nth-child(40) .dke_icon {
+      background-image: get-icon('metro', colors.$text8);
+    }
+    
+    &:nth-child(41) .dke_icon {
+      background-image: get-icon('trumpet', colors.$text8);
+    }
+    
+    &:nth-child(42) .dke_icon {
+      background-image: get-icon('ask', colors.$text8);
+    }
+    
+    &:nth-child(43) .dke_icon {
+      background-image: get-icon('boat', colors.$text8);
+    }
+    
+    &:nth-child(44) .dke_icon {
+      background-image: get-icon('anchor-detailed', colors.$text8);
+    }
+    
+    &:nth-child(45) .dke_icon {
+      background-image: get-icon('lifebuoy', colors.$text8);
+    }
+    
+    &:nth-child(46) .dke_icon {
+      background-image: get-icon('ticket', colors.$text8);
+    }
+    
+    &:nth-child(47) .dke_icon {
+      background-image: get-icon('star', colors.$text8);
+    }
+
+    &:nth-child(48) .dke_icon {
+      background-image: get-icon('readtime', colors.$text8);
+    }
   }
 }

@@ -1,4 +1,7 @@
 @use '../media';
+@use '../colors';
+@use '../variables';
+@use '../icons' as *;
 
 .dke_social-item {
   display: block;
@@ -11,9 +14,6 @@
 
   &__link {
     display: block;
-  }
-
-  &__icon {
     width: 30px;
     height: 30px;
 
@@ -25,6 +25,57 @@
     &_large {
       width: 32px;
       height: 32px;
+    }
+
+    &_hover{
+      transition: opacity variables.$transition;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+
+    &_instagram {
+      background: get-icon('instagram', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('instagram', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('instagram', colors.$icon2) no-repeat;
+      }
+    }
+
+    &_vk {
+      background: get-icon('vk', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('vk', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('vk', colors.$icon2) no-repeat;
+      }
+    }
+
+    &_youtube {
+      background: get-icon('youtube', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('youtube', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('youtube', colors.$icon2) no-repeat;
+      }
+    }
+
+    &_telegram {
+      background: get-icon('telegram', colors.$link) no-repeat;
+
+      &-gray {
+        background: get-icon('telegram', colors.$icon12) no-repeat;
+      }
     }
   }
 }

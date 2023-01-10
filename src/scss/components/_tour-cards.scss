@@ -1,6 +1,7 @@
 @use '../colors';
 @use '../media';
 @use '../variables';
+@use '../icons' as *;
 
 .dke_tour {
   display: flex;
@@ -153,7 +154,7 @@
       top: 3px;
       width: 16px;
       height: 16px;
-      background-image: url('/src/icons/time.system.svg');
+      background-image: get-icon('time', colors.$link3);
       background-position: center;
       background-repeat: no-repeat;
 
@@ -185,6 +186,14 @@
       position: relative;
       padding-left: 23px;
       margin-bottom: 0.5em;
+      a:not(.dke_tour__ticket){
+        transition: border-color variables.$transition;
+        border-bottom: 1px solid transparent;
+        display: inline;
+        &:hover{
+          border-color: colors.$border8;
+        }
+      }
 
       &::before {
         content: '';
@@ -193,10 +202,10 @@
         top: 5px;
         width: 15px;
         height: 15px;
-        background-image: url('/src/icons/list-arrow.system.svg');
+        background-image: get-icon('list-arrow', colors.$icon);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 100%;
       }
     }
   }
@@ -282,26 +291,27 @@
   }
 }
 
-.dke_tours-small{
-
+.dke_tours-small {
   @include media.md {
     display: none;
   }
 
-  .dke_tour{
+  .dke_tour {
     width: 100%;
     flex-direction: column;
     border-radius: 16px;
-    border: 1px solid #e3e3e3;
+    border: 1px solid colors.$border10;
     padding: 0;
     align-self: baseline;
     margin-bottom: 20px;
+
     &__description {
       padding: 0 15px 15px 15px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
+
     &__preview {
       width: 100%;
       margin-right: 0;
@@ -312,37 +322,48 @@
         height: 204px;
       }
     }
+
     &__title {
       font-size: 16px;
     }
+
     &__time {
       font-size: 14px;
     }
+
     &__list {
       font-size: 15px;
     }
   }
-  .dke_tour__tag{
+  
+  .dke_tour__tag {
     padding: 10px 30px;
     font-size: 13px;
   }
-  .dke_button{
+
+  .dke_button {
     transition: all variables.$transition;
   }
+  
   .dke_button:not(:hover){
-    border: 1px solid #e3e3e3;
-    background-color: #f5f5f5;
+    border: 1px solid colors.$border10;
+    background-color: colors.$background7;
   }
+  
   .dke_button:hover{
-    border: 1px solid #e8b705;
+    border: 1px solid colors.$border12;
   }
-  .dke_price{
+
+  .dke_price {
     font-size: 26px;
   }
-  .dke_price > svg, .dke_price > img{
+
+  .dke_price > svg,
+  .dke_price > img {
     max-height: 20px;
   }
-  .dke_price-box{
+
+  .dke_price-box {
     width: 100%;
     justify-content: space-between;
   }

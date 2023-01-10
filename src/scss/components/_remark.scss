@@ -1,7 +1,8 @@
 @use '../colors';
 @use '../media';
+@use '../icons' as *;
 
-.dke_remark{
+.dke_remark {
   position: relative;
   border-radius: 12px;
   margin-bottom: 30px;
@@ -12,36 +13,39 @@
     padding-left: 55px;
   }
 
-  &, ol, ul {
+  &,
+  ol,
+  ul {
     font-size: 17px;
-  
-    @include media.lg{
+
+    @include media.lg {
       font-size: 15px;
     }
   }
 
-  p:last-child{
+  p:last-child {
     margin-bottom: 0;
   }
 
-  ol, ul {
+  ol,
+  ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
 
-    li{
+    li {
       list-style: none;
     }
 
-    li + li{
+    li + li {
       margin-top: 1.4em;
     }
   }
 
-  ol{
+  ol {
     counter-reset: myCounter;
 
-    li{
+    li {
       &::before {
         counter-increment: myCounter;
         content: counter(myCounter) '. ';
@@ -49,15 +53,15 @@
     }
   }
 
-  ul{
+  ul {
     margin-left: -18px;
 
-    li{
+    li {
       position: relative;
       list-style: none;
       padding-left: 18px;
 
-      &::before{
+      &::before {
         content: '';
         position: absolute;
         height: 7px;
@@ -70,62 +74,72 @@
     }
   }
 
-  &::before{
+  &::before, &::after {
     content: '';
     position: absolute;
     background-repeat: no-repeat;
   }
 
-  &._blue{
+  &._blue {
     background: colors.$background8;
     box-shadow: 2px 2px 5px rgba(colors.$shadow, 25%);
     padding-top: 25px;
     padding-bottom: 25px;
 
-    &::before{
+    &::before {
       top: 25px;
       left: 25px;
       width: 24px;
-      height: 23px;
-      background-image: url('/src/icons/trumpet.system.svg');
-
+      height: 24px;
+      
       @include media.md {
         left: 18px;
       }
     }
 
-    h2, strong {
+    h2,
+    strong {
       font-size: 17px;
 
-      @include media.lg{
+      @include media.lg {
         font-size: 15px;
       }
     }
   }
 
-  &._light{
+  &._light {
     background-color: #fff;
     border: 2px solid colors.$background8;
     padding-top: 20px;
     padding-bottom: 22px;
 
-    &::before{
+    &::before {
       top: 22px;
       left: 22px;
       width: 26px;
       height: 26px;
       border-radius: 7px;
-      background-image: url('/src/icons/star-small.system.svg');
       background-color: colors.$background8;
-      background-position: center;
 
       @include media.md {
         left: 18px;
-      }    
+      }
+    }
+
+    &::after{
+      background-image: get-icon('star-rounded', colors.$tourIcon);
+      top: 27px;
+      left: 27px;
+      width: 16px;
+      height: 16px;
+
+      @include media.md {
+        left: 23px;
+      }
     }
   }
 
-  &._gray{
+  &._gray {
     padding: 19px;
     margin-bottom: 20px;
     background-color: colors.$background7;

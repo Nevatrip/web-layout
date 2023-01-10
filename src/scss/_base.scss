@@ -37,7 +37,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -102,6 +103,11 @@ img {
     flex-direction: column;
     max-width: media.$lgContainerWidth;
   }
+
+  &_small{
+    max-width: 708px;
+    font-family: 'FuturaPT', sans-serif;
+  }
 }
 
 .dke_row {
@@ -109,6 +115,7 @@ img {
   margin-right: -15px;
   display: flex;
   flex-grow: 1;
+  max-width: calc(100% + 30px);
 
   &_column {
     flex-direction: column;

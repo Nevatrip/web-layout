@@ -1,5 +1,7 @@
 @use '../colors';
 @use '../variables';
+@use '../icons' as *;
+@use '../media';
 
 .dke_modal {
   padding-right: 0px;
@@ -33,8 +35,7 @@
     right: 10px;
     width: 30px;
     height: 30px;
-    background: url('src/icons/cross-in-circle.system.svg') center center/contain
-      no-repeat;
+    background: get-icon('cross-in-circle', colors.$icon12) no-repeat;
     transition: opacity variables.$transition;
 
     &:hover {
@@ -60,6 +61,39 @@
 
   &__button {
     width: 100%;
+  }
+
+  &_videovlog{
+    position: fixed;
+    display: flex;
+    padding: 30px 0;
+    overflow-y: auto;
+    .dke_modal__window{
+      width: 700px;
+      position: relative;
+      margin: auto;
+
+      @include media.md{
+        width: 600px;
+      }
+
+      @include media.sm{
+        width: calc(100% - 30px);
+      }
+    }
+
+    .dke_modal__close{
+      background: none;
+      font-size: 22.5px;
+      font-weight: 600;
+    }
+
+    &.js_dke_modal-active .dke_modal__window{
+      left: auto;
+      right: auto;
+      bottom: auto;
+      top: auto;
+    }
   }
 }
 
