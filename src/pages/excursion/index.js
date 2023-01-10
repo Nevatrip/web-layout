@@ -54,7 +54,7 @@ function ready() {
   cruiseMenu();
 
   //Инициализация слайдера и попапа галереи
-  new Gallery('#dke_gallery', '#dke_slider-items', '#blueimp-gallery-carousel');
+  new Gallery('.dke_gallery-container__swiper');
 
   //Инициализация попапа уведомления
   new LiveNotify('#dke_live-notify');

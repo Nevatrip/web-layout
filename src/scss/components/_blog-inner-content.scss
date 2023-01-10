@@ -1,6 +1,7 @@
 @use '../variables';
 @use '../media';
 @use '../colors';
+@use '../icons' as *;
 
 .dke_blog-inner-content{
   &__title{
@@ -25,7 +26,8 @@
     font-size: 14px;
     border-radius: 17px;
     border: 1px solid colors.$border13;
-    background-image: url('/src/icons/readtime-gray.system.svg');
+    background-image: get-icon('readtime', colors.$text11);
+    background-size: 16px;
     background-position: 11px 10px;
     background-repeat: no-repeat;
     padding: 9px 16px 7px 36px;

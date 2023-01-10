@@ -219,5 +219,9 @@ ul {
     &:nth-child(47) .dke_icon {
       background-image: get-icon('star', colors.$text8);
     }
+
+    &:nth-child(48) .dke_icon {
+      background-image: get-icon('readtime', colors.$text8);
+    }
   }
 }
