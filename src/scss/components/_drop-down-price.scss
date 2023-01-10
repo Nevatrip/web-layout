@@ -73,7 +73,7 @@
     display: block;
     width: 11px;
     height: 11px;
-    background: url('src/icons/cross.system.svg') center center no-repeat;
+    background: get-icon('cross', colors.$tourIcon) no-repeat;
 
     @include media.xs {
       display: none;

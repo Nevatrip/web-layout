@@ -2,8 +2,13 @@
 
 .dke_logo {
   max-width: 200px;
+  max-height: 40px;
 
   @include media.sm {
-    width: 160px;
+    max-width: 160px;
+  }
+
+  &__icon {
+    min-width: 40px;
   }
 }

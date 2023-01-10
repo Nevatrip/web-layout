@@ -30,7 +30,11 @@
       background: get-icon('instagram', colors.$link) no-repeat;
 
       &-gray {
-        background: get-icon('instagram', colors.$text2) no-repeat;
+        background: get-icon('instagram', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('instagram', colors.$icon2) no-repeat;
       }
     }
 
@@ -38,7 +42,11 @@
       background: get-icon('vk', colors.$link) no-repeat;
 
       &-gray {
-        background: get-icon('vk', colors.$text2) no-repeat;
+        background: get-icon('vk', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('vk', colors.$icon2) no-repeat;
       }
     }
 
@@ -46,7 +54,11 @@
       background: get-icon('youtube', colors.$link) no-repeat;
 
       &-gray {
-        background: get-icon('youtube', colors.$text2) no-repeat;
+        background: get-icon('youtube', colors.$icon12) no-repeat;
+      }
+
+      &-black {
+        background: get-icon('youtube', colors.$icon2) no-repeat;
       }
     }
 
@@ -54,7 +66,7 @@
       background: get-icon('telegram', colors.$link) no-repeat;
 
       &-gray {
-        background: get-icon('telegram', colors.$text2) no-repeat;
+        background: get-icon('telegram', colors.$icon12) no-repeat;
       }
     }
   }
