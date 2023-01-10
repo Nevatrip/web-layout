@@ -186,6 +186,14 @@
       position: relative;
       padding-left: 23px;
       margin-bottom: 0.5em;
+      a:not(.dke_tour__ticket){
+        transition: border-color variables.$transition;
+        border-bottom: 1px solid transparent;
+        display: inline;
+        &:hover{
+          border-color: colors.$border8;
+        }
+      }
 
       &::before {
         content: '';
@@ -292,7 +300,7 @@
     width: 100%;
     flex-direction: column;
     border-radius: 16px;
-    border: 1px solid #e3e3e3;
+    border: 1px solid colors.$border10;
     padding: 0;
     align-self: baseline;
     margin-bottom: 20px;
@@ -327,6 +335,7 @@
       font-size: 15px;
     }
   }
+  
   .dke_tour__tag {
     padding: 10px 30px;
     font-size: 13px;
@@ -335,14 +344,14 @@
   .dke_button {
     transition: all variables.$transition;
   }
-
-  .dke_button:not(:hover) {
-    border: 1px solid #e3e3e3;
-    background-color: #f5f5f5;
+  
+  .dke_button:not(:hover){
+    border: 1px solid colors.$border10;
+    background-color: colors.$background7;
   }
-
-  .dke_button:hover {
-    border: 1px solid #e8b705;
+  
+  .dke_button:hover{
+    border: 1px solid colors.$border12;
   }
 
   .dke_price {
