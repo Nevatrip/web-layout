@@ -33,7 +33,7 @@
       display: inline-block;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url('/src/icons/ask-gray.system.svg');
+      background-image: get-icon('ask', colors.$icon8);
       background-size: contain;
       width: 48px;
       height: 48px;
@@ -289,7 +289,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url('/src/icons/collapsed-gray.system.svg');
+      background-image: get-icon('collapsed', colors.$icon6);
       top: 22px;
       right: 13px;
       height: 23px;
@@ -364,7 +364,7 @@
 
   &.js_dke_active{
     .dke_item-tab-faq__head::after {
-      background-image: url('/src/icons/deployed-blue.system.svg');
+      background-image: get-icon('deployed', colors.$icon5);
     }
   }
 }

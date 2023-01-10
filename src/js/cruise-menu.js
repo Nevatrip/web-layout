@@ -74,7 +74,8 @@ function setActiveLink(link, menuBottom) {
           sectionCruiseMenuWrapper.scrollTo({
             left: x,
             behavior: 'smooth'
-          });    
+          });
+          
           link.classList.add('js_dke_active');
         }
       }

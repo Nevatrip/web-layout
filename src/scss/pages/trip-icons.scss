@@ -18,8 +18,20 @@ ul {
       width: 100%;
       background-repeat: no-repeat;
       background-position: center;
-    }
 
+      svg {
+        color: colors.$text8;
+      }
+    }
+    
+    span{
+      font-size: 12px;
+      min-height: 30px;
+      word-break: break-all;
+    }
+  }
+
+  &.dke_system-icons li {
     &:nth-child(1) .dke_icon {
       background-image: get-icon('instagram', colors.$text8);
     }
@@ -206,12 +218,6 @@ ul {
     
     &:nth-child(47) .dke_icon {
       background-image: get-icon('star', colors.$text8);
-    }
-    
-    span{
-      font-size: 12px;
-      min-height: 30px;
-      word-break: break-all;
     }
   }
 }

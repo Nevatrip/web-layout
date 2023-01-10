@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../media';
+@use '../icons' as *;
 
 .dke_offer {
   margin: 14px 0 37px;
@@ -143,20 +144,22 @@
     display: block;
     width: 18px;
     height: 18px;
-
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-
-  &__icon {
-    height: 18px;
-    width: 18px;
-    flex: 0 1 18px;
-
-    path {
-      fill: colors.$icon4;
+  
+  &_icon {
+    &-schedule::before {
+      background-image: get-icon('schedule', colors.$icon6);
     }
-  }
-
-  &__text {
-    // flex: 0 1 calc(100% - 18px);
+    
+    &-placemark::before {
+      background-image: get-icon('placemark', colors.$icon6);
+    }
+    
+    &-anchor::before {
+      background-image: get-icon('anchor', colors.$icon6);
+    }
+    
   }
 }
