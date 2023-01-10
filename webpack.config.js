@@ -51,6 +51,42 @@ const PAGES = [
     filename: 'faq',
   },
   {
+    dir: 'list',
+    filename: 'list',
+  },
+  {
+    dir: 'list-map',
+    filename: 'list-map',
+  },
+  {
+    dir: 'group',
+    filename: 'group',
+  },
+  {
+    dir: 'arenda-main',
+    filename: 'arenda-main',
+  },
+  {
+    dir: 'arenda-list',
+    filename: 'arenda-list',
+  },
+  {
+    dir: 'vlog-main',
+    filename: 'vlog-main',
+  },
+  {
+    dir: 'vlog-inner-page',
+    filename: 'vlog-inner-page',
+  },
+  {
+    dir: 'blog',
+    filename: 'blog',
+  },
+  {
+    dir: 'blog-inner',
+    filename: 'blog-inner',
+  },
+  {
     dir: 'blog-detail-old',
     filename: 'blog-detail-old',
   },

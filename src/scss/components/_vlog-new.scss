@@ -1,0 +1,14 @@
+.dke_vlog-new{
+  margin-bottom: 25px;
+  
+  &__title{
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 0.9em;
+    text-align: center;
+  }
+
+  .dke_container{
+    flex-direction: column;
+  }
+}
