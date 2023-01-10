@@ -1,5 +1,7 @@
 @use '../colors';
+@use '../variables';
 @use '../media';
+@use '../icons' as *;
 
 .dke_item-drop-down-mobile {
   &._hr{
@@ -71,7 +73,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: transform .3s ease-out;
+      transition: transform variables.$transition;
+      background: get-icon('arrow-drop-down', colors.$icon10) center / contain no-repeat;
     }
   }
 

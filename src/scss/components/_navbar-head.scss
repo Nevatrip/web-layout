@@ -1,6 +1,7 @@
 @use '../colors';
 @use '../media';
 @use '../variables';
+@use '../icons' as *;
 
 .dke_head-navbar {
   color: white;
@@ -37,7 +38,6 @@
   &__container {
     display: flex;
     align-items: center;
-
     position: relative;
     z-index: 3;
 
@@ -84,14 +84,20 @@
     width: 32px;
     height: 32px;
     margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &_chat{
+      background-image: get-icon('chat');
+    }
+
+    &_call{
+      background-image: get-icon('call');
+    }
 
     &:last-child {
       margin-right: 0;
     }
-  }
-
-  &__contact-icon {
-    width: 32px;
-    height: 32px;
   }
 }

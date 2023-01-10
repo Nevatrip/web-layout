@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../variables';
+@use '../icons' as *;
 
 .dke_contacts {
   flex-direction: column;
@@ -31,17 +32,21 @@
     }
   }
 
-  &__icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__icon {
     width: 15px;
     height: 15px;
     margin-right: 10px;
-  }
 
-  &__icon {
-    filter: invert(46%) sepia(25%) saturate(0%) hue-rotate(198deg)
-      brightness(95%) contrast(90%);
+    &_tel {
+      background: get-icon('tel', colors.$icon12) no-repeat;
+    }
+
+    &_mail {
+      background: get-icon('mail', colors.$icon12) no-repeat;
+    }
+
+    &_telegram-bot {
+      background: get-icon('telegram-bot', colors.$icon12) no-repeat;
+    }
   }
 }

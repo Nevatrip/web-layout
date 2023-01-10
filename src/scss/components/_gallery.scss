@@ -1,4 +1,6 @@
 @use '../media';
+@use '../colors';
+@use '../icons' as *;
 @import '/node_modules/blueimp-gallery/css/blueimp-gallery.css';
 @import '/node_modules/blueimp-gallery/css/blueimp-gallery-indicator.css';
 
@@ -68,7 +70,7 @@
     display: block;
   
     .blueimp-gallery-svgasimg > .next, .blueimp-gallery-svgasimg > .prev {
-      background: url('/src/icons/galery-arrow.system.svg');
+      background: get-icon('gallery-arrow', colors.$icon9);
       background-repeat: no-repeat;
       background-size: 10px 14px;
       background-position: center;

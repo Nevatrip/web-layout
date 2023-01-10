@@ -1,6 +1,7 @@
 @use '../colors';
 @use '../media';
 @use '../variables';
+@use '../icons' as *;
 
 .dke_faq {
   margin-bottom: 30px;
@@ -32,7 +33,7 @@
       display: inline-block;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url('/src/icons/ask-gray.system.svg');
+      background-image: get-icon('ask', colors.$icon8);
       background-size: contain;
       width: 48px;
       height: 48px;
@@ -137,9 +138,36 @@
       width: 38px;
       height: 38px;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+    
+    &[aria-controls$='1'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('boat', colors.$icon4) center no-repeat;
+      }
+    }
+    
+    &[aria-controls$='2'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('ticket', colors.$icon4) center no-repeat;
+      }
+    }
+    
+    &[aria-controls$='3'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('lifebuoy', colors.$icon4) center no-repeat;
+      }
+    }
+    
+    &[aria-controls$='4'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('anchor-detailed', colors.$icon4) center no-repeat;
+      }
+    }
+    
+    &[aria-controls$='5'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('star', colors.$icon4) center no-repeat;
+      }
     }
     
     span{
@@ -164,8 +192,34 @@
   &.js_dke_active{
     border: 2px solid colors.$link;
 
-    svg{
-      fill: colors.$link;
+    .dke_item-tabs-faq__btn[aria-controls$='1'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('boat', colors.$icon5) center no-repeat;
+      }
+    }
+
+    .dke_item-tabs-faq__btn[aria-controls$='2'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('ticket', colors.$icon5) center no-repeat;
+      }
+    }
+
+    .dke_item-tabs-faq__btn[aria-controls$='3'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('lifebuoy', colors.$icon5) center no-repeat;
+      }
+    }
+
+    .dke_item-tabs-faq__btn[aria-controls$='4'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('anchor-detailed', colors.$icon5) center no-repeat;
+      }
+    }
+
+    .dke_item-tabs-faq__btn[aria-controls$='5'] {
+      .dke_item-tabs-faq__btn-icon{
+        background: get-icon('star', colors.$icon5) center no-repeat;
+      }
     }
   }
 }
@@ -235,7 +289,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url('/src/icons/collapsed-gray.system.svg');
+      background-image: get-icon('collapsed', colors.$icon6);
       top: 22px;
       right: 13px;
       height: 23px;
@@ -310,7 +364,7 @@
 
   &.js_dke_active{
     .dke_item-tab-faq__head::after {
-      background-image: url('/src/icons/deployed-blue.system.svg');
+      background-image: get-icon('deployed', colors.$icon5);
     }
   }
 }

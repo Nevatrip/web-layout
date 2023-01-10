@@ -32,6 +32,7 @@ function setTopExcursionMenu() {
   const topbarBottom = topbar.getBoundingClientRect().bottom;
   const navbarBottom = navbar.getBoundingClientRect().bottom;
   const topbarHeight = topbar.offsetHeight;
+
   if (topbar && navbar && sectionCruiseMenu) {
     const cruiseMenuBottom = navbarBottom - (topbarBottom > 0 ? topbarHeight : 0);
     sectionCruiseMenu.style.top = cruiseMenuBottom + 'px';
@@ -68,11 +69,13 @@ function setActiveLink(link, menuBottom) {
       && sectionBottom > menuBottom) {
         if (!link.classList.contains('js_dke_active')) {
           const sectionCruiseMenuWrapper = sectionCruiseMenu.querySelector('.dke_cruise-menu__wrapper');
-          const x = link.getBoundingClientRect().left - window.innerWidth / 2 + link.offsetWidth / 2;
+          const x = link.offsetLeft - window.innerWidth / 2 + link.offsetWidth / 2;
+
           sectionCruiseMenuWrapper.scrollTo({
             left: x,
             behavior: 'smooth'
-          });    
+          });
+          
           link.classList.add('js_dke_active');
         }
       }

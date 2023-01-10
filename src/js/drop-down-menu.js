@@ -21,22 +21,13 @@ export function dropDownMenu() {
     const btn = element.querySelector('.dke_item-drop-down__btn');
 
     btn?.addEventListener('click', showDropDownList);
-    
-    btn?.addEventListener('click', function () {
-      showSublist.call(this, element);
-    });
   });
 
   // открытие/закрытие внутренних списков бургер-меню
   itemsDropDownMenuMobile?.forEach(element => {
     const btn = element.querySelector('.dke_item-drop-down-mobile__head');
 
-
     btn?.addEventListener('click', showDropDownList);
-
-    btn?.addEventListener('click', function () {
-      showSublist.call(this, element);
-    });
   });
 }
 

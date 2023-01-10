@@ -1,15 +1,15 @@
 @use '../media';
 @use '../variables';
 @use '../colors';
+@use '../icons' as *;
 
-.dke_footer{
-
-  &__container{
+.dke_footer {
+  &__container {
     padding-top: 30px;
     padding-bottom: 20px;
     background-color: colors.$background6;
 
-    .dke_container{
+    .dke_container {
       display: flex;
       justify-content: space-between;
 
@@ -20,7 +20,7 @@
     }
   }
 
-  &__links{
+  &__links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,8 +38,8 @@
       order: 2;
       margin-top: 10px;
     }
-    
-    &::before{
+
+    &::before {
       @include media.sm {
         content: '';
         position: absolute;
@@ -52,7 +52,7 @@
       }
     }
 
-    &:last-child{
+    &:last-child {
       justify-content: flex-end;
 
       @include media.sm {
@@ -61,7 +61,7 @@
     }
   }
 
-  &__link{
+  &__link {
     font-size: 14px;
     color: colors.$text3;
     margin: 5px 15px;
@@ -69,12 +69,12 @@
     border-bottom: 1px solid transparent;
     transition: border-color variables.$transition;
 
-    &:hover{
+    &:hover {
       border-bottom: 1px solid #fff;
     }
   }
 
-  &__socials-block{
+  &__socials-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,13 +87,13 @@
       justify-content: center;
       align-items: center;
 
-      .dke_social-item:first-child{
+      .dke_social-item:first-child {
         margin-left: 0;
       }
     }
   }
 
-  &__social-link{
+  &__social-link {
     margin-top: 4px;
     margin-bottom: 4px;
     display: flex;
@@ -105,7 +105,8 @@
       margin-right: 6px;
     }
 
-    span, noindex{
+    span:not(.dke_footer__social-icon),
+    noindex {
       margin-left: 10px;
       border-bottom: 1px solid transparent;
       transition: border-color variables.$transition;
@@ -115,13 +116,14 @@
       }
     }
 
-    &:hover{
-      span, noindex{
+    &:hover {
+      span:not(.dke_footer__social-icon),
+      noindex {
         border-bottom: 1px solid #fff;
       }
     }
 
-    &:not(:first-child){
+    &:not(:first-child) {
       margin-left: 12px;
 
       @include media.sm {
@@ -129,22 +131,20 @@
         margin-right: 6px;
       }
     }
-
-    img, svg{
-      max-width: 28px;
-      max-height: 28px;
-    }
-
-    img{
-      object-fit: contain;
-    }
   }
 
-  &__contacts{
+  &__social-icon {
+    border-bottom: none;
+    width: 20px;
+    height: 20px;
+    background: get-icon('telegram-bot') no-repeat;
+  }
+
+  &__contacts {
     padding: 10px 0;
     width: 25%;
     font-style: normal;
-    
+
     @include media.sm {
       padding-top: 0;
       max-width: 290px;
@@ -155,30 +155,30 @@
     }
   }
 
-  &__contact{
+  &__contact {
     color: colors.$text3;
     font-size: 16px;
     font-weight: 100;
     display: block;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
 
-    a{
+    a {
       color: colors.$text3;
 
-      span{
+      span {
         border-bottom: 1px solid transparent;
         transition: border-color variables.$transition;
       }
-      
-      &:hover span{
-        border-bottom: 1px solid #fff;
+
+      &:hover span {
+        border-bottom: 1px solid colors.$border3;
       }
     }
 
-    & > span{
+    & > span {
       display: block;
       color: colors.$text4;
       font-size: 14px;
@@ -188,11 +188,12 @@
       margin-top: 2px;
     }
 
-    &_mail, &_tel{
+    &_mail,
+    &_tel {
       padding-left: 40px;
       position: relative;
 
-      &::before{
+      &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -203,39 +204,39 @@
         background-repeat: no-repeat;
       }
 
-      & ~ span{
+      & ~ span {
         padding-left: 40px;
       }
     }
 
-    &_mail::before{
-      background-image: url('/src/icons/mail.system.svg');
+    &_mail::before {
+      background-image: get-icon('mail');
     }
 
-    &_tel::before{
-      background-image: url('/src/icons/tel.system.svg');
+    &_tel::before {
+      background-image: get-icon('tel');
     }
   }
 
-  &__disclaimer{
+  &__disclaimer {
     background-color: colors.$background5;
     padding: 20px 0;
 
-    .dke_container{
+    .dke_container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+
       @include media.sm {
         flex-direction: column;
       }
     }
   }
-  &__copyright{
+  &__copyright {
     font-size: 11px;
     color: colors.$text3;
   }
-  &__pay{
+  &__pay {
     @include media.sm {
       margin-top: 15px;
     }

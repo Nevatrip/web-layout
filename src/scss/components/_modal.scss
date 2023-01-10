@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../variables';
+@use '../icons' as *;
 @use '../media';
 
 .dke_modal {
@@ -34,8 +35,7 @@
     right: 10px;
     width: 30px;
     height: 30px;
-    background: url('src/icons/cross-in-circle.system.svg') center center/contain
-      no-repeat;
+    background: get-icon('cross-in-circle', colors.$icon12) no-repeat;
     transition: opacity variables.$transition;
 
     &:hover {
